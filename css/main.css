@@ -651,8 +651,18 @@ label.error {
   width: 100%;
 }
 
-
-
+/*========================================
+Sponsors
+==========================================*/
+/* .item-client{
+  border-color:#000000;
+  border-width: 1px;
+  border-style: none solid solid none;
+  text-align: center;
+} */
+.item-client img{
+  transform: scale(0.75);
+}
 /*=========================================
 	Contact Us
 ==========================================*/
