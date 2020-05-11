@@ -1,1007 +1,135 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-    <head>
-    	<!-- meta charec set -->
-		<meta charset="utf-8">
-		<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
-		<!-- Always force latest IE rendering engine or request Chrome Frame -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<!-- Page Title -->
-        <title>Aerial Robotics IITK</title>	
-	<link rel="icon" type="image/png" href="img/logo-color.png" />
-		<!-- Meta Description -->
-        <meta name="description" content="Blue One Page Creative HTML5 Template">
-        <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
-        <meta name="author" content="Muhammad Morshed">
-		<!-- Mobile Specific Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- Google Font -->
-		
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-		<!-- CSS
-		================================================== -->
-		<!-- Fontawesome Icon font -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-		<!-- Twitter Bootstrap css -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- jquery.fancybox  -->
-        <link rel="stylesheet" href="css/jquery.fancybox.css">
-		<!-- animate -->
-        <link rel="stylesheet" href="css/animate.css">
-		<!-- Main Stylesheet -->
-        <link rel="stylesheet" href="css/main.css">
-		<!-- media-queries -->
-        <link rel="stylesheet" href="css/media-queries.css">
-
-    </head>
-	
-    <body id="body">
-	
-		<!-- preloader -->
-		<div id="preloader">
-			<img src="img/preloader.gif" alt="Preloader">
-		</div>
-		<!-- end preloader -->
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v3.3'
-    });
-  };
-
-  (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Your customer chat code -->
-<div class="fb-customerchat"
-  attribution=setup_tool
-  page_id="247388436171313"
-  theme_color="#7EC0EE">
-</div>
-        <!-- 
-        Fixed Navigation
-        ==================================== -->
-        <header id="navigation" class="navbar-fixed-top navbar">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- responsive nav button -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-bars fa-2x"></i>
-                    </button>
-					<!-- /responsive nav button -->
-					
-					<!-- logo -->
-                    			<a class="navbar-brand" href="#body">	
-						<h1 id="logo">
-							<img src="img/logo-white-small.png" alt="AerialRobotics-IITK">
-						</h1>
-					</a>
-					<!-- /logo -->
-					<!-- gallery -->
-						<!-- <a class="navbar-brand" href="gallery.html">	
-						<h1 id="logo">
-							<img src="img/logo-white-small.png" alt="AerialRobotics-IITK">
-						</h1>
-					</a>
-					<!-- gallery ends -->
+<html class="wide wow-animation" lang="en">
+<head>
+  <style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+</style>
+<style>
+  .gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+</style>
+<style>
+  .dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style>
+<style>
+    body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } #particles-js{ position:absolute; width: 100%; height: 100%; background-image: url("bg-bunner-1.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } 
+</style>
+    <title>Aerial Robotics IITK</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-P9FT69"></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="/cdn-cgi/apps/head/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script><script src="/cdn-cgi/apps/body/4o300efCt-CXoq1JEC-sVReFz48.js"></script><link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,300i,400,500,600,700,800,900,900i%7CRoboto+Mono:100,300,300i,400,400i,500,500i,700,700i">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grt-youtube-popup.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  <link rel="stylesheet" href="data:text/css;charset=utf-8;base64,Y2xvdWRmbGFyZS1hcHBbYXBwLWlkPSJhLWJldHRlci1icm93c2VyIl0gewogIGRpc3BsYXk6IGJsb2NrOwogIGJhY2tncm91bmQ6ICM0NTQ4NGQ7CiAgY29sb3I6ICNmZmY7CiAgbGluZS1oZWlnaHQ6IDEuNDU7CiAgcG9zaXRpb246IGZpeGVkOwogIHotaW5kZXg6IDkwMDAwMDAwOwogIHRvcDogMDsKICBsZWZ0OiAwOwogIHJpZ2h0OiAwOwogIHBhZGRpbmc6IC41ZW0gMWVtOwogIHRleHQtYWxpZ246IGNlbnRlcjsKICAtd2Via2l0LXVzZXItc2VsZWN0OiBub25lOwogICAgIC1tb3otdXNlci1zZWxlY3Q6IG5vbmU7CiAgICAgIC1tcy11c2VyLXNlbGVjdDogbm9uZTsKICAgICAgICAgIHVzZXItc2VsZWN0OiBub25lOwp9CgpjbG91ZGZsYXJlLWFwcFthcHAtaWQ9ImEtYmV0dGVyLWJyb3dzZXIiXVtkYXRhLXZpc2liaWxpdHk9ImhpZGRlbiJdIHsKICBkaXNwbGF5OiBub25lOwp9CgpjbG91ZGZsYXJlLWFwcFthcHAtaWQ9ImEtYmV0dGVyLWJyb3dzZXIiXSBjbG91ZGZsYXJlLWFwcC1tZXNzYWdlIHsKICBkaXNwbGF5OiBibG9jazsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwLWlkPSJhLWJldHRlci1icm93c2VyIl0gYSB7CiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7CiAgY29sb3I6ICNlYmViZjQ7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcC1pZD0iYS1iZXR0ZXItYnJvd3NlciJdIGE6aG92ZXIsCmNsb3VkZmxhcmUtYXBwW2FwcC1pZD0iYS1iZXR0ZXItYnJvd3NlciJdIGE6YWN0aXZlIHsKICBjb2xvcjogI2RiZGJlYjsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwLWlkPSJhLWJldHRlci1icm93c2VyIl0gY2xvdWRmbGFyZS1hcHAtY2xvc2UgewogIGRpc3BsYXk6IGJsb2NrOwogIGN1cnNvcjogcG9pbnRlcjsKICBmb250LXNpemU6IDEuNWVtOwogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICByaWdodDogLjRlbTsKICB0b3A6IC4zNWVtOwogIGhlaWdodDogMWVtOwogIHdpZHRoOiAxZW07CiAgbGluZS1oZWlnaHQ6IDE7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcC1pZD0iYS1iZXR0ZXItYnJvd3NlciJdIGNsb3VkZmxhcmUtYXBwLWNsb3NlOmFjdGl2ZSB7CiAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTsKICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpOwp9CgpjbG91ZGZsYXJlLWFwcFthcHAtaWQ9ImEtYmV0dGVyLWJyb3dzZXIiXSBjbG91ZGZsYXJlLWFwcC1jbG9zZTpob3ZlciB7CiAgb3BhY2l0eTogLjllbTsKICBjb2xvcjogI2ZmZjsKfQo="><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/geocoder.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/onion.js"></script></head>
+  <body class="">
+    <div class="ie-panel"><a href="https://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." width="820" height="42"></a></div>
+    <div class="preloader loaded">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page animated" style="animation-duration: 500ms;">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap" style="height: 110px;">
+          <nav class="rd-navbar rd-navbar-modern rd-navbar-original rd-navbar-static" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-default-207x45.png" alt="" width="207" height="45"></a></div>
                 </div>
-
-				<!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                        <li class="current"><a href="#body">Home</a></li>
-                        <li><a href="#features">About Us</a></li>
-                        <li><a href="#uav">Our UAVs</a></li>
-						<li><a href="#team">Team</a></li>
-                        <li><a href="#sponsors">Our Patron</a></li>
-                        <li><a href="#contact">Contact</a></li>	
+                <div class="rd-navbar-main-element"> 
+                  <div class="rd-navbar-nav-wrap toggle-original-elements">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu"><a class="rd-nav-link" href="about-us.html">About Us</a><!--<span class="rd-navbar-submenu-toggle"></span>-->
+                        <!-- RD Navbar Dropdown-->
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Our Team</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="past-projects.html">Past Projects</a></li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="ouruavs.html">Our UAVs</a>
+                      </li>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="sponsors.html">Sponsors</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="gallery.html">Gallery</a>
+                      </li>
                     </ul>
-				</nav>
-				<!-- /main nav -->
-				
+                  </div>
+                </div>
+              </div>
             </div>
-        </header>
-        <!--
-        End Fixed Navigation
-        ==================================== -->
-		
-		
-		
-        <!--
-        Home Slider
-        ==================================== -->
-		<!-- <div id="particle-js"></div> -->
-		<section id="slider">
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			
-				<!-- Indicators bullet -->
-				<ol class="carousel-indicators">
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-				</ol>
-				<!-- End Indicators bullet -->				
-				
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					
-					<!-- single slide -->
-					<div class="item active" style="background-image: url(img/banner1.jpeg);">
-						<div class="carousel-caption">
-							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">AERIAL<span> ROBOTICS</span> IITK</h2>
-							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">#Love</span> for drones.</h3>
-							<p data-wow-duration="1000ms" class="wow slideInRight animated">We build autonomous UAVs </p>
-							
-							<ul class="social-links text-center">
-								<li><a href="https://www.facebook.com/ariitk/"><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href="https://www.youtube.com/channel/UC0A50yxfhMAYRSOMTG87o6A?view_as=subscriber"><i class="fa fa-youtube fa-lg"></i></a></li>
-								<li><a href="https://instagram.com/ar.iitk"><i class="fa fa-instagram fa-lg"></i></a></li>
-								<li><a href="https://www.linkedin.com/company/aerial-robotics-iitk"><i class="fa fa-linkedin  fa-lg"></i></a></li>
-								<li><a href="https://github.com/AerialRobotics-IITK"><i class="fa fa-github fa-lg"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- end single slide -->
-					
-					<!-- single slide -->
-					<div class="item" style="background-image: url(img/banner2.jpg);">
-						<div class="carousel-caption">
-							<h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Aerial Robotics<span> IITK</span>!</h2>
-							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">/Love</span> for drone</h3>
-							<p data-wow-duration="1000ms" class="wow slideInRight animated">We are a team with professional ethics</p>
-							
-							<ul class="social-links text-center">
-								<li><a href="https://www.facebook.com/ariitk/"><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href="https://www.youtube.com/channel/UC0A50yxfhMAYRSOMTG87o6A?view_as=subscriber"><i class="fa fa-youtube fa-lg"></i></a></li>
-								<li><a href="https://instagram.com/ar.iitk"><i class="fa fa-instagram fa-lg"></i></a></li>
-								<li><a href="https://www.linkedin.com/company/aerial-robotics-iitk"><i class="fa fa-linkedin  fa-lg"></i></a></li>
-								<li><a href="https://github.com/AerialRobotics-IITK"><i class="fa fa-github fa-lg"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- end single slide -->
+          </nav>
+        </div>
+      </header>
+      <!-- Swiper-->
+      <section class="section section-lg section-main-bunner">
+        <div id="particles-js" class="main-bunner-img" style="background-image: url(&quot;images/bg-bunner-1.jpg&quot;); background-size: cover;"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1853" height="517"></canvas></div>
+        <div class="main-bunner-inner offset-top-140">
+          <div class="container">
+            <div class="row justify-content-lg-between align-items-lg-center">
+              <div class="col-lg-2 order-lg-2 text-center text-lg-right">
+                <div class="block-video-button"><a href="#" class="youtube-link" youtubeid="j_l1Y6-9mBE"><span class="icon fa-play icon-md" ></span></a></div>
+              </div>
+              <div class="col-12 col-lg-9 col-xl-6 order-lg-1 text-center text-lg-left">
+                <h2 class="offset-top-30">AerialRobotics IITK</h2>
+                <h4 class="font-weight-regular text-opacity-80">Contributing to the open source robotics community since 2018.</h4>
+                      <a class="button button-default-outline button-md-2" href="about-us.html"><h4>GET TO KNOW US</h4></a>
+                      <ul class="social-list">
+                      <li><a class="icon icon-lg icon-circle icon-circle-md fa-facebook" href="https://www.facebook.com/ariitk/"></a></li>
+                      <li><a class="icon icon-lg icon-circle icon-circle-md fa-instagram" href="https://instagram.com/ar.iitk"></a></li>
+                      <li><a class="icon icon-lg icon-circle icon-circle-md fa-github" href="https://github.com/AerialRobotics-IITK"></a></li>
+                      <li><a class="icon icon-lg icon-circle icon-circle-md fa-linkedin" href="https://www.linkedin.com/company/aerial-robotics-iitk"></a></li>
+                      <li><a class="icon icon-lg icon-circle icon-circle-md fa-youtube" href="https://www.youtube.com/channel/UC0A50yxfhMAYRSOMTG87o6A?view_as=subscriber"> </a></li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/grt-youtube-popup.js"></script>
+    <script src="js/particles.js"></script>    
 
-					<div class="item active" style="background-image: url(img/banner3.JPG);">
-						<div class="carousel-caption">
-							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">AERIAL<span> ROBOTICS</span> IITK</h2>
-							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">#Love</span> for drones</h3>
-							<p data-wow-duration="1000ms" class="wow slideInRight animated">We build autonomous UAVs</p>
-							
-							<ul class="social-links text-center">
-								<li><a href="https://www.facebook.com/ariitk/"><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href="https://www.youtube.com/channel/UC0A50yxfhMAYRSOMTG87o6A?view_as=subscriber"><i class="fa fa-youtube fa-lg"></i></a></li>
-								<li><a href="https://www.linkedin.com/company/aerial-robotics-iitk"><i class="fa fa-linkedin  fa-lg"></i></a></li>
-								<li><a href="https://instagram.com/ar.iitk"><i class="fa fa-instagram fa-lg"></i></a></li>
-								<li><a href="https://github.com/AerialRobotics-IITK"><i class="fa fa-github fa-lg"></i></a></li>
-							</ul>
-						</div>
-					</div>
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7078796-5']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();</script>
 
-					<div class="item active" style="background-image: url(img/banner4.JPG);">
-						<div class="carousel-caption">
-							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">AERIAL<span> ROBOTICS</span>IITK</h2>
-							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">#Love</span> for drones.</h3>
-							<p data-wow-duration="1000ms" class="wow slideInRight animated">We build autonomous UAVs</p>
-							
-							<ul class="social-links text-center">
-								<li><a href="https://www.facebook.com/ariitk/"><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href="https://www.youtube.com/channel/UC0A50yxfhMAYRSOMTG87o6A?view_as=subscriber"><i class="fa fa-youtube fa-lg"></i></a></li>
-								<li><a href="https://www.linkedin.com/company/aerial-robotics-iitk"><i class="fa fa-linkedin  fa-lg"></i></a></li>
-								<li><a href="https://instagram.com/ar.iitk"><i class="fa fa-instagram fa-lg"></i></a></li>
-								<li><a href="https://github.com/AerialRobotics-IITK"><i class="fa fa-github fa-lg"></i></a></li>
-							</ul>
-						</div>
-					</div>
+    <script> $(".youtube-link").grtyoutube({theme:"light", autoPlay:false}); </script>
+  
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script>
+<a href="#" id="ui-to-top" class="ui-to-top fa fa-angle-up"></a>
+<script type="text/javascript" id="">(function(){var b=document.location.search.split("aff\x3d")[1];if(b){var d=document.querySelectorAll("a"),c;for(c=0;c<d.length;c++){var a=d[c];0==a.href.indexOf("https://www.templatemonster.com")&&(0<a.href.indexOf("?")?a.href=a.href+"\x26aff\x3d"+b:a.href=a.href+"?aff\x3d"+b)}}b=document.location.search.split("i\x3d")[1];var e=document.location.search.split("pr_code\x3d")[1];if(b&&e)for(b=b.split("\x26")[0],d=document.querySelectorAll("a"),c=0;c<d.length;c++)a=d[c],0==a.href.indexOf("https://www.templatemonster.com")&&
+(a.href="https://www.templatehelp.com/preset/cart.php?act\x3dadd\x26templ\x3d"+b+"\x26pr_code\x3d"+e)})();</script>
+<div style="position: absolute; left: 0px; top: -2px; height: 1px; overflow: hidden; visibility: hidden; width: 1px;"><span style="position: absolute; font-size: 300px; width: auto; height: auto; margin: 0px; padding: 0px; font-family: Roboto, Arial, sans-serif;">BESbswy</span></div>
 
+  
+<script type="text/javascript">
+      particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"triangle","stroke":{"width":0,"color":"#4c4c4c"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+    </script>
 
-					
-				</div>
-				<!-- End Wrapper for slides -->
-				
-			</div>
-		</section>
-		
-        <!--
-        End Home SliderEnd
-        ==================================== -->
-		
-        <!--
-        Features
-        ==================================== -->
-		
-		<section id="features" class="features">
-			<div class="container">
-				<div class="row">
-				
-					<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
-						<h2> About Us </h2>
-						<div class="devider"><i class="fa fa-check-o fa-lg"></i></div>
-					</div>
-
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms">
-						<div class="service-item"><a href="https://github.com/AerialRobotics-IITK/Wiki/wiki">
-							<div class="service-icon">
-								<i class="fa fa-github fa-2x"></i>
-							</div></a>
-							
-							<div class="service-desc">
-								<h3>Github Wiki</h3>
-								<p>What could be better than a well documented work. Our team worked on almost every almost every aspect of autonomous UAV. Find out more by visiting out wiki.</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
-						<div class="service-item"><a href="#">
-							<div class="service-icon">
-								<i class="fa fa-pencil fa-2x"></i>
-							</div></a>
-							
-							<div class="service-desc">
-								<h3>Our Blog</h3>
-								<p>Follow us closely in our endavour. Visit our blog for more information.</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInRight" data-wow-duration="500ms"  data-wow-delay="900ms">
-						<div class="service-item"><a href="https://www.youtube.com/channel/UC0A50yxfhMAYRSOMTG87o6A">
-							<div class="service-icon">
-								<i class="fa fa-play fa-2x"></i>
-							</div></a>
-							
-							<div class="service-desc">
-								<h3>Test Videos</h3>
-								<p>Results keeps us motivated and act as torch bearer for our future work. See some of our testing videos</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-						
-				</div>
-			</div>
-		</section>
-		
-        <!--
-        End Features
-        ==================================== -->
-		
-		<br/><br/><br/><br/><br/><br/>
-        <!--
-        Our Works
-        ==================================== -->
-		
-		<section id="uav" class="works clearfix">
-			<div class="container">
-				<div class="row">
-				
-					<div class="sec-title text-center">
-						<h2>Our UAVs</h2>
-						<div class="devider"><i class="fa fa-check-o fa-lg"></i></div>
-					</div>
-					
-					<div class="sec-sub-title text-center">
-						<p>Peek into the world of possiblities with our UAVs</p>
-					</div>
-					
-					<!-- <div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
-						<ul class="text-center">
-							<li><a href="javascript:;" data-filter="all" class="active filter">All</a></li>
-							<li><a href="javascript:;" data-filter=".branding" class="filter">Branding</a></li>
-							<li><a href="javascript:;" data-filter=".web" class="filter">web</a></li>
-							<li><a href="javascript:;" data-filter=".logo-design" class="filter">logo design</a></li>
-							<li><a href="javascript:;" data-filter=".photography" class="filter">photography</a></li>
-						</ul>
-					</div> -->
-					
-				</div>
-			</div>
-			
-			<div class="project-wrapper">
-			
-				<figure class="mix work-item branding">
-					<img src="img/works/item-1.JPG" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Mission mode" href="img/works/item-1.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Speed X</h4>
-						<p>Performing autonomous mission</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item web">
-					<img src="img/works/item-2.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Cool Calm Evening" href="img/works/item-2.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Ironman</h4>
-						<p>Chilling out in Cool Calm evening</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item logo-design">
-					<img src="img/works/item-3.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Waiting to fly high" href="img/works/item-3.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Ironman</h4>
-						<p>Waiting .... Waiting .....</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item photography">
-					<img src="img/works/item-4.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Alone on IITK Airstrip" href="img/works/item-4.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Ironman</h4>
-						<p>Alone on IITK Airstrip</p>
-					</figcaption>
-				</figure>
-			
-				<!--<figure class="mix work-item branding">
-					<img src="img/works/item-5.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-5.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Ironman</h4>
-						<p>Alone on IITK Airstrip</p>
-					</figcaption>
-				</figure>
-				
-			    <figure class="mix work-item web">
-					<img src="img/works/item-6.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-6.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item logo-design">
-					<img src="img/works/item-7.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-7.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item photography">
-					<img src="img/works/item-8.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-8.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure> -->
-				
-			</div>
-
-<!-- 
-			<div class="text-center" style="width: 100%; height: 100px;">
-				<a href="gallery.html"><p style="border-radius: 5px; border-color: #5e9bff;border-width: 5px;">
-					Gallery
-				</p></a>
-			</div> -->
-
-		</section>
-		
-				<div id="galbuttin" ><a href="gallery.html" target="_blank"><p style="font-size:25px; font-weight:4rem;padding: 15px 0 15px 0;color:#5c9fd9;">GALLERY</p></a></div>
-		
-        <!--
-        End Our Works
-        ==================================== -->
-		
-		<br/><br/><br/><br/>
-        <!--
-        Meet Our Team
-        ==================================== -->		
-		
-		<section id="team" class="team">
-			<div class="container">
-				<div class="row">
-		
-					<div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
-						<h2>Meet Our Team</h2>
-						<div class="devider"><i class="fa fa-check-o fa-lg"></i></div>
-					</div>
-					
-					<div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
-						<p>A good team and a strong determination makes everything possible</p>
-					</div>
-
-					<!-- single member -->
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<img src="img/team/gajena.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Gajendra Nagar</h5>
-								<p>Work is on</p>
-								<ul class="social-links text-center">
-									<li><a href="https://github.com/gajena"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="https://www.facebook.com/i.m.gajen"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Gajendra Nagar</h4>
-						<span>Founder & Alumnus</span>
-					</figure>
-					<!-- end single member -->
-					
-					<!-- single member -->
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-						<div class="member-thumb">
-							<img src="img/team/prashant.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5> Prashant Singh</h5>
-								<p>Do or do not, there is no try</p>
-								<ul class="social-links text-center">
-									<li><a href="https://github.com/prashantiitk"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="https://www.facebook.com/profile.php?id=100001482115581"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Prashant Singh</h4>
-						<span>Co-Founder</span>
-					</figure>
-					<!-- end single member -->
-					
-					<!-- single member -->
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
-						<div class="member-thumb">
-							<img src="img/team/nitish.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Nitish Pant</h5>
-								<p>The fool doth think he is wise, but the wise man knows himself to be a fool</p>
-								<ul class="social-links text-center">
-									<li><a href=""><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Nitish Pant</h4>
-						<span>Co-Founder & Alumnus</span>
-					</figure>
-					<!-- end single member -->
-					
-					<!-- single member -->
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/pence.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Pence Mataria</h5>
-								<p></p>
-								<ul class="social-links text-center">
-									<li><a href="https://github.com/PenceMataria"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="https://www.facebook.com/pence.mataria"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Pence Mataria</h4>
-						<span>Team Head</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/piyush.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Piyush Patel</h5>
-								<p>Work Hard Play Hard</p>
-								<ul class="social-links text-center">
-									<li><a href="https://github.com/da-piyushpatel"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="https://www.facebook.com/piyush.patel.319"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Piyush Patel</h4>
-						<span>Team Head</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/naveen.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Naveen Balaji</h5>
-								<p>Love is in the Air</p>
-								<ul class="social-links text-center">
-									<li><a href="https://github.com/naveenb"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="https://www.facebook.com/naveen.balaji.311"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Naveen Balaji</h4>
-						<span>Team Head</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/parivesh.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Parivesh Chaudhary</h5>
-								<p>Born to Fly</p>
-								<ul class="social-links text-center">
-									<li><a href="https://github.com/choudhary0parivesh"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="https://www.facebook.com/parivesh.choudhary.10"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Parivesh Chaudhary</h4>
-						<span>Senior Member</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/neha.png" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Neha Aggarwal</h5>
-								<p></p>
-								<ul class="social-links text-center">
-									<li><a href="https://github.com/neharak"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="https://www.facebook.com/profile.php?id=100026721948152"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Neha Aggarwal</h4>
-						<span>Senior Member</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/amartya.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Amartya Dash</h5>
-								<p></p>
-								<ul class="social-links text-center">
-									<li><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Amartya Dash</h4>
-						<span>Senior Member</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/kabeer.JPG" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Kshitij Kabeer</h5>
-								<p>Born to Fly Again</p>
-								<ul class="social-links text-center">
-									<li><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>kshitij Kabeer</h4>
-						<span>Senior Member</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/ashwin.jpeg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Ashwin Shenai</h5>
-								<p>Born to Fly Again</p>
-								<ul class="social-links text-center">
-									<li><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Ashwin Senai</h4>
-						<span>Senior Member</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/tanay.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Tanay Saha</h5>
-								<p>Born to Fly Again</p>
-								<ul class="social-links text-center">
-									<li><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Tanay Saha</h4>
-						<span>Senior Member</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="member-thumb">
-							<img src="img/team/aman.jpg" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
-								<h5>Aman Parekh</h5>
-								<p>Born to Fly Again</p>
-								<ul class="social-links text-center">
-									<li><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
-								</ul>
-							</figcaption>
-						</div>
-						<h4>Aman Parekh</h4>
-						<span>Senior Member</span>
-					</figure>
-
-					<!-- end single member -->
-					
-				</div>
-			</div>
-		</section>
-		
-        <!--
-        End Meet Our Team
-        ==================================== -->
-		
-		<br/><br/><br/><br/><br/><br/>
-
-		<!--
-        Some fun facts
-        ==================================== -->		
-		
-		<section id="facts" class="facts">
-			<div class="parallax-overlay">
-				<div class="container">
-					<div class="row number-counters">
-						
-						<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="1000ms">
-							<h2>Our Legacy</h2>
-							<!-- <div class="devider"><i class="fa fa-check-o fa-lg"></i></div> -->
-						</div>
-						
-						<!-- first count item -->
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
-							<div class="counters-item">
-								<i class="fa fa-clock-o fa-3x"></i>
-								<strong data-to="12">0</strong>
-								<!-- Set Your Number here. i,e. data-to="56" -->
-								<p>MONTHS</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-							<div class="counters-item">
-								<i class="fa fa-users fa-3x"></i>
-								<strong data-to="14">0</strong>
-								<!-- Set Your Number here. i,e. data-to="56" -->
-								<p>MEMBERS</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
-							<div class="counters-item">
-								<i class="fa fa-rocket fa-3x"></i>
-								<strong data-to="25">0</strong>
-								<!-- Set Your Number here. i,e. data-to="56" -->
-								<p> PROJECTS </p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-							<div class="counters-item">
-								<i class="fa fa-trophy fa-3x"></i>
-								<strong data-to="2">0</strong>
-								<!-- Set Your Number here. i,e. data-to="56" -->
-								<p>Awards</p>
-							</div>
-						</div>
-						<!-- end first count item -->
-				
-					</div>
-				</div>
-			</div>
-		</section>
-		
-        <!--
-        End Some fun facts
-        ==================================== -->
-		
-		<br/><br/><br/><br/><br/><br/>
-
-		<section id="sponsors" class="sponsors">
-			<div id="container" >
-				<div class="row" style="max-width: 80%; margin-left: 10%;">
-					<div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
-						<h2>Our Patron</h2>
-						<div class="devider"><i class="fa fa-check-o fa-lg"></i></div>
-					</div>
-					
-					<div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
-						<p>To acomplish our common dreams and to build a better future, we depend on your generous donations</p>
-					</div>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated item-client" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<a href="#"><img src="#" alt="" class="img-responsive"></a>
-						</div>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated item-client" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<a href="https://iitk.ac.in"><img src="img/sponsors/iitklogo.png" alt="Sponsor name" class="img-responsive"></a>
-						</div>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated item-client" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<a href="https://www.nvidia.com/en-us/"><img src="img/sponsors/nvidia.png" alt="Sponsor name" class="img-responsive"></a>
-						</div>
-					</figure>
-
-					<<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated item-client" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<a href="http://store-en.tmotor.com/"><img src="img/sponsors/tmotor.png" alt="Sponsor name" class="img-responsive"></a>
-						</div>
-					</figure>
-
-					<!--<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated item-client" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<a href="#"><img src="img/sponsors/icon-ubuntu.svg" alt="Sponsor name" class="img-responsive"></a>
-						</div>
-						<h4>Sponsor 1</h4>
-						<span>Sponsor 1</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated item-client" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<a href="#"><img src="img/sponsors/icon-dropbox.svg" alt="Sponsor name" class="img-responsive"></a>
-						</div>
-						<h4>Sponsor 1</h4>
-						<span>Sponsor 1</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated item-client" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<a href="#"><img src="img/sponsors/icon-dropbox.svg" alt="Sponsor name" class="img-responsive"></a>
-						</div>
-						<h4>Sponsor 1</h4>
-						<span>Sponsor 1</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated item-client" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<a href="#"><img src="img/sponsors/icon-dropbox.svg" alt="Sponsor name" class="img-responsive"></a>
-						</div>
-						<h4>Sponsor 1</h4>
-						<span>Sponsor 1</span>
-					</figure>
-
-					<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated item-client" data-wow-duration="500ms">
-						<div class="member-thumb">
-							<a href="#"><img src="img/sponsors/icon-dropbox.svg" alt="Sponsor name" class="img-responsive"></a>
-						</div>
-						<h4>Sponsor 1</h4>
-						<span>Sponsor 1</span>
-					</figure>-->
-				</div>
-			</div>
-		<section>
-
-		<br/><br/><br/><br/><br/><br/>
-
-		
-		<!--
-        Contact Us
-        ==================================== -->		
-		
-		<section id="contact" class="contact">
-			<div class="container">
-				<div class="row mb50">
-				
-					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-						<h2>Contact Us!</h2>
-						<div class="devider"><i class="fa fa-check-o fa-lg"></i></div>
-					</div>
-					
-					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-						<p>Suggestions are open</p>
-					</div>
-					
-					<!-- contact address -->
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
-						<div class="contact-address">
-							<h3>Let us know anything we can do</h3>
-							<p>We would like to listen if</p>
-							<p>there is anything we can do</p>
-							<p>to make ourselves better.</p>
-							<p>Contact: aerialroboticsiitk@gmail.com</p>
-						</div>
-					</div>
-					<!-- end contact address -->
-					
-					<!-- contact form -->
-					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
-						<div class="contact-form">
-							<h3>Say hello!</h3>
-							<form action="#" id="contact-form">
-								<div class="input-group name-email">
-									<div class="input-field">
-										<input type="text" name="name" id="name" placeholder="Name" class="form-control">
-									</div>
-									<div class="input-field">
-										<input type="email" name="email" id="email" placeholder="Email" class="form-control">
-									</div>
-								</div>
-								<div class="input-group">
-									<textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
-								</div>
-								<div class="input-group">
-									<input type="submit" id="form-submit" class="pull-right" value="Send message">
-								</div>
-							</form>
-						</div>
-					</div>
-					<!-- end contact form -->
-					
-				</div>
-			</div>
-			
-		</section>
-		
-        <!--
-        End Contact Us
-        ==================================== -->
-		
-		
-		<footer id="footer" class="footer">
-			<div class="container">
-				<div class="row text-center">
-				
-					<!-- <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms ">
-						<div>
-							<img src="img/logo-footer.png" alt="AerialRobotics-IITK">
-							<p>Aerial Robotics IITK</p>
-						</div>
-					</div>
-				
-					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-						<div class="footer-single">
-							<h6>Subscribe </h6>
-							<form action="#" class="subscribe">
-								<input type="text" name="subscribe" id="subscribe">
-								<input type="submit" value="&#8594;" id="subs">
-							</form>
-							<p>eusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-						</div>
-					</div>
-					<ul class="social-links text-center">
-								<li><a href="https://www.facebook.com/ariitk/"><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href="https://www.youtube.com/channel/UC0A50yxfhMAYRSOMTG87o6A?view_as=subscriber"><i class="fa fa-youtube fa-lg"></i></a></li>
-								<li><a href="https://instagram.com/ar.iitk"><i class="fa fa-instagram fa-lg"></i></a></li>
-								<li><a href="https://github.com/AerialRobotics-IITK"><i class="fa fa-github fa-lg"></i></a></li>
-							</ul>
-				
-					
-				
-					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-						<div class="footer-single">
-							<h6>Support</h6>
-							<ul>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Market Blog</a></li>
-								<li><a href="#">Help Center</a></li>
-								<li><a href="#">Pressroom</a></li>
-							</ul>
-						</div>
-					</div> -->
-					
-				</div>
-				<div class="wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
-						<div class="social-links text-center">
-							<ul>
-								<li class="col-md-1"><i class="fa fa-none"></i></li>								
-								<li class="col-md-2"><a href="https://www.facebook.com/ariitk/"><i class="fa fa-facebook  fa-3x"></i></a></li>
-								<li class="col-md-2"><a href="https://www.youtube.com/channel/UC0A50yxfhMAYRSOMTG87o6A?view_as=subscriber"><i class="fa fa-youtube  fa-3x"></i></a></li>
-								<li class="col-md-2"><a href="https://instagram.com/ar.iitk"><i class="fa fa-instagram  fa-3x"></i></a></li>
-								<li class="col-md-2"><a href="https://www.linkedin.com/company/aerial-robotics-iitk"><i class="fa fa-linkedin  fa-3x"></i></a></li>
-								<li class="col-md-2"><a href="https://github.com/AerialRobotics-IITK"><i class="fa fa-github fa-3x"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				<div class="row">
-					<div class="col-md-12">
-						<p class="copyright text-center" style="font-size: 8px;">
-							Copyright © 2015 <a href="http://themefisher.com/">Themefisher</a>. All rights reserved. Designed & developed by <a href="http://themefisher.com/">Themefisher</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</footer>
-		
-		<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
-
-		<!-- Essential jQuery Plugins
-		================================================== -->
-		<!-- Main jQuery -->
-		<!-- initilize firebase -->
-        <script src="js/jquery-1.11.1.min.js"></script>
-		<!-- Single Page Nav -->
-        <script src="js/jquery.singlePageNav.min.js"></script>
-		<!-- Twitter Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-		<!-- jquery.fancybox.pack -->
-        <script src="js/jquery.fancybox.pack.js"></script>
-		<!-- jquery.mixitup.min -->
-        <script src="js/jquery.mixitup.min.js"></script>
-		<!-- jquery.parallax -->
-        <script src="js/jquery.parallax-1.1.3.js"></script>
-		<!-- jquery.countTo -->
-        <script src="js/jquery-countTo.js"></script>
-		<!-- jquery.appear -->
-        <script src="js/jquery.appear.js"></script>
-		<!-- Contact form validation -->
-		<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script> -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
-		<!-- Google Map -->
-        <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
-		<!-- jquery easing -->
-        <script src="js/jquery.easing.min.js"></script>
-		<!-- jquery easing -->
-		<script src="js/wow.min.js"></script>
-        <script src="js/contact.js"></script>
-		<script>
-			var wow = new WOW ({
-				boxClass:     'wow',      // animated element css class (default is wow)
-				animateClass: 'animated', // animation css class (default is animated)
-				offset:       120,          // distance to the element when triggering the animation (default is 0)
-				mobile:       false,       // trigger animations on mobile devices (default is true)
-				live:         true        // act on asynchronously loaded content (default is true)
-			  }
-			);
-			wow.init();
-		</script> 
-		<!-- <script type="text/javascript">
-			$(function(){
-				/* ========================================================================= */
-				/*	Contact Form
-				/* ========================================================================= */
-				
-				$('#contact-form').validate({
-					rules: {
-						name: {
-							required: true,
-							minlength: 2
-						},
-						email: {
-							required: true,
-							email: true
-						},
-						message: {
-							required: true
-						}
-					},
-					messages: {
-						name: {
-							required: "come on, you have a name don't you?",
-							minlength: "your name must consist of at least 2 characters"
-						},
-						email: {
-							required: "no email, no message"
-						},
-						message: {
-							required: "um...yea, you have to write something to send this form.",
-							minlength: "thats all? really?"
-						}
-					}
-				});
-			});
-		</script> -->
-		<!-- Custom Functions -->
-        <script src="js/custom.js"></script>
-    </body>
-</html>
+</body></html><!--A WEBSITE EDITED BY 7LAMPEROUGE-->
