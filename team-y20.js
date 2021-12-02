@@ -1,7 +1,7 @@
 const teamInfo = [
   {
     name: "Akshit Verma",
-    role: "Member & Creative Member",
+    role: "Junior Member & Creative Member",
     image:
       "https://drive.google.com/file/d/1BUYjHQ8PucCFuucpzHEcxMx_FBZwQAnM/view?usp=sharing/preview",
     fb: "https://www.facebook.com/profile.php?id=100057273051263",
@@ -11,7 +11,7 @@ const teamInfo = [
   },
   {
     name: "B.Anshuman",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1eqt2_XNJm5h0ocQC8X4_wl7tPtpSVb1u/preview",
     fb: "https://www.facebook.com/b.anshuman1305",
@@ -21,7 +21,7 @@ const teamInfo = [
   },
   {
     name: "Pratyush Gupta",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1__M-R2lubG54OKCB51NeDQe18OXegLIM/preview",
     fb: "https://www.facebook.com/pratyush.gupta.39566/",
@@ -32,7 +32,7 @@ const teamInfo = [
 
   {
     name: "Aryan Jain",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1AWLpQfnz9rVQh6fK0Bd8LRbJRmIkdEY0/preview",
     fb: "https://www.facebook.com/profile.php?id=100056025635847",
@@ -42,7 +42,7 @@ const teamInfo = [
   },
   {
     name: "Saransh Shivhare",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=13zAhNK-TD2extQhdsxyfN_SbPwV5cHUo/preview",
     fb: "https://www.facebook.com/profile.php?id=100006630047839",
@@ -53,7 +53,7 @@ const teamInfo = [
 
   {
     name: "Rahul Rustagi",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1zNRNrS9weGmQd5ehODrEezlGpU8ylwlo/preview",
     fb: "https://www.facebook.com/profile.php?id=100002427998692",
@@ -63,7 +63,7 @@ const teamInfo = [
   },
   {
     name: "Adit Jain",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1_4BT9BzIcSLDCVYn4YxY8kS4U7EOkSjo/preview",
     fb: "https://www.facebook.com/adit.jain.1675/",
@@ -73,7 +73,7 @@ const teamInfo = [
   },
   {
     name: "Rajarshi Dutta",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1PNGZ4DeiVqO6VPuaZQwipgRIvk5pDGpm/preview",
     fb: "https://www.facebook.com/rajarshi.dutta.507",
@@ -83,7 +83,7 @@ const teamInfo = [
   },
   {
     name: "Sharath Kumar V",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1KKbbFUEqE70dqFx-t8D54e1l7ns47PCj/preview",
     fb: "https://www.facebook.com/sharath.kumarv.39/",
@@ -94,7 +94,7 @@ const teamInfo = [
 
   {
     name: "Ujwal Jyot Panda",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1uldEaiFgD4v9pceKbbvihcDa2aoS7zCK/preview",
     fb: "https://www.facebook.com/ujwaljyot.panda.9/",
@@ -104,7 +104,7 @@ const teamInfo = [
   },
   {
     name: "Aditya Anand",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1vQxYXNDecI9KEW6fJi-RacRBGQBQ8Muy/preview",
     fb: "https://www.facebook.com/adityaanandaa28",
@@ -114,7 +114,7 @@ const teamInfo = [
   },
   {
     name: "Atharva Dehadraya",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1J225F5Nv4Qae0RZOo-gGhfXACMfY1A2_/preview",
     fb: "https://www.facebook.com/atharva.dehadraya",
@@ -124,7 +124,7 @@ const teamInfo = [
   },
   {
     name: "Batta Soumith",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1ERS7nwL-12_jEbaAg0mhN3JW5KBdAmJf/preview",
     fb: "https://www.facebook.com/soumith.monu",
@@ -134,7 +134,7 @@ const teamInfo = [
   },
   {
     name: "Rakshit Yash ",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1ES5RpMYZ__jCzkt0OMQSC7KNbf3iQm9X/preview",
     fb: "https://www.facebook.com/rakshit.yash.142",
@@ -144,7 +144,7 @@ const teamInfo = [
   },
   {
     name: "L Gokulnath",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1vo5mZtGBRjBkpMw-qrjsvBz8i8rx0KLN/preview",
     fb: "https://www.facebook.com/gokulnath.l.75/",
@@ -154,7 +154,7 @@ const teamInfo = [
   },
   {
     name: "Aryaman badkul",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1uOEEOwzM-KHXXNBAZk8F2cEBwA0yV8Y4/preview",
     fb: "https://www.facebook.com/aryaman.badkul/",
@@ -164,7 +164,7 @@ const teamInfo = [
   },
   {
     name: "Karan Jeyasankar",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1ZCzHcptFf7C-6JM9H-83lobmxR_AdAng/preview",
     fb: "https://www.facebook.com/karan.jey.37/",
@@ -174,7 +174,7 @@ const teamInfo = [
   },
   {
     name: "Aryan Sharma",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=12lTqwgNOOBvr8XG9I1qz_eXscefTI4-8/preview",
     fb: "https://www.facebook.com/profile.php?id=100056630960019",
@@ -184,7 +184,7 @@ const teamInfo = [
   },
   {
     name: "Sujal Harkut",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1YrviSnsFt4OEks8BU8PrHKLR9p11pTdJ/preview",
     fb: "https://www.facebook.com/sujalharkut",
@@ -194,7 +194,7 @@ const teamInfo = [
   },
   {
     name: "Dev Barbhaya",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1rdx6-wvqzKVIAbEmLtH2Lmc2i_Ui5_iS/preview",
     fb: "https://www.facebook.com/dev.barbhaya.18/",
@@ -204,7 +204,7 @@ const teamInfo = [
   },
   {
     name: "Jaya Gupta",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=15GxtRRq3NIA_dLwI-EtzNlJjmds97qz3/preview",
     fb: "https://www.facebook.com/27JayaGupta",
@@ -214,7 +214,7 @@ const teamInfo = [
   },
   {
     name: "Arth Banka",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=1gaeBl3Z-5J7BoiIxJ10ho4emRZYFmUhm/preview",
     fb: "https://www.facebook.com/arth.banka/",
@@ -224,7 +224,7 @@ const teamInfo = [
   },
   {
     name: "Subhrajit Mishra",
-    role: "Member",
+    role: "Junior Member",
     image:
       "https://drive.google.com/u/0/open?usp=forms_web&id=11hl_wdN1knF6qX8O3bQyg2HfrB_dJMtq/preview",
     fb: "https://www.facebook.com/subhrajit.mishra.37017",
