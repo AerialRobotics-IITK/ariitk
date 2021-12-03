@@ -240,6 +240,6 @@ teamInfo.forEach((member) => {
   const div = document.createElement("div");
   div.classList.add("col-md-6");
   div.classList.add("col-lg-4");
-  div.innerHTML = `<div class=\"team-minimal\"><div class=\"team-minimal-figure\"><img src=\"images/team/y20/${member.name}.jpg" alt=\"\"  /><ul class=\"team-minimal-soc-list\"><li><a class=\"icon icon-lg fa-facebook\" href=\"${member.fb}"></a></li><li><a class=\"icon icon-lg fa-instagram\" href=\"${member.insta}\"></a></li><li><a class=\"icon icon-lg fa-linkedin\" href=\"${member.linkedin}\"></a></li></ul></div><div class=\"team-minimal-caption\"><h4><a class=\"team-name\"><spanstyle=\"font-family:Rajdhani;letter-spacing:-34;font-weight:bolder;\">${member.name}</span></a></h4><p style=\"font-family:'SF UI Display Light';\">${member.role}</p></div></div>`;
+  div.innerHTML = `<div class="team-minimal"><div class="team-minimal-figure"><img src="images/team/y20/${member.name}.jpg" alt="" width="370" height="395" style="width:370px; height:440px; object-fit: fill;" /><ul class="team-minimal-soc-list"><li><a class="icon icon-lg fa-facebook" href="${member.fb}"></a></li><li><a class="icon icon-lg fa-instagram" href="${member.insta}"></a></li><li><a class="icon icon-lg fa-linkedin" href="${member.linkedin}"></a></li></ul></div><div class="team-minimal-caption"><h4><a class="team-name"><spanstyle="font-family:Rajdhani;letter-spacing:-34;font-weight:bolder;">${member.name}</span></a></h4><p style="font-family:'SF UI Display Light';">${member.role}</p></div></div>`;
   element.appendChild(div);
 });
