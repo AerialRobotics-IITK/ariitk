@@ -1,0 +1,47 @@
+---
+import LogoLight from '../images/symmetric_logo_light-07.png'
+import LogoDark from '../images/symmetric_logo_dark-07-08.png'
+import LogoBlack from '../images/symmetric_logo_black-09.png'
+import LogoWhite from '../images/symmetric_logo_white-10.png'
+export interface Props {
+    width?:string,
+    speed?:string,
+    type?:string
+}
+let Logo;
+const {width = "30rem", speed = "2000ms", type = "white"} = Astro.props as Props;
+if (type == "white") {
+    Logo = LogoWhite;
+} else if (type == "black") {
+    Logo = LogoBlack;
+} else if (type == "dark") {
+    Logo = LogoDark;
+} else if (type == "light") {
+    Logo = LogoLight;
+}
+---
+
+<div class="logo-spinner">
+    <img src={Logo} alt="">
+</div>
+
+<style define:vars={{ width, speed }}>
+    .logo-spinner > img {
+        border-radius: 50%;
+        width: var(--width);
+    }
+    
+    @-moz-keyframes spin {
+        to { -moz-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+        to { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+        to {transform:rotate(360deg);}
+    }
+
+    .logo-spinner > img {
+        animation: spin var(--speed) infinite;
+    }
+</style>

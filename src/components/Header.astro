@@ -1,0 +1,113 @@
+---
+import Loader from '../components/Loader.astro';
+---
+
+<header class="header">
+    <div class="container">
+        <a href="/">
+            <div class="logo-outer">
+                <div class="logo">
+                    <Loader width={"6rem"} type={"dark"} speed={"25000ms"} />
+                </div>
+                <div class="name">
+                    ARIITK
+                </div>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/showcase">Showcase</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li class="hidden-nav"><a href="#footer">Links</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+.logo-outer {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+.name {
+    color: white;
+    font-size: 2.3rem;
+    margin-left: -0.1rem;
+    margin-top: 3.4rem;
+}
+.logo {
+    margin-top: 1.5rem;
+    width: 8rem; /* or whatever width you want. */
+    height: 8rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+.logo > img {
+    height: 6rem;
+}
+    /* Header */
+.hidden-nav {
+    display: none;
+}
+
+nav {
+    overflow: hidden;
+}
+
+.header {
+  height: 6.5rem;
+  background: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header nav ul {
+  display: flex;
+}
+
+.header nav ul li {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+.header nav ul li a {
+  color: #fff;
+}
+.header nav ul li a:hover {
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+@media (max-width: 900px) {
+  .name {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+    .header nav ul :nth-child(3) {
+        display: none;
+    }
+    .header nav ul :nth-child(4) {
+        display: none;
+    }
+    .header nav ul :nth-child(5) {
+        display: none;
+    }
+    .hidden-nav {
+        display: block;
+    }
+}
+</style>

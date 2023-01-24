@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Loader from '../components/Loader.astro'
+---
+
+<Layout title="Aerial Robotics IITK">
+
+    <div class="container-idx">
+        <!-- <Loader width={"30rem"} type={"light"} /> -->
+        <div class="content">Aerial Robotics IITK</div>
+    </div>
+
+</Layout>
+
+<style>
+
+    .container-idx {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0 30px;    
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    .container-idx > .content {
+        /* margin-top: 10rem; */
+        z-index: -1;
+        font-size: 7rem;
+    }
+    
+
+</style>

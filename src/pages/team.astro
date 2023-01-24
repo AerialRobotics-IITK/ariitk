@@ -1,0 +1,52 @@
+---
+import TeamMember from '../components/Member.astro';
+import TwoPanels from '../components/TwoPanels.astro';
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Meet the Team">
+    
+    <TwoPanels title="Y20s">
+        <TeamMember photo="https://picsum.photos/400?random=2" name="Akshit Verma" title="Team Member" />
+        <TeamMember photo="https://picsum.photos/400?random=3" name="Pratyush Gupta" title="Team Member" />
+        <TeamMember photo="https://picsum.photos/400?random=4" name="Rahul Rustagi" title="Team Member" />
+        <TeamMember photo="https://picsum.photos/400?random=5" name="Rajarshi Dutta" title="Team Member" />
+        <TeamMember photo="https://picsum.photos/400?random=7" name="B.Anshuman" title="Team Member" />
+    </TwoPanels>
+
+    <TwoPanels title="Y19s">
+        <TeamMember photo="https://picsum.photos/400?random=8" name="Ishir Roongta" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=9" name="Rohan Baijal" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=10" name="Varun Khatri" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=11" name="Piyush Kumar" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=12" name="Atharva Umbarkar" title="Team Member"/>
+    </TwoPanels>
+
+    <TwoPanels title="Y18s">
+        <TeamMember photo="https://picsum.photos/400?random=13" name="Ashwin Shenai" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=14" name="Kshitij Kabeer" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=15" name="Parivesh Choudhary" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=16" name="Amartya Dash" title="Team Member"/>
+    </TwoPanels>
+
+    <TwoPanels title="Y17s">
+        <TeamMember photo="https://picsum.photos/400?random=17" name="Pence Mataria" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=18" name="Piyush Patel" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=19" name="Naveen Balaji" title="Team Member"/>
+    </TwoPanels>
+
+    <TwoPanels title="Y16s">
+        <TeamMember photo="https://picsum.photos/400?random=20" name="Gajendra Nagar" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=21" name="Prashant Singh" title="Team Member"/>
+        <TeamMember photo="https://picsum.photos/400?random=22" name="Nitish Pant" title="Team Member"/>
+    </TwoPanels>
+</Layout>
+
+<style>
+    TeamMember {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+</style>
