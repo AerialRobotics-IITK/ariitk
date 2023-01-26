@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-let posts = await Astro.glob('../posts/*.md');
+let posts = await Astro.glob('../../posts/*.md');
 
 function sortByKey(array:any, key:string) {
     return array.sort(function(a:any, b:any) {
@@ -131,6 +131,15 @@ posts = sortByKey(posts, 'file');
 
     .new-posts > .post {
         padding: 1rem 1rem;
+    }
+
+    @media (max-width: 600px) {
+        .doing {
+            flex-direction: column;
+        }
+        .new-posts {
+            flex-direction: column;
+        }
     }
 
 </style>

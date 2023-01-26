@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-const posts = await Astro.glob('../posts/*.md');
+const posts = await Astro.glob('../../posts/*.md');
 ---
 
 <Layout title="Anecdotes" showPicture={true} background={"/ironman_bw.JPG"}>

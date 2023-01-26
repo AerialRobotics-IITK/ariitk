@@ -2,7 +2,7 @@
 import BlogLayout from '../layouts/BlogLayout.astro';
 import Card from '../components/Card.astro';
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../posts/*.md');
+  const posts = await Astro.glob('../../posts/*.md');
   return posts.map(post => ({
     params: {
       slug: post.frontmatter.slug
