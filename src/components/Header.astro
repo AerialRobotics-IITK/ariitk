@@ -3,7 +3,7 @@ import Loader from '../components/Loader.astro';
 ---
 
 <header class="header">
-    <div class="container">
+    <div class="container-header">
         <a href="/">
             <div class="logo-outer">
                 <div class="logo">
@@ -16,12 +16,12 @@ import Loader from '../components/Loader.astro';
         </a>
         <nav>
             <ul>
+                <li class="hidden-nav"><a href="/links">Links</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/team">Team</a></li>
                 <li><a href="/showcase">Showcase</a></li>
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li class="hidden-nav"><a href="#footer">Links</a></li>
             </ul>
         </nav>
     </div>
@@ -70,7 +70,7 @@ nav {
   z-index: 100;
 }
 
-.header .container {
+.header .container-header {
   position: sticky;
   height: 100%;
   display: flex;
@@ -103,6 +103,9 @@ nav {
 }
 
 @media (max-width: 650px) {
+    .header nav ul :nth-child(2) {
+        display: none;
+    }
     .header nav ul :nth-child(3) {
         display: none;
     }
