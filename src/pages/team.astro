@@ -1,9 +1,9 @@
 ---
 import TeamMember from '../components/Member.astro';
-import TwoPanels from '../components/TwoPanels.astro';
+import TwoPanels from '../components/TwoPanelsTitlePicture.astro';
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Meet the Team">
+<Layout title="Meet the Team" showPicture={true} background={"/pavillion_team.jpg"}>
     
     <TwoPanels title="Y20s">
         <TeamMember photo="https://picsum.photos/400?random=2" name="Akshit Verma" title="Team Member" />

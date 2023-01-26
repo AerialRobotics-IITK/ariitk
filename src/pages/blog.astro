@@ -4,7 +4,7 @@ import Card from '../components/Card.astro';
 const posts = await Astro.glob('../posts/*.md');
 ---
 
-<Layout title="Astro Blog">
+<Layout title="Anecdotes" showPicture={true} background={"/ironman_bw.JPG"}>
   <section class="page-content">
     <div class="container">
       {posts.map(post => (

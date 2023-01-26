@@ -5,7 +5,7 @@ import Gajendra from "../images/gajendra_gazing.jpg"
 
 ---
 
-<Layout title="Contact Us">
+<Layout title="Contact Us" showPicture={true} background={"/gajendra_gazing.jpg"}>
     <div class="container">
         <Card>
             <h3>
@@ -30,12 +30,12 @@ import Gajendra from "../images/gajendra_gazing.jpg"
             </h3>
         </Card>
     </div>
-    <div class="container bye-img">
+    <!-- <div class="container bye-img">
         <div class="content">
             Get <span class="color">Involved</span>
         </div>
         <img src={Gajendra} alt="">
-    </div>
+    </div> -->
 </Layout>
 
 <style>
@@ -47,8 +47,8 @@ import Gajendra from "../images/gajendra_gazing.jpg"
     .container a {
         text-decoration: underline;
     }
-    .bye-img {
-        margin-left: 12rem;
+    /* .bye-img {
+        position: relative;
         justify-items: center;
         width: 100%;
         height: 50vh;
@@ -57,9 +57,8 @@ import Gajendra from "../images/gajendra_gazing.jpg"
     .bye-img > .content {
         position: absolute;
         font-size: 60px;
-        top: 60%;
         font-weight: 600;
-    }
+    } */
     img {
         margin-top: -13rem;
         margin-left: -4rem;

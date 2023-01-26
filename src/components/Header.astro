@@ -10,7 +10,7 @@ import Loader from '../components/Loader.astro';
                     <Loader width={"6rem"} type={"dark"} speed={"25000ms"} />
                 </div>
                 <div class="name">
-                    ARIITK
+                        ARIITK
                 </div>
             </div>
         </a>
@@ -38,6 +38,7 @@ import Loader from '../components/Loader.astro';
     font-size: 2.3rem;
     margin-left: -0.1rem;
     margin-top: 3.4rem;
+    font-weight: 700;
 }
 .logo {
     margin-top: 1.5rem;
@@ -60,12 +61,17 @@ nav {
 }
 
 .header {
+  position: fixed;
+  width: 100vw;
   height: 6.5rem;
   background: var(--color-primary);
+  /* margin-top: 1.8rem; */
   margin-bottom: 2rem;
+  z-index: 100;
 }
 
 .header .container {
+  position: sticky;
   height: 100%;
   display: flex;
   align-items: center;
