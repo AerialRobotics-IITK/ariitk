@@ -9,7 +9,7 @@ function sortByKey(array:any, key:string) {
         return ((x > y) ? -1 : ((x < y) ? 1 : 0));
     });
 }
-posts = sortByKey(posts, 'frontmatter.date');
+posts = sortByKey(posts, 'file');
 ---
 
 <Layout title="Aerial Robotics IITK" showPicture={false} background={"/UAVs_Merge.mp4"} text={"We build drones so you don't have to"}>
@@ -20,6 +20,30 @@ posts = sortByKey(posts, 'frontmatter.date');
 
     <div class="container">
         <h1>What's New?</h1>
+        <div class="new-posts">
+            <!-- Show latest 2 blogs -->
+            <!-- Latest is defined according to blog file number -->
+            <div class="post">
+                {<Card>
+                    <h3>{posts[0].frontmatter.title}</h3>
+                    <div>
+                    Written by <strong>{posts[0].frontmatter.author} </strong> on {new Date(posts[0].frontmatter.date).toLocaleDateString()}
+                    </div>
+                    <p>{posts[0].frontmatter.excerpt}</p>  
+                    <a class="btn" href={`/${posts[0].frontmatter.slug}`}>Read More</a>
+                </Card>}
+            </div>
+            <div class="post">
+                {<Card>
+                    <h3>{posts[1].frontmatter.title}</h3>
+                    <div>
+                    Written by <strong>{posts[1].frontmatter.author} </strong> on {new Date(posts[1].frontmatter.date).toLocaleDateString()}
+                  </div>
+                    <p>{posts[1].frontmatter.excerpt}</p>  
+                    <a class="btn" href={`/${posts[1].frontmatter.slug}`}>Read More</a>
+                </Card>}
+            </div>
+        </div>
     </div>
 
 </Layout>
@@ -29,7 +53,14 @@ console.log("Posts are", posts);
 </script>
 
 <style>
+    .new-posts {
+        display: flex;
+        flex-direction: row;
+    }
 
+    .new-posts > .post {
+        padding: 2rem 1rem;
+    }
     .container-idx {
         max-width: 1500px;
         margin: 0 auto;
