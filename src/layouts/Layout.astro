@@ -1,12 +1,12 @@
 ---
-const width = 25;
+const height = 30;
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Loader from '../components/Loader.astro';
 import Showcase from '../components/Showcase.astro';
 import '../styles/global.css';
-const widthCSS = `${width}rem`;
-const loaderWidthCSS = `${width/2}rem`;
+const heightCSS = `${height}vw`;
+const loaderHeightCSS = `${height/2}vw`;
 export interface Props {
 	title: string;
 	showcase?: boolean;
@@ -30,7 +30,7 @@ const { showPicture = true, title, showcase = true, text = "", background = "" }
 	<body>
 		<div class="loader-bg">
 			<div class="loader">
-				<Loader width={widthCSS} type={"white"}></Loader>
+				<Loader height={heightCSS} type={"white"}></Loader>
 			</div>
 		</div>
 		<Header />
@@ -68,7 +68,7 @@ const { showPicture = true, title, showcase = true, text = "", background = "" }
 	</script>
 </html>
 
-<style is:global define:vars={{  loaderWidthCSS }}>
+<style is:global define:vars={{  loaderHeightCSS }}>
 	.loader-bg {
 		position: fixed;
 		width: 100%;
@@ -78,8 +78,8 @@ const { showPicture = true, title, showcase = true, text = "", background = "" }
 	}
 	.loader {
 		position: absolute;
-		top: calc(50vh - var(--loaderWidthCSS));
-		left: calc(50vw - var(--loaderWidthCSS));
+		top: calc(50vh - var(--loaderHeightCSS));
+		left: calc(50vw - var(--loaderHeightCSS));
 	}
 	.filler {
 		position: relative;

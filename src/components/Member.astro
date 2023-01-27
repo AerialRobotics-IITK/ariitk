@@ -35,6 +35,7 @@ const { photo = "https://picsum.photos/400?random=1", name, title } = Astro.prop
     .content {
         background-color: white;
         border: solid 1px black;
+        border-radius: 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -57,9 +58,6 @@ const { photo = "https://picsum.photos/400?random=1", name, title } = Astro.prop
     @media (max-width: 600px) {
         .card {
             margin-left: -2rem;
-        }
-        .picture {
-            width: 200px;
         }
         .content {
             padding: 0rem;

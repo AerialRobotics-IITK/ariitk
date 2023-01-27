@@ -4,12 +4,12 @@ import LogoDark from '/symmetric_logo_dark-07-08.png'
 import LogoBlack from '/symmetric_logo_black-09.png'
 import LogoWhite from '/symmetric_logo_white-10.png'
 export interface Props {
-    width?:string,
+    height?:string,
     speed?:string,
     type?:string
 }
 let Logo;
-const {width = "30rem", speed = "2000ms", type = "white"} = Astro.props as Props;
+const {height = "30vh", speed = "2000ms", type = "white"} = Astro.props as Props;
 if (type == "white") {
     Logo = LogoWhite;
 } else if (type == "black") {
@@ -25,10 +25,10 @@ if (type == "white") {
     <img src={Logo} alt="">
 </div>
 
-<style define:vars={{ width, speed }}>
+<style define:vars={{ height, speed }}>
     .logo-spinner > img {
         border-radius: 50%;
-        width: var(--width);
+        width: var(--height);
     }
     
     @-moz-keyframes spin {

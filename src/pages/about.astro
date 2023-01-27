@@ -4,22 +4,22 @@ import Card from '../components/Card.astro'
 ---
 <Layout title="About ARIITK" showPicture={true} background={"/jetson_jbl.jpg"}>
     <div class="container">
-        <!-- <Card> -->
-            <h2>Who we are?</h2>
-            <p>
-                ARIITK is a student vehicle project in the Faculty of Engineering. We design and build our own UAV systems, typically of similar size to radio controlled model airplanes. Every year a system is designed, built, tested and then competed internationally. We offer the opportunity for students to put theory into practice and gain valuable design and management experience.
-                
-                Some opportunities in the club include:
-                <ul>
-                    <li>Making new friends</li>
-                    <li>Designing airframe structures</li>
-                    <li>Programing autopilot behavior</li>
-                    <li>Coding on an embedded system platform</li>
-                    <li>Creating electrical systems to power the plane</li>
-                    <li>Traveling internationally</li>
-                </ul>    
+        <center><h1>Who we are?</h1></center>
+        <Card>
+        ARIITK is a student vehicle project in the Faculty of Engineering. We design and build our own UAV systems, typically of similar size to radio controlled model airplanes. Every year a system is designed, built, tested and then competed internationally. We offer the opportunity for students to put theory into practice and gain valuable design and management experience.
+        
+        Some opportunities in the club include:
+                <div class="points">
+                    <ll>
+                        <li>Making new friends</li>
+                        <li>Designing airframe structures</li>
+                        <li>Programing autopilot behavior</li>
+                        <li>Coding on an embedded system platform</li>
+                        <li>Creating electrical systems to power the plane</li>
+                        <li>Traveling internationally</li>
+                    </ll>
+                </div>
                 All of these are awesome resume boosters!
-            </p>
-        <!-- </Card> -->
+            </Card>
     </div>
 </Layout>

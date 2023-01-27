@@ -93,18 +93,17 @@
   .page-content h3 {
     font-size: 25px;
   }
-  
-  @media (max-width: 960px) {
-    .logos-small {
-      display: block;
-      margin: auto;
-    }
-    .logos {
-      display: none;
-    }
+
+  center > h1 { /* Making a title */
+    margin: 2rem 0rem 1rem 0rem;
+    font-size: 4rem;
+  }
+
+  .points { /* For a list */
+    padding: 1rem 2rem;
   }
   
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     h1,
     h2 {
         text-align: center;

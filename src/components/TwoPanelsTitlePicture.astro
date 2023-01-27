@@ -35,14 +35,14 @@ const { title } = Astro.props as Props;
     .flex-item{
         margin-left: 3rem;
         display: grid;
-        grid-template-columns: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 1fr);
         /* grid-auto-flow: column; */
         justify-content: center;
         align-content: center;
         column-gap: 2rem;
         row-gap: 1rem;
     }
-    @media (max-width: 960px) {
+    @media (max-width: 900px) {
         .row {
             flex-direction: column;
         }

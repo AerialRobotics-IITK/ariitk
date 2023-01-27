@@ -15,7 +15,7 @@ posts = sortByKey(posts, 'file');
 <Layout title="Aerial Robotics IITK" showPicture={false} background={"/UAVs_Merge.mp4"} text={"We build drones so you don't have to"}>
 
     <div class="container">
-        <h1>What's New?</h1>
+        <center><h1>What's New?</h1></center>
         <div class="new-posts">
             <!-- Show latest 2 blogs -->
             <!-- Latest is defined according to blog file number -->
@@ -43,7 +43,7 @@ posts = sortByKey(posts, 'file');
     </div>
 
     <div class="container">
-        <h1>What We Do?</h1>
+        <center><h1>What We Do?</h1></center>
         <div class="doing">
             <div class="thing">
                 <!-- Made by surang -->
@@ -85,23 +85,33 @@ posts = sortByKey(posts, 'file');
     </div>
 
     <div class="container">
-        <h1>Our Competitions?</h1>
+        <center><h1>Our Competitions?</h1></center>
         <p>
-            Throughout the year, ARIITK designs and develops autonomous aircraft for student competitions, where we perform a full flight demonstration of our aircraft. We attend the following competitions each year:
+            Throughout the year, ARIITK designs and develops autonomous aircraft for student competitions, where we perform a full flight demonstration of our aircraft. We have attended the following competitions:
         </p>
-        <ul>
-            <li>
-                USC:  Unmanned Systems Canada
-            </li>
-            <li>
-                AUVSI:  Association of Unmanned Vehicle Systems International
-            </li>
-        </ul>
+        <div class="points">
+            <div class="point">
+                <a href="https://interiit-tech.org/" class="btn">InterIIT Techmeet</a>
+                Podium finish streak of 5 years!
+            </div>
+            <div class="point">
+                <a href="https://www.imavs.org/" class="btn">IMAV</a> 
+                International Micro Air Vehicles, Conferences and Competitions
+            </div>
+        </div>
     </div>
 
 </Layout>
 
 <style>
+    .points {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .points > .point {
+        margin: 0rem 0rem 1rem 0rem;
+    }
     .doing {
         display: flex;
         flex-direction: row;
@@ -134,10 +144,13 @@ posts = sortByKey(posts, 'file');
     }
 
     @media (max-width: 600px) {
-        .doing {
+        .new-posts {
             flex-direction: column;
         }
-        .new-posts {
+    }
+    
+    @media (max-width: 900px) {
+        .doing {
             flex-direction: column;
         }
     }

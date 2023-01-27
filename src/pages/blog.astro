@@ -6,7 +6,15 @@ const posts = await Astro.glob('../../posts/*.md');
 
 <Layout title="Anecdotes" showPicture={true} background={"/ironman_bw.JPG"}>
   <section class="page-content">
+    <center>
+      <h1>Documentation</h1>
+      <Card>
+        <p>We keep documenting our work at Aerial Robotics GitBook!</p><a href="https://aerial-robotics-iitk.gitbook.io/wiki/" class="btn">Check it out</a>
+      </Card>
+    </center>
     <div class="container">
+      <center><h1>Blogs</h1></center>
+      <p>
       {posts.map(post => (
         <Card>
           <h3>{post.frontmatter.title}</h3>
@@ -17,6 +25,10 @@ const posts = await Astro.glob('../../posts/*.md');
           <a class="btn" href={`/${post.frontmatter.slug}`}>Read More</a>
         </Card>
       ))}
+      </p>
     </div>
   </section>
 </Layout>
+
+<style>
+</style>
