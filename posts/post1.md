@@ -1,18 +1,28 @@
 ---
-title: ARIITK_1.0
+title: ARIITK 20.0
 slug: ariitk-1-0
-excerpt: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptate, quae, quod, voluptates quibusdam voluptatibus quidem voluptatum quos quia quas nesciunt. Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam, quae.
-date: 2022-05-13
-author: John Doe
+excerpt: This is the inaugural post stating that we're back on!  
+date: 2022-01-26
+author: ba-13
 image: https://pixlr.com/images/index/remove-bg.webp
 ---
  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis porttitor mauris. Sed quis nulla malesuada, imperdiet ipsum eleifend, pharetra lacus. Maecenas vehicula tincidunt lorem sed elementum. Vestibulum luctus consectetur risus at aliquet. Donec ac sapien malesuada, congue neque ultrices, fringilla velit. Suspendisse potenti. Maecenas ac elit sem. Suspendisse malesuada ligula eu efficitur vulputate. Mauris tincidunt urna a elit ultricies porttitor. Donec vestibulum nibh euismod lectus rutrum sollicitudin. Aliquam luctus urna volutpat erat malesuada sodales. Etiam dapibus interdum est, sit amet aliquet turpis accumsan non. Sed tincidunt felis ut magna tincidunt, sit amet mollis neque ultricies. Duis mollis, libero sit amet dictum faucibus, mauris sapien volutpat est, sit amet molestie enim eros et lorem.
+Hello World.
 
-Morbi interdum mi at nisl aliquam, eu tristique diam efficitur. Etiam at placerat elit. Phasellus a risus pretium, vulputate lectus ut, eleifend ex. Proin facilisis odio a magna sodales rutrum. Fusce venenatis mi ipsum, nec sagittis augue dapibus nec. Proin vel enim varius, sollicitudin mauris id, viverra tortor. Phasellus feugiat, ex commodo malesuada congue, elit ipsum lacinia velit, et fermentum nunc nunc id quam. Proin at quam vitae dui lobortis congue eu elementum quam. Ut mattis, magna vitae condimentum dignissim, ligula nisl fermentum lectus, sed lobortis magna lectus a enim. Quisque vitae purus rutrum, euismod urna auctor, egestas sem. Aenean dictum, nisl vel imperdiet mattis, urna justo varius massa, sed sollicitudin dui massa non eros. Sed mi elit, sagittis sit amet turpis in, faucibus consectetur justo. Nam non tincidunt tortor, vel pellentesque tellus. Integer posuere nisi vel porta malesuada. Etiam scelerisque quam arcu, quis lacinia magna accumsan ac.
+This is an inaugural post stating that we're back on!  
+Yes, Team ARIITK is full on track to serve as **the group** of undergraduates in IITK that has complete autonomous aerial vehicle solutions.  
+Our team founders had joined up together to tackle a novel PS, and we are trying to continue the same.  
+Due to the pandemic situation, the team had been passed down, but it forgot how to handle an actual unmanned vehicle. Since October 2022, we restarted handling the inventory laid at our hands, and have come a long way since.
+Briefing the inventory, we received the *inheritance* of the following:
 
-In dignissim interdum diam, eget iaculis libero venenatis vel. Aliquam tristique finibus pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus viverra mollis consectetur. Donec eleifend sem sit amet vulputate fermentum. Nulla tincidunt, libero in efficitur euismod, lorem augue tristique mi, a imperdiet nunc ipsum eu ligula. Cras aliquam dictum est eu bibendum. Quisque viverra mauris augue, sit amet sollicitudin quam bibendum non. Morbi aliquam placerat vestibulum. Nulla facilisi. In in dolor id ex molestie luctus non a tortor. Sed lacus sem, ornare dignissim tellus ut, dictum sodales erat. Nulla facilisi. Maecenas mollis lacus in dolor interdum ultrices. Curabitur dignissim orci dolor, id imperdiet libero vulputate eget.
+1. Computing Units:
+    - Two Jetson TX2s, One Odroid H2, Two Odroid XU4s, One Xilinx, One Intel Celeron NUC
+2. Motors:
+    - AirGear 880kv, KDE 920kv, Antigravity, EMax
 
-Curabitur eget augue sed leo tempor cursus a ac nunc. Quisque maximus aliquet nisl, sed auctor tellus venenatis at. Nam id efficitur lacus. Duis mattis laoreet tempus. Suspendisse tellus nisi, porta nec nulla vitae, gravida euismod magna. Sed maximus suscipit dui at commodo. Nunc arcu sapien, auctor in porttitor quis, porta nec magna. Ut sed augue vel libero placerat aliquet sit amet in enim. Morbi id malesuada magna. In iaculis gravida fermentum. Suspendisse sed magna sem.
+### ...and more Confidential data
 
-Etiam eu tortor placerat, eleifend quam vel, sollicitudin tellus. Fusce at eros vestibulum, finibus augue auctor, vulputate metus. Morbi porta felis sed vehicula vulputate. Cras porta laoreet urna, ac eleifend nunc feugiat at. Pellentesque dignissim sem dui, eget volutpat quam ultricies vitae. Mauris sed condimentum tortor. Aenean bibendum enim sit amet nisi dignissim, vel ultrices ex accumsan. Integer felis orci, imperdiet at dapibus quis, rutrum ut nisl. Proin sit amet tellus in nibh mollis tempus sed sit amet diam. Donec pharetra vestibulum porttitor. Nullam ornare nulla dignissim lectus venenatis ornare. In eu maximus ante.
+We made 3 drones since then, using the same inventory with a few minor additions.
+We have tackled with outdoor autonomous navigation and laid our hands on pick-up-delivery problem as well. Also taking part in InterIIT Techmeet this year had us deal with sending protocol packets directly to a flight controller and handling position control of a drone only using a single monocular camera, creating and tuning controllers from scratch in the process.  
+We are just getting started.  
+Stay tuned.

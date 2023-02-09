@@ -1,12 +1,11 @@
 ---
-const width = 25;
+const height = 30;
 import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
 import Loader from '../components/Loader.astro';
-import Showcase from '../components/Showcase.astro';
 import '../styles/global.css';
-const widthCSS = `${width}rem`;
-const loaderWidthCSS = `${width/2}rem`;
+
+const heightCSS = `${height}vw`;
+const loaderHeightCSS = `${height/2}vw`;
 export interface Props {
 	title: string;
 	showcase?: boolean;
@@ -15,7 +14,7 @@ export interface Props {
 	showPicture?: boolean;
 }
 
-const { showPicture = false, title, showcase = true, text = "", background = "" } = Astro.props;
+const { showPicture = false, title, showcase = false, text = "", background = "" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -30,15 +29,14 @@ const { showPicture = false, title, showcase = true, text = "", background = "" 
 	<body>
 		<div class="loader-bg">
 			<div class="loader">
-				<Loader width={widthCSS} type={"white"}></Loader>
+				<Loader height={heightCSS} type={"white"}></Loader>
 			</div>
 		</div>
-		<!-- <Header /> -->
-		{
-			showcase &&
-			<div class="filler"></div>
-			<Showcase text={text} showPicture={showPicture} heading={title} text={""} backgroundPic={background}/>
-		}
+		<a href="/">
+			<div class="left-top-fixed">
+				<Loader speed={"1000ms"} rotate={false} height={loaderHeightCSS} type={"light"}></Loader>
+			</div>
+		</a>
 		<slot />
 	</body>
 	<Footer />
@@ -68,7 +66,7 @@ const { showPicture = false, title, showcase = true, text = "", background = "" 
 	</script>
 </html>
 
-<style is:global define:vars={{  loaderWidthCSS }}>
+<style is:global define:vars={{  loaderHeightCSS }}>
 	.loader-bg {
 		position: fixed;
 		margin-top: -2rem;
@@ -79,12 +77,29 @@ const { showPicture = false, title, showcase = true, text = "", background = "" 
 	}
 	.loader {
 		position: absolute;
-		top: calc(50vh - var(--loaderWidthCSS));
-		left: calc(50vw - var(--loaderWidthCSS));
+		top: calc(50vh - var(--loaderHeightCSS));
+		left: calc(50vw - var(--loaderHeightCSS));
 	}
 	.filler {
 		position: relative;
 		width: 100%;
 		height: 18rem;
+	}
+	.left-top-fixed {
+		position: fixed;
+		margin: -14vh 0rem 0rem -7vw;
+		background-color: white;
+		border-radius: 50%;
+		box-shadow: 1px 2px 5px rgb(0 0 0 / 0.8);
+		cursor: pointer;
+	}
+	img {
+		max-width: 100%;
+	}
+
+	@media (max-width: 900px) {
+		.left-top-fixed {
+			display: none;
+		}
 	}
 </style>

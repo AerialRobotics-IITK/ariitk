@@ -6,10 +6,11 @@ import LogoWhite from '/symmetric_logo_white-10.png'
 export interface Props {
     height?:string,
     speed?:string,
-    type?:string
+    type?:string,
+    rotate?:boolean
 }
 let Logo;
-const {height = "30vh", speed = "2000ms", type = "white"} = Astro.props as Props;
+const {rotate = true, height = "30vh", speed = "2000ms", type = "white"} = Astro.props as Props;
 if (type == "white") {
     Logo = LogoWhite;
 } else if (type == "black") {
@@ -21,7 +22,7 @@ if (type == "white") {
 }
 ---
 
-<div class="logo-spinner">
+<div class={`logo-spinner ${rotate && "spinner"}`}>
     <img src={Logo} alt="">
 </div>
 
@@ -31,17 +32,15 @@ if (type == "white") {
         width: var(--height);
     }
     
-    @-moz-keyframes spin {
-        to { -moz-transform: rotate(360deg); }
-    }
-    @-webkit-keyframes spin {
-        to { -webkit-transform: rotate(360deg); }
-    }
     @keyframes spin {
         to {transform:rotate(360deg);}
     }
 
-    .logo-spinner > img {
+    .spinner > img {
+        animation: spin var(--speed) infinite;
+    }
+
+    .logo-spinner > img:hover {
         animation: spin var(--speed) infinite;
     }
 </style>

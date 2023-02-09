@@ -1,17 +1,21 @@
 ---
-title: Astro 1.0 Release Update
-slug: astro-1-0-release-update
-excerpt: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptate, quae, quod, voluptates quibusdam voluptatibus quidem voluptatum quos quia quas nesciunt. Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam, quae.
-date: 2022-06-20
-author: Jane Doe
+title: InterIIT Techmeet Update
+slug: interiit-11-update
+excerpt: Milestone update on Drona Aviation PS
+date: 2023-01-28
+author: ba-13
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis porttitor mauris. Sed quis nulla malesuada, imperdiet ipsum eleifend, pharetra lacus. Maecenas vehicula tincidunt lorem sed elementum. Vestibulum luctus consectetur risus at aliquet. Donec ac sapien malesuada, congue neque ultrices, fringilla velit. Suspendisse potenti. Maecenas ac elit sem. Suspendisse malesuada ligula eu efficitur vulputate. Mauris tincidunt urna a elit ultricies porttitor. Donec vestibulum nibh euismod lectus rutrum sollicitudin. Aliquam luctus urna volutpat erat malesuada sodales. Etiam dapibus interdum est, sit amet aliquet turpis accumsan non. Sed tincidunt felis ut magna tincidunt, sit amet mollis neque ultricies. Duis mollis, libero sit amet dictum faucibus, mauris sapien volutpat est, sit amet molestie enim eros et lorem.
+After working for two whole nights straight, we finally got our position controller working good enough.  
+See, the problem itself would seem trivial. We had the digital controller coded up, we had the pluto in a working condition with a single provided battery.
+Trouble comes up during tuning. You can need quite a few runs to get one degree of freedom working well, and while doing so others being coupled can get wrecked.  
+Also the battery problem of equilibrium thrust being dependant on the battery's voltage was a headache as well.  
+Adding to this, getting complete and consistent pose feedback from a single RGB monocular camera was pain as well, adjusting the camera's parameters according to lighting conditions, handling edge distortions, uneven lighting, AR tag visibility, all needed to be handled simultaneously.
+Anyways, always focus on automating tasks, you'll save time. Automate logging, committing, recording hardware and code parameters, all are eventually helpful to analyse your performance.
 
-Morbi interdum mi at nisl aliquam, eu tristique diam efficitur. Etiam at placerat elit. Phasellus a risus pretium, vulputate lectus ut, eleifend ex. Proin facilisis odio a magna sodales rutrum. Fusce venenatis mi ipsum, nec sagittis augue dapibus nec. Proin vel enim varius, sollicitudin mauris id, viverra tortor. Phasellus feugiat, ex commodo malesuada congue, elit ipsum lacinia velit, et fermentum nunc nunc id quam. Proin at quam vitae dui lobortis congue eu elementum quam. Ut mattis, magna vitae condimentum dignissim, ligula nisl fermentum lectus, sed lobortis magna lectus a enim. Quisque vitae purus rutrum, euismod urna auctor, egestas sem. Aenean dictum, nisl vel imperdiet mattis, urna justo varius massa, sed sollicitudin dui massa non eros. Sed mi elit, sagittis sit amet turpis in, faucibus consectetur justo. Nam non tincidunt tortor, vel pellentesque tellus. Integer posuere nisi vel porta malesuada. Etiam scelerisque quam arcu, quis lacinia magna accumsan ac.
+<center>
+<img src="/blogs/post2/group.jpg" alt="team" width="800vw"/>
+</center>
 
-In dignissim interdum diam, eget iaculis libero venenatis vel. Aliquam tristique finibus pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus viverra mollis consectetur. Donec eleifend sem sit amet vulputate fermentum. Nulla tincidunt, libero in efficitur euismod, lorem augue tristique mi, a imperdiet nunc ipsum eu ligula. Cras aliquam dictum est eu bibendum. Quisque viverra mauris augue, sit amet sollicitudin quam bibendum non. Morbi aliquam placerat vestibulum. Nulla facilisi. In in dolor id ex molestie luctus non a tortor. Sed lacus sem, ornare dignissim tellus ut, dictum sodales erat. Nulla facilisi. Maecenas mollis lacus in dolor interdum ultrices. Curabitur dignissim orci dolor, id imperdiet libero vulputate eget.
-
-Curabitur eget augue sed leo tempor cursus a ac nunc. Quisque maximus aliquet nisl, sed auctor tellus venenatis at. Nam id efficitur lacus. Duis mattis laoreet tempus. Suspendisse tellus nisi, porta nec nulla vitae, gravida euismod magna. Sed maximus suscipit dui at commodo. Nunc arcu sapien, auctor in porttitor quis, porta nec magna. Ut sed augue vel libero placerat aliquet sit amet in enim. Morbi id malesuada magna. In iaculis gravida fermentum. Suspendisse sed magna sem.
-
-Etiam eu tortor placerat, eleifend quam vel, sollicitudin tellus. Fusce at eros vestibulum, finibus augue auctor, vulputate metus. Morbi porta felis sed vehicula vulputate. Cras porta laoreet urna, ac eleifend nunc feugiat at. Pellentesque dignissim sem dui, eget volutpat quam ultricies vitae. Mauris sed condimentum tortor. Aenean bibendum enim sit amet nisi dignissim, vel ultrices ex accumsan. Integer felis orci, imperdiet at dapibus quis, rutrum ut nisl. Proin sit amet tellus in nibh mollis tempus sed sit amet diam. Donec pharetra vestibulum porttitor. Nullam ornare nulla dignissim lectus venenatis ornare. In eu maximus ante.
+Keep cycling between your available batteries. Gives you more flight time.  
+Log your sensor data, and keep a ready to go visualizer.

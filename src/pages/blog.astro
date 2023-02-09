@@ -1,7 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-const posts = await Astro.glob('../../posts/*.md');
+let posts = await Astro.glob('../../posts/*.md');
+
+function sortByKey(array:any, key:string) {
+    return array.sort(function(a:any, b:any) {
+        var x = a[key]; var y = b[key];
+        return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+    });
+}
+
+posts = sortByKey(posts, 'file');
 ---
 
 <Layout title="Anecdotes" showPicture={true} background={"/ironman_bw.JPG"}>
@@ -18,7 +27,7 @@ const posts = await Astro.glob('../../posts/*.md');
       {posts.map(post => (
         <Card>
           <h3>{post.frontmatter.title}</h3>
-          <div>
+          <div class="right">
           Written by <strong>{post.frontmatter.author} </strong> on {new Date(post.frontmatter.date).toLocaleDateString()}
         </div>
           <p>{post.frontmatter.excerpt}</p>  
@@ -31,4 +40,7 @@ const posts = await Astro.glob('../../posts/*.md');
 </Layout>
 
 <style>
+  .right {
+    margin: -0.2rem 0rem 0rem 0rem;
+  }
 </style>

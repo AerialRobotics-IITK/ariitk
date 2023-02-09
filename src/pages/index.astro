@@ -23,7 +23,7 @@ posts = sortByKey(posts, 'file');
                 {<Card>
                     <h3>{posts[0].frontmatter.title}</h3>
                     <div>
-                    Written by <strong>{posts[0].frontmatter.author} </strong> on {new Date(posts[0].frontmatter.date).toLocaleDateString()}
+                    Written on {new Date(posts[0].frontmatter.date).toLocaleDateString()}
                     </div>
                     <p>{posts[0].frontmatter.excerpt}</p>  
                     <a class="btn" href={`/${posts[0].frontmatter.slug}`}>Read More</a>
@@ -33,7 +33,7 @@ posts = sortByKey(posts, 'file');
                 {<Card>
                     <h3>{posts[1].frontmatter.title}</h3>
                     <div>
-                    Written by <strong>{posts[1].frontmatter.author} </strong> on {new Date(posts[1].frontmatter.date).toLocaleDateString()}
+                    Written on {new Date(posts[1].frontmatter.date).toLocaleDateString()}
                   </div>
                     <p>{posts[1].frontmatter.excerpt}</p>  
                     <a class="btn" href={`/${posts[1].frontmatter.slug}`}>Read More</a>
@@ -135,8 +135,9 @@ posts = sortByKey(posts, 'file');
         width: 13rem;
     }
     .new-posts {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
     }
 
     .new-posts > .post {
@@ -145,7 +146,8 @@ posts = sortByKey(posts, 'file');
 
     @media (max-width: 600px) {
         .new-posts {
-            flex-direction: column;
+            grid-template-rows: repeat(2);
+            grid-template-columns: none;
         }
     }
     
