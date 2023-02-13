@@ -3,13 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 let posts = await Astro.glob('../../posts/*.md');
 
-function sortByKey(array:any, key:string) {
+function sortByKey(array:any) {
     return array.sort(function(a:any, b:any) {
-        var x = a[key]; var y = b[key];
+        var x = a.frontmatter.date; var y = b.frontmatter.date;
         return ((x > y) ? -1 : ((x < y) ? 1 : 0));
     });
 }
-posts = sortByKey(posts, 'file');
+posts = sortByKey(posts);
 ---
 
 <Layout title="Aerial Robotics IITK" showPicture={false} background={"/UAVs_Merge.mp4"} text={"We build drones so you don't have to"}>
@@ -26,7 +26,7 @@ posts = sortByKey(posts, 'file');
                     Written on {new Date(posts[0].frontmatter.date).toLocaleDateString()}
                     </div>
                     <p>{posts[0].frontmatter.excerpt}</p>  
-                    <a class="btn" href={`/${posts[0].frontmatter.slug}`}>Read More</a>
+                    <a class="btn" href={`/blog/${posts[0].frontmatter.slug}`}>Read More</a>
                 </Card>}
             </div>
             <div class="post">
@@ -36,7 +36,7 @@ posts = sortByKey(posts, 'file');
                     Written on {new Date(posts[1].frontmatter.date).toLocaleDateString()}
                   </div>
                     <p>{posts[1].frontmatter.excerpt}</p>  
-                    <a class="btn" href={`/${posts[1].frontmatter.slug}`}>Read More</a>
+                    <a class="btn" href={`/blog/${posts[1].frontmatter.slug}`}>Read More</a>
                 </Card>}
             </div>
         </div>
@@ -84,21 +84,23 @@ posts = sortByKey(posts, 'file');
         </div>
     </div>
 
+    <center><h1>Our Competitions?</h1></center>
     <div class="container">
-        <center><h1>Our Competitions?</h1></center>
-        <p>
-            Throughout the year, ARIITK designs and develops autonomous aircraft for student competitions, where we perform a full flight demonstration of our aircraft. We have attended the following competitions:
-        </p>
-        <div class="points">
-            <div class="point">
-                <a href="https://interiit-tech.org/" class="btn">InterIIT Techmeet</a>
-                Podium finish streak of 5 years!
+        <Card>
+            <p>
+                Throughout the year, ARIITK designs and develops autonomous aircraft for student competitions, where we perform a full flight demonstration of our aircraft. We have attended the following competitions:
+            </p>
+            <div class="points">
+                <div class="point">
+                    <a href="https://interiit-tech.org/" class="btn">InterIIT Techmeet</a>
+                    Podium finish streak of 5 years!
+                </div>
+                <div class="point">
+                    <a href="https://www.imavs.org/" class="btn">IMAV</a> 
+                    International Micro Air Vehicles, Conferences and Competitions
+                </div>
             </div>
-            <div class="point">
-                <a href="https://www.imavs.org/" class="btn">IMAV</a> 
-                International Micro Air Vehicles, Conferences and Competitions
-            </div>
-        </div>
+        </Card>
     </div>
 
 </Layout>

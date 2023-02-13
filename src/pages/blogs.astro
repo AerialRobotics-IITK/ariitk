@@ -3,14 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 let posts = await Astro.glob('../../posts/*.md');
 
-function sortByKey(array:any, key:string) {
+function sortByKey(array:any) {
     return array.sort(function(a:any, b:any) {
-        var x = a[key]; var y = b[key];
+        var x = a.frontmatter.date; var y = b.frontmatter.date;
         return ((x > y) ? -1 : ((x < y) ? 1 : 0));
     });
 }
-
-posts = sortByKey(posts, 'file');
+posts = sortByKey(posts);
 ---
 
 <Layout title="Anecdotes" showPicture={true} background={"/ironman_bw.JPG"}>
@@ -31,7 +30,7 @@ posts = sortByKey(posts, 'file');
           Written by <strong>{post.frontmatter.author} </strong> on {new Date(post.frontmatter.date).toLocaleDateString()}
         </div>
           <p>{post.frontmatter.excerpt}</p>  
-          <a class="btn" href={`/${post.frontmatter.slug}`}>Read More</a>
+          <a class="btn" href={`/blog/${post.frontmatter.slug}`}>Read More</a>
         </Card>
       ))}
       </p>
