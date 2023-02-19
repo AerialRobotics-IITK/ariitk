@@ -69,17 +69,20 @@ const { showPicture = true, title, showcase = true, text = "", background = "" }
 </html>
 
 <style is:global define:vars={{  loaderHeightCSS }}>
+	/* * {
+		scrollbar-width: none;
+	} */
 	.filler {
 		position: relative;
 		width: 100%;
 		height: 8rem;
 	}
-
-	  /* Loader */
-	  .loader-bg {
+	
+	/* Loader */
+	.loader-bg {
 		position: fixed;
-		width: 100%;
-		height: 120vh;
+		width: 100vw;
+		height: 100vh;
 		z-index: 999;
 		background-color: black;
 	}
