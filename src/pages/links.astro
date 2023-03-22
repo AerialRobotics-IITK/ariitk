@@ -4,39 +4,47 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Links" showcase={false}>
-<div class="filler"></div>
-<div class="container">
+  <div class="filler"></div>
+  <div class="container">
     <Card>
-        <ul>
-            <li><a href="/about">/About</a></li>
-            <li><a href="/team">/Team</a></li>
-            <li><a href="/showcase">/Showcase</a></li>
-            <li><a href="/blog">/Blog</a></li>
-            <li><a href="/contact">/Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="/about">/About</a></li>
+        <li><a href="/team">/Team</a></li>
+        <li><a href="/showcase">/Showcase</a></li>
+        <li><a href="/blog">/Blog</a></li>
+        <li><a href="/contact">/Contact</a></li>
+      </ul>
     </Card>
     <Card>
-        <ul>
-            <li><a href="https://aerial-robotics-iitk.gitbook.io/wiki/">GitBook</a></li>
-            <li><a href="https://github.com/AerialRobotics-IITK">GitHub</a></li>
-            <li><a href="https://www.youtube.com/@aerialroboticsiitkanpur7921">YouTube</a></li>
-            <li><a href="https://www.linkedin.com/company/aerial-robotics-iitk">LinkedIn</a></li>
-        </ul>
+      <ul>
+        <li>
+          <a href="https://aerial-robotics-iitk.gitbook.io/wiki/">GitBook</a>
+        </li>
+        <li><a href="https://github.com/AerialRobotics-IITK">GitHub</a></li>
+        <li>
+          <a href="https://www.youtube.com/@aerialroboticsiitkanpur7921"
+            >YouTube</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/aerial-robotics-iitk"
+            >LinkedIn</a>
+        </li>
+      </ul>
     </Card>
-</div>
+  </div>
 </Layout>
 
 <style>
-    a {
-        text-decoration: solid underline;
-    }
-    a:hover {
-        font-weight: 600;
-    }
-    ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  a {
+    text-decoration: solid underline;
+  }
+  a:hover {
+    font-weight: 600;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 </style>

@@ -23,6 +23,5 @@ Briefing the inventory, we received the *inheritance* of the following:
 ### ...and more Confidential data
 
 We made 3 drones since then, using the same inventory with a few minor additions.
-We have tackled with outdoor autonomous navigation and laid our hands on pick-up-delivery problem as well. Also taking part in InterIIT Techmeet this year had us deal with sending protocol packets directly to a flight controller and handling position control of a drone only using a single monocular camera, creating and tuning controllers from scratch in the process.  
-We are just getting started.  
+We have tackled with outdoor autonomous navigation and laid our hands on pick-up-delivery problem as well. Also taking part in InterIIT Techmeet this year had us deal with sending protocol packets directly to a flight controller and handling position control of a drone only using a single monocular camera, creating and tuning controllers from scratch in the process. We are just getting started.  
 Stay tuned.

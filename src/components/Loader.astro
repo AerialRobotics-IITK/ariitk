@@ -1,46 +1,49 @@
 ---
-import LogoLight from '/symmetric_logo_light-07.png'
-import LogoDark from '/symmetric_logo_dark-07-08.png'
-import LogoBlack from '/symmetric_logo_black-09.png'
-import LogoWhite from '/symmetric_logo_white-10.png'
 export interface Props {
-    height?:string,
-    speed?:string,
-    type?:string,
-    rotate?:boolean
+  height?: string;
+  speed?: string;
+  type?: string;
+  rotate?: boolean;
 }
 let Logo;
-const {rotate = true, height = "30vh", speed = "2000ms", type = "white"} = Astro.props as Props;
+const {
+  rotate = true,
+  height = "30vh",
+  speed = "2000ms",
+  type = "white",
+} = Astro.props as Props;
 if (type == "white") {
-    Logo = LogoWhite;
+  Logo = "/symmetric_logo_white-10.png";
 } else if (type == "black") {
-    Logo = LogoBlack;
+  Logo = "/symmetric_logo_black-09.png";
 } else if (type == "dark") {
-    Logo = LogoDark;
+  Logo = "/symmetric_logo_dark-07-08.png";
 } else if (type == "light") {
-    Logo = LogoLight;
+  Logo = "/symmetric_logo_light-07.png";
 }
 ---
 
 <div class={`logo-spinner ${rotate && "spinner"}`}>
-    <img src={Logo} alt="">
+  <img src={Logo} alt="" />
 </div>
 
 <style define:vars={{ height, speed }}>
-    .logo-spinner > img {
-        border-radius: 50%;
-        width: var(--height);
-    }
-    
-    @keyframes spin {
-        to {transform:rotate(360deg);}
-    }
+  .logo-spinner > img {
+    border-radius: 50%;
+    width: var(--height);
+  }
 
-    .spinner > img {
-        animation: spin var(--speed) infinite;
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
     }
+  }
 
-    .logo-spinner > img:hover {
-        animation: spin var(--speed) infinite;
-    }
+  .spinner > img {
+    animation: spin var(--speed) infinite;
+  }
+
+  .logo-spinner > img:hover {
+    animation: spin var(--speed) infinite;
+  }
 </style>

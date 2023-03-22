@@ -1,58 +1,66 @@
 ---
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
-import Gajendra from "../images/gajendra_gazing.jpg"
-
+// import Gajendra from "../images/gajendra_gazing.jpg";
 ---
 
-<Layout title="Contact Us" showPicture={true} background={"/gajendra_gazing.jpg"}>
-    <div class="container cards">
-        <div class="card">
-            <Card>
-                <h3>
-                    Looking to Join?
-                </h3>
-                <p>
-                    First rule, show up at our doors, even thou you dunno what's going on. If you have an interest in robotics, planes, imaging, electronics, computers, programming or just enjoying building things then you would fit right in!
-                </p>
-                <h3>
-                    Reach out to us at <a href="mailto:aerialroboticsiitk@gmail.com">aerialroboticsiitk@gmail.com</a>
-                </h3>
-            </Card>
-        </div>
-        <div class="card">
-            <Card>
-                <h3>
-                    Looking to sponsor us?
-                </h3>
-                <p>
-                    Aerial Robotics IITK is always keen on working with potential sponsors since it helps bring our projects to fruition!
-                </p>
-                <h3>
-                    Please send any questions to: <a href="mailto:aerialroboticsiitk@gmail.com">aerialroboticsiitk@gmail.com</a>
-                </h3>
-            </Card>
-        </div>
+<Layout
+  title="Contact Us"
+  showPicture={true}
+  background={"/gajendra_gazing.jpg"}
+>
+  <div class="container cards">
+    <div class="card">
+      <Card>
+        <h3>Looking to Join?</h3>
+        <p>
+          First rule, show up at our doors, even thou you dunno what's going on.
+          If you have an interest in robotics, planes, imaging, electronics,
+          computers, programming or just enjoying building things then you would
+          fit right in!
+        </p>
+        <h3>
+          Reach out to us at <a href="mailto:aerialroboticsiitk@gmail.com"
+            >aerialroboticsiitk@gmail.com</a
+          >
+        </h3>
+      </Card>
     </div>
+    <div class="card">
+      <Card>
+        <h3>Looking to sponsor us?</h3>
+        <p>
+          Aerial Robotics IITK is always keen on working with potential sponsors
+          since it helps bring our projects to fruition!
+        </p>
+        <h3>
+          Please send any questions to: <a
+            href="mailto:aerialroboticsiitk@gmail.com"
+            >aerialroboticsiitk@gmail.com</a
+          >
+        </h3>
+      </Card>
+    </div>
+  </div>
 </Layout>
 
 <style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 1rem;
+  }
+  .card {
+    width: 100%;
+  }
+  .cards a {
+    text-decoration: underline;
+  }
+  @media (max-width: 900px) {
     .cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        column-gap: 1rem;
+      display: flex;
+      flex-direction: column;
     }
-    .card {
-        width: 100%;
-    }
-    .cards a {
-        text-decoration: underline;
-    }
-    @media (max-width: 900px) {
-        .cards {
-            display: flex;
-            flex-direction: column;
-        }
-    }
+  }
 </style>

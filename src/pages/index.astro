@@ -1,162 +1,205 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-let posts = await Astro.glob('../../posts/*.md');
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+let posts = await Astro.glob("../../posts/*.md");
 
-function sortByKey(array:any) {
-    return array.sort(function(a:any, b:any) {
-        var x = a.frontmatter.date; var y = b.frontmatter.date;
-        return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-    });
+function sortByKey(array: any) {
+  return array.sort(function (a: any, b: any) {
+    var x = a.frontmatter.date;
+    var y = b.frontmatter.date;
+    return x > y ? -1 : x < y ? 1 : 0;
+  });
 }
 posts = sortByKey(posts);
 ---
 
-<Layout title="Aerial Robotics IITK" showPicture={false} background={"/UAVs_Merge.mp4"} text={"We build drones so you don't have to"}>
-
-    <div class="container">
-        <center><h1>What's New?</h1></center>
-        <div class="new-posts">
-            <!-- Show latest 2 blogs -->
-            <!-- Latest is defined according to blog file number -->
-            <div class="post">
-                {<Card>
-                    <h3>{posts[0].frontmatter.title}</h3>
-                    <div>
-                    Written on {new Date(posts[0].frontmatter.date).toLocaleDateString()}
-                    </div>
-                    <p>{posts[0].frontmatter.excerpt}</p>  
-                    <a class="btn" href={`/blog/${posts[0].frontmatter.slug}`}>Read More</a>
-                </Card>}
-            </div>
-            <div class="post">
-                {<Card>
-                    <h3>{posts[1].frontmatter.title}</h3>
-                    <div>
-                    Written on {new Date(posts[1].frontmatter.date).toLocaleDateString()}
-                  </div>
-                    <p>{posts[1].frontmatter.excerpt}</p>  
-                    <a class="btn" href={`/blog/${posts[1].frontmatter.slug}`}>Read More</a>
-                </Card>}
-            </div>
-        </div>
+<Layout
+  title="Aerial Robotics IITK"
+  showPicture={false}
+  background={"/UAVs_Merge.mp4"}
+  text={"We build drones so you don't have to"}
+>
+  <div class="container">
+    <center><h1>What's New?</h1></center>
+    <div class="new-posts">
+      <!-- Show latest 2 blogs -->
+      <!-- Latest is defined according to blog file number -->
+      <div class="post">
+        {
+          (
+            <Card>
+              <h3>{posts[0].frontmatter.title}</h3>
+              <div>
+                Written on{" "}
+                {new Date(posts[0].frontmatter.date).toLocaleDateString()}
+              </div>
+              <p>{posts[0].frontmatter.excerpt}</p>
+              <a class="btn" href={`/blog/${posts[0].frontmatter.slug}`}>
+                Read More
+              </a>
+            </Card>
+          )
+        }
+      </div>
+      <div class="post">
+        {
+          (
+            <Card>
+              <h3>{posts[1].frontmatter.title}</h3>
+              <div>
+                Written on{" "}
+                {new Date(posts[1].frontmatter.date).toLocaleDateString()}
+              </div>
+              <p>{posts[1].frontmatter.excerpt}</p>
+              <a class="btn" href={`/blog/${posts[1].frontmatter.slug}`}>
+                Read More
+              </a>
+            </Card>
+          )
+        }
+      </div>
     </div>
+  </div>
 
-    <div class="container">
-        <center><h1>What We Do?</h1></center>
-        <div class="doing">
-            <div class="thing">
-                <!-- Made by surang -->
-                {
-                    <Card>
-                        <div class="content">
-                            <div class="top"><h1>Automated UAV</h1></div>
-                            <div class="mid"><img src={"/automated-process.png"} alt="" /></div>
-                            <div class="bottom"><h1>Software and Systems</h1></div>
-                        </div>
-                    </Card>
-                }
-            </div>
-            <div class="thing">
-                <!-- Made by srip -->
-                {
-                    <Card>
-                        <div class="content">
-                            <div class="top"><h1>Airframe</h1></div>
-                            <div class="mid"><img src={"/uav.png"} alt="" /></div>
-                            <div class="bottom"><h1>Hardware Integration</h1></div>
-                        </div>
-                    </Card>
-                }
-            </div>
-            <div class="thing">
-                <!-- Made by Octopocto -->
-                {
-                    <Card>
-                        <div class="content">
-                            <div class="top"><h1>Competitions</h1></div>
-                            <div class="mid"><img src={"/award.png"} alt="" /></div>
-                            <div class="bottom"><h1>Indian or International</h1></div>
-                        </div>
-                    </Card>
-                }
-            </div>
-        </div>
-    </div>
-
-    <center><h1>Our Competitions?</h1></center>
-    <div class="container">
-        <Card>
-            <p>
-                Throughout the year, ARIITK designs and develops autonomous aircraft for student competitions, where we perform a full flight demonstration of our aircraft. We have attended the following competitions:
-            </p>
-            <div class="points">
-                <div class="point">
-                    <a href="https://interiit-tech.org/" class="btn">InterIIT Techmeet</a>
-                    Podium finish streak of 5 years!
+  <div class="container">
+    <center><h1>What We Do?</h1></center>
+    <div class="doing">
+      <div class="thing">
+        <!-- Made by surang -->
+        {
+          (
+            <Card>
+              <div class="content">
+                <div class="top">
+                  <h1>Automated UAV</h1>
                 </div>
-                <div class="point">
-                    <a href="https://www.imavs.org/" class="btn">IMAV</a> 
-                    International Micro Air Vehicles, Conferences and Competitions
+                <div class="mid">
+                  <img src={"/automated-process.png"} alt="" />
                 </div>
-            </div>
-        </Card>
+                <div class="bottom">
+                  <h1>Software and Systems</h1>
+                </div>
+              </div>
+            </Card>
+          )
+        }
+      </div>
+      <div class="thing">
+        <!-- Made by srip -->
+        {
+          (
+            <Card>
+              <div class="content">
+                <div class="top">
+                  <h1>Airframe</h1>
+                </div>
+                <div class="mid">
+                  <img src={"/uav.png"} alt="" />
+                </div>
+                <div class="bottom">
+                  <h1>Hardware Integration</h1>
+                </div>
+              </div>
+            </Card>
+          )
+        }
+      </div>
+      <div class="thing">
+        <!-- Made by Octopocto -->
+        {
+          (
+            <Card>
+              <div class="content">
+                <div class="top">
+                  <h1>Competitions</h1>
+                </div>
+                <div class="mid">
+                  <img src={"/award.png"} alt="" />
+                </div>
+                <div class="bottom">
+                  <h1>Indian or International</h1>
+                </div>
+              </div>
+            </Card>
+          )
+        }
+      </div>
     </div>
+  </div>
 
+  <center><h1>Our Competitions?</h1></center>
+  <div class="container">
+    <Card>
+      <p>
+        Throughout the year, ARIITK designs and develops autonomous aircraft for
+        student competitions, where we perform a full flight demonstration of
+        our aircraft. We have attended the following competitions:
+      </p>
+      <div class="points">
+        <div class="point">
+          <a href="https://interiit-tech.org/" class="btn">InterIIT Techmeet</a>
+          Podium finish streak of 5 years!
+        </div>
+        <div class="point">
+          <a href="https://www.imavs.org/" class="btn">IMAV</a>
+          International Micro Air Vehicles, Conferences and Competitions
+        </div>
+      </div>
+    </Card>
+  </div>
 </Layout>
 
 <style>
-    .points {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .points > .point {
-        margin: 0rem 0rem 1rem 0rem;
-    }
-    .doing {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .thing {
-        margin: 1rem;
-    }
-    .content {
-        padding: -2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .content > .bottom {
-        text-align: center;
-    }
-    .thing img {
-        margin: 1rem;
-        width: 13rem;
-    }
+  .points {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .points > .point {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+  .doing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .thing {
+    margin: 1rem;
+  }
+  .content {
+    padding: -2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .content > .bottom {
+    text-align: center;
+  }
+  .thing img {
+    margin: 1rem;
+    width: 13rem;
+  }
+  .new-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .new-posts > .post {
+    padding: 1rem 1rem;
+  }
+
+  @media (max-width: 600px) {
     .new-posts {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
+      grid-template-rows: repeat(2);
+      grid-template-columns: none;
     }
+  }
 
-    .new-posts > .post {
-        padding: 1rem 1rem;
+  @media (max-width: 900px) {
+    .doing {
+      flex-direction: column;
     }
-
-    @media (max-width: 600px) {
-        .new-posts {
-            grid-template-rows: repeat(2);
-            grid-template-columns: none;
-        }
-    }
-    
-    @media (max-width: 900px) {
-        .doing {
-            flex-direction: column;
-        }
-    }
-
+  }
 </style>

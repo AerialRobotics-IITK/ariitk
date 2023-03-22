@@ -1,13 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-let posts = await Astro.glob('../../posts/*.md');
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+let posts = await Astro.glob("../../posts/*.md");
 
-function sortByKey(array:any) {
-    return array.sort(function(a:any, b:any) {
-        var x = a.frontmatter.date; var y = b.frontmatter.date;
-        return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-    });
+function sortByKey(array: any) {
+  return array.sort(function (a: any, b: any) {
+    var x = a.frontmatter.date;
+    var y = b.frontmatter.date;
+    return x > y ? -1 : x < y ? 1 : 0;
+  });
 }
 posts = sortByKey(posts);
 ---
@@ -17,22 +18,30 @@ posts = sortByKey(posts);
     <center>
       <h1>Documentation</h1>
       <Card>
-        <p>We keep documenting our work at Aerial Robotics GitBook!</p><a href="https://aerial-robotics-iitk.gitbook.io/wiki/" class="btn">Check it out</a>
+        <p>We keep documenting our work at Aerial Robotics GitBook!</p><a
+          href="https://aerial-robotics-iitk.gitbook.io/wiki/"
+          class="btn">Check it out</a
+        >
       </Card>
     </center>
     <div class="container">
       <center><h1>Blogs</h1></center>
       <p>
-      {posts.map(post => (
-        <Card>
-          <h3>{post.frontmatter.title}</h3>
-          <div class="right">
-          Written by <strong>{post.frontmatter.author} </strong> on {new Date(post.frontmatter.date).toLocaleDateString()}
-        </div>
-          <p>{post.frontmatter.excerpt}</p>  
-          <a class="btn" href={`/blog/${post.frontmatter.slug}`}>Read More</a>
-        </Card>
-      ))}
+        {
+          posts.map((post) => (
+            <Card>
+              <h3>{post.frontmatter.title}</h3>
+              <div class="right">
+                Written by <strong>{post.frontmatter.author} </strong> on{" "}
+                {new Date(post.frontmatter.date).toLocaleDateString()}
+              </div>
+              <p>{post.frontmatter.excerpt}</p>
+              <a class="btn" href={`/blog/${post.frontmatter.slug}`}>
+                Read More
+              </a>
+            </Card>
+          ))
+        }
       </p>
     </div>
   </section>

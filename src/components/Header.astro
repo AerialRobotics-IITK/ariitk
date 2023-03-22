@@ -1,122 +1,120 @@
 ---
-import Loader from '../components/Loader.astro';
+import Loader from "../components/Loader.astro";
 ---
 
 <header class="header">
-    <div class="container-header">
-        <a href="/">
-            <div class="logo-outer">
-                <div class="logo">
-                    <Loader height={"6rem"} type={"dark"} speed={"0ms"} />
-                </div>
-                <div class="name">
-                        ARIITK
-                </div>
-            </div>
-        </a>
-        <nav>
-            <ul>
-                <li class="hidden-nav"><a href="/links">Links</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/team">Team</a></li>
-                <li><a href="/showcase">Showcase</a></li>
-                <li><a href="/blogs">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="container-header">
+    <a href="/">
+      <div class="logo-outer">
+        <div class="logo">
+          <Loader height={"6rem"} type={"dark"} speed={"0ms"} />
+        </div>
+        <div class="name">ARIITK</div>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li class="hidden-nav"><a href="/links">Links</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/team">Team</a></li>
+        <li><a href="/showcase">Showcase</a></li>
+        <li><a href="/blogs">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <style>
-.logo-outer {
+  .logo-outer {
     display: flex;
     flex-direction: row;
     z-index: 1;
-}
-.name {
+  }
+  .name {
     color: white;
     font-size: 2.3rem;
     margin-left: -0.1rem;
     margin-top: 3.4rem;
     font-weight: 700;
-}
-.logo {
+  }
+  .logo {
     margin-top: 1.5rem;
     width: 8rem; /* or whatever width you want. */
     height: 8rem;
     padding: 1rem;
     border-radius: 50%;
     background-color: var(--color-primary);
-}
-.logo > img {
+  }
+  .logo > img {
     height: 6rem;
-}
-    /* Header */
-.hidden-nav {
-    display: none;
-}
-
-nav {
-    overflow: hidden;
-}
-
-.header {
-  position: fixed;
-  width: 100vw;
-  height: 6.5rem;
-  background: var(--color-primary);
-  /* margin-top: 1.8rem; */
-  margin-bottom: 2rem;
-  z-index: 100;
-}
-
-.header .container-header {
-  position: sticky;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
-.header nav ul {
-  display: flex;
-}
-
-.header nav ul li {
-  font-size: 1.5rem;
-  padding: 0 1rem;
-}
-
-.header nav ul li a {
-  color: #fff;
-}
-.header nav ul li a:hover {
-    font-weight: 600;
-    text-decoration-line: underline;
-}
-
-@media (max-width: 900px) {
-  .name {
+  }
+  /* Header */
+  .hidden-nav {
     display: none;
   }
-}
 
-@media (max-width: 600px) {
+  nav {
+    overflow: hidden;
+  }
+
+  .header {
+    position: fixed;
+    width: 100vw;
+    height: 6.5rem;
+    background: var(--color-primary);
+    /* margin-top: 1.8rem; */
+    margin-bottom: 2rem;
+    z-index: 100;
+  }
+
+  .header .container-header {
+    position: sticky;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .header nav ul {
+    display: flex;
+  }
+
+  .header nav ul li {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .header nav ul li a {
+    color: #fff;
+  }
+  .header nav ul li a:hover {
+    font-weight: 600;
+    text-decoration-line: underline;
+  }
+
+  @media (max-width: 900px) {
+    .name {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
     .header nav ul :nth-child(2) {
-        display: none;
+      display: none;
     }
     .header nav ul :nth-child(3) {
-        display: none;
+      display: none;
     }
     .header nav ul :nth-child(4) {
-        display: none;
+      display: none;
     }
     .header nav ul :nth-child(5) {
-        display: none;
+      display: none;
     }
     .hidden-nav {
-        display: block;
+      display: block;
     }
-}
+  }
 </style>
