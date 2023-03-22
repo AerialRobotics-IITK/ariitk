@@ -1,105 +1,116 @@
 ---
 const height = 30;
-import Footer from '../components/Footer.astro';
-import Loader from '../components/Loader.astro';
-import '../styles/global.css';
+import Footer from "../components/Footer.astro";
+import Loader from "../components/Loader.astro";
+import "../styles/global.css";
 
 const heightCSS = `${height}vw`;
-const loaderHeightCSS = `${height/2}vw`;
+const loaderHeightCSS = `${height / 2}vw`;
 export interface Props {
-	title: string;
-	showcase?: boolean;
-	text?: string;
-	background?: string;
-	showPicture?: boolean;
+  title: string;
+  showcase?: boolean;
+  text?: string;
+  background?: string;
+  showPicture?: boolean;
 }
 
-const { showPicture = false, title, showcase = false, text = "", background = "" } = Astro.props;
+const {
+  showPicture = false,
+  title,
+  showcase = false,
+  text = "",
+  background = "",
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="loader-bg">
-			<div class="loader">
-				<Loader height={heightCSS} type={"white"}></Loader>
-			</div>
-		</div>
-		<a href="/">
-			<div class="left-top-fixed">
-				<Loader speed={"1000ms"} rotate={false} height={loaderHeightCSS} type={"light"}></Loader>
-			</div>
-		</a>
-		<slot />
-	</body>
-	<Footer />
-	<script>
-		(function() {
-		"use strict";
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="loader-bg">
+      <div class="loader">
+        <Loader height={heightCSS} type={"white"} />
+      </div>
+    </div>
+    <a href="/">
+      <div class="left-top-fixed">
+        <Loader
+          speed={"1000ms"}
+          rotate={false}
+          height={loaderHeightCSS}
+          type={"light"}
+        />
+      </div>
+    </a>
+    <slot />
+  </body>
+  <Footer />
+  <script>
+    (function () {
+      "use strict";
 
-		const select = (el:any, all = false) => {
-			el = el.trim()
-			if (all) {
-			return [...document.querySelectorAll(el)]
-			} else {
-			return document.querySelector(el)
-			}
-		}
+      const select = (el: any, all = false) => {
+        el = el.trim();
+        if (all) {
+          return [...document.querySelectorAll(el)];
+        } else {
+          return document.querySelector(el);
+        }
+      };
 
-		/**
-		 * Preloader
-		 */
-		let preloader = select('.loader-bg'); 
-		if (preloader) {
-			window.addEventListener('load', () => {
-			preloader.remove()
-			});
-		}
-		})()
-	</script>
+      /**
+       * Preloader
+       */
+      let preloader = select(".loader-bg");
+      if (preloader) {
+        window.addEventListener("load", () => {
+          preloader.remove();
+        });
+      }
+    })();
+  </script>
 </html>
 
-<style is:global define:vars={{  loaderHeightCSS }}>
-	.loader-bg {
-		position: fixed;
-		margin-top: -2rem;
-		width: 100%;
-		height: 120vh;
-		z-index: 999;
-		background-color: black;
-	}
-	.loader {
-		position: absolute;
-		top: calc(50vh - var(--loaderHeightCSS));
-		left: calc(50vw - var(--loaderHeightCSS));
-	}
-	.filler {
-		position: relative;
-		width: 100%;
-		height: 18rem;
-	}
-	.left-top-fixed {
-		position: fixed;
-		margin: -14vh 0rem 0rem -7vw;
-		background-color: white;
-		border-radius: 50%;
-		box-shadow: 1px 2px 5px rgb(0 0 0 / 0.8);
-		cursor: pointer;
-	}
-	img {
-		max-width: 100%;
-	}
+<style is:global define:vars={{ loaderHeightCSS }}>
+  .loader-bg {
+    position: fixed;
+    margin-top: -2rem;
+    width: 100%;
+    height: 120vh;
+    z-index: 999;
+    background-color: black;
+  }
+  .loader {
+    position: absolute;
+    top: calc(50vh - var(--loaderHeightCSS));
+    left: calc(50vw - var(--loaderHeightCSS));
+  }
+  .filler {
+    position: relative;
+    width: 100%;
+    height: 18rem;
+  }
+  .left-top-fixed {
+    position: fixed;
+    margin: -14vh 0rem 0rem -7vw;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 1px 2px 5px rgb(0 0 0 / 0.8);
+    cursor: pointer;
+  }
+  img {
+    max-width: 100%;
+  }
 
-	@media (max-width: 900px) {
-		.left-top-fixed {
-			display: none;
-		}
-	}
+  @media (max-width: 900px) {
+    .left-top-fixed {
+      display: none;
+    }
+  }
 </style>

@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "ariitk.in",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -11,7 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.9.0"
+    "@astrojs/image": "^0.16.1",
+    "astro": "^2.1.4"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.16"

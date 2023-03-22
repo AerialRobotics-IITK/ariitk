@@ -1,94 +1,109 @@
 ---
 const height = 30;
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import Loader from '../components/Loader.astro';
-import Showcase from '../components/Showcase.astro';
-import '../styles/global.css';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Loader from "../components/Loader.astro";
+import Showcase from "../components/Showcase.astro";
+import "../styles/global.css";
 const heightCSS = `${height}vw`;
-const loaderHeightCSS = `${height/2}vw`;
+const loaderHeightCSS = `${height / 2}vw`;
 export interface Props {
-	title: string;
-	showcase?: boolean;
-	text?: string;
-	background?: string;
-	showPicture?: boolean;
+  title: string;
+  showcase?: boolean;
+  text?: string;
+  background?: string;
+  showPicture?: boolean;
 }
 
-const { showPicture = true, title, showcase = true, text = "", background = "" } = Astro.props;
+const {
+  showPicture = true,
+  title,
+  showcase = true,
+  text = "",
+  background = "",
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="loader-bg">
-			<div class="loader">
-				<Loader height={heightCSS} type={"white"}></Loader>
-			</div>
-		</div>
-		<Header />
-		{
-			showcase &&
-			<div class="filler"></div>
-			<Showcase text={text} showPicture={showPicture} heading={title} text={""} backgroundPic={background}/>
-		}
-		<slot />
-	</body>
-	<Footer />
-	<script>
-		(function() {
-		"use strict";
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="loader-bg">
+      <div class="loader">
+        <Loader height={heightCSS} type={"white"} />
+      </div>
+    </div>
+    <Header />
+    {
+      showcase && (
+        <>
+          <div class="filler" />
+          <Showcase
+            text={text}
+            showPicture={showPicture}
+            heading={title}
+            text={""}
+            backgroundPic={background}
+          />
+        </>
+      )
+    }
+    <slot />
+  </body>
+  <Footer />
+  <script>
+    (function () {
+      "use strict";
 
-		const select = (el:any, all = false) => {
-			el = el.trim()
-			if (all) {
-			return [...document.querySelectorAll(el)]
-			} else {
-			return document.querySelector(el)
-			}
-		}
+      const select = (el: any, all = false) => {
+        el = el.trim();
+        if (all) {
+          return [...document.querySelectorAll(el)];
+        } else {
+          return document.querySelector(el);
+        }
+      };
 
-		/**
-		 * Preloader
-		 */
-		let preloader = select('.loader-bg'); 
-		if (preloader) {
-			window.addEventListener('load', () => {
-			preloader.remove()
-			});
-		}
-		})()
-	</script>
+      /**
+       * Preloader
+       */
+      let preloader = select(".loader-bg");
+      if (preloader) {
+        window.addEventListener("load", () => {
+          preloader.remove();
+        });
+      }
+    })();
+  </script>
 </html>
 
-<style is:global define:vars={{  loaderHeightCSS }}>
-	/* * {
+<style is:global define:vars={{ loaderHeightCSS }}>
+  /* * {
 		scrollbar-width: none;
 	} */
-	.filler {
-		position: relative;
-		width: 100%;
-		height: 8rem;
-	}
-	
-	/* Loader */
-	.loader-bg {
-		position: fixed;
-		width: 100vw;
-		height: 100vh;
-		z-index: 999;
-		background-color: black;
-	}
-	.loader {
-		position: absolute;
-		top: calc(50vh - var(--loaderHeightCSS));
-		left: calc(50vw - var(--loaderHeightCSS));
-	}
+  .filler {
+    position: relative;
+    width: 100%;
+    height: 8rem;
+  }
+
+  /* Loader */
+  .loader-bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: black;
+  }
+  .loader {
+    position: absolute;
+    top: calc(50vh - var(--loaderHeightCSS));
+    left: calc(50vw - var(--loaderHeightCSS));
+  }
 </style>

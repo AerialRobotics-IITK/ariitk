@@ -1,134 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200;300;500;600;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200;300;500;600;900&display=swap");
 
 :root {
-    --color-primary: #0f172a;
-    --color-secondary: #22c8ff;
-  }
+  --color-primary: #0f172a;
+  --color-secondary: #22c8ff;
+}
 
-  html,body {
-    /* https://stackoverflow.com/questions/46012482/unwanted-white-space-on-right-side-in-mobile-view */
-    overflow-x: hidden;
-  }
+html,
+body {
+  /* https://stackoverflow.com/questions/46012482/unwanted-white-space-on-right-side-in-mobile-view */
+  overflow-x: hidden;
+}
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background: #f8fafc;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.logos-small {
+  display: none;
+}
+
+/* Page Content */
+.page-content {
+  text-align: justify;
+  margin: 20px -10px;
+  /* padding: 0px 20vw; */
+}
+
+.page-content h2,
+.page-content h3 {
+  margin: 10px 0px;
+}
+
+.page-content h2 {
+  font-size: 40px;
+}
+
+.page-content h3 {
+  font-size: 25px;
+}
+
+center > h1 {
+  /* Making a title */
+  margin: 2rem 0rem 1rem 0rem;
+  font-size: 4rem;
+}
+
+.points {
+  /* For a list */
+  padding: 1rem 2rem;
+}
+
+ul {
+  margin: 0rem 0rem 0rem 2rem;
+}
+ol {
+  margin: 0rem 0rem 0rem 2rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
-  
-  body {
-    font-family: 'Saira Semi Condensed', sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
-    background: #f8fafc;
-    color: #333;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  p {
-    margin: 1rem 0;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  li {
-    line-height: 2;
-  }
-  
+}
+
+@media (max-width: 600px) {
   h1,
-  h2,
-  h3 {
-    line-height: 1.2;
+  h2 {
+    text-align: center;
   }
-  
+  center > h1 {
+    word-break: break-word;
+    scale: 0.8;
+  }
+}
+@media (max-width: 700px) {
   .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
   }
-  .container-header {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 30px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    background: #333;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-  }
-  
-  .logos-small {
-    display: none;
-  }
-  
-  /* Page Content */
-  .page-content {
-    text-align: justify;
-    margin: 20px -10px;
-    /* padding: 0px 20vw; */
-  }
-  
-  .page-content h2,
-  .page-content h3 {
-    margin: 10px 0px;
-  }
-  
-  .page-content h2 {
-    font-size: 40px;
-  }
-  
-  .page-content h3 {
-    font-size: 25px;
-  }
-
-  center > h1 { /* Making a title */
-    margin: 2rem 0rem 1rem 0rem;
-    font-size: 4rem;
-  }
-
-  .points { /* For a list */
-    padding: 1rem 2rem;
-  }
-
-  ul {
-    margin: 0rem 0rem 0rem 2rem;
-  }
-  ol {
-    margin: 0rem 0rem 0rem 2rem;
-  }
-  
-  @keyframes spin {
-    to {transform:rotate(360deg);}
-  }
-
-  @media (max-width: 600px) {
-    h1,
-    h2 {
-      text-align: center;
-    }
-    center > h1 {
-      word-break: break-word;
-      scale: 0.8;
-    }
-  }
-  @media (max-width: 700px) {
-    .container {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+}
