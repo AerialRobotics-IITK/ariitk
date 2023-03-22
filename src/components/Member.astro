@@ -1,10 +1,14 @@
+---
+import { Image, Picture } from '@astrojs/image/components';
 export interface Props { photo?: string; name: string; title: string; }
 
 const { photo = "https://picsum.photos/400?random=1", name, title, } = Astro.props as Props;
+---
 
 <div class="card">
   <div class="picture">
-    <img src={photo} alt="" />
+    <!--Local image with multiple sizes and formats-->
+    <Picture src={photo} widths={[30, 20, 300]} aspectRatio="4:5" sizes="(max-width: 35vh) 100vw, 35vh" formats={['avif', 'jpeg', 'png', 'webp']} alt="cool dude ikyk" />
   </div>
   <div class="content">
     <div class="name">{name}</div>
@@ -20,6 +24,7 @@ const { photo = "https://picsum.photos/400?random=1", name, title, } = Astro.pro
     flex-direction: column;
     align-items: center;
   }
+
   .picture {
     box-shadow: 0 2px 10px rgb(0 0 0 / 0.8);
     max-width: 18rem;
@@ -27,6 +32,7 @@ const { photo = "https://picsum.photos/400?random=1", name, title, } = Astro.pro
     overflow: hidden;
     border-radius: 1rem;
   }
+
   .content {
     background-color: white;
     border: solid 1px black;
@@ -37,11 +43,6 @@ const { photo = "https://picsum.photos/400?random=1", name, title, } = Astro.pro
     margin-top: -4rem;
     padding: 0.5rem 0rem 0.5rem 0rem;
     width: 18rem;
-  }
-  .content:hover {
-    transition-timing-function: ease-out;
-    transform: translate(0px, -10px);
-    scale: 1.15;
   }
   .name {
     font-size: 2rem;
