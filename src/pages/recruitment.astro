@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout
+  title="Y22 Recruitment"
+  showPicture={true}
+  background={"recruitment/banner.png"}
+>
+  <div class="container">
+    <div>
+      <div class="form-desc">
+        The below link is for the form for submitting the recruitment test
+        responses.
+      </div>
+      <div class="form-link">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSebyriZQihv5TNGpvkLIuSktkIa6XsUYsb9ChWUQZEVemkWrg/viewform?"
+          >Form</a
+        >
+      </div>
+    </div>
+    <div class="text">
+      <p>
+        We at Team Aerial Robotics are recruiting!!! The recruitment procedure
+        is straightforward. You must take a test that will be administered by
+        us. Here is the test preparation material we have prepared for you:
+        <a
+          href="https://drive.google.com/file/d/1PDuuF63lxgr_c5gzbb6qjJTVrtlGNuG-/view"
+        ></a>
+        You are not required to completely understand all of the material's specifics.
+        However, we would like you to read it and try to gain a general understanding
+        and concept. We do not expect you to have any prior knowledge, and the above
+        material will suffice to pass the exam. If you pass the examination, we will
+        simply chat with you to learn more about you. And that's it! Check out the
+        recruitment presentation and the Intro video to learn more about what we
+        do and what we have achieved over the years.
+
+        <script async src="//www.instagram.com/embed.js"></script>
+        <div
+          style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+border-radius: 8px; will-change: transform;"
+        >
+          <iframe
+            loading="lazy"
+            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+            src="https://www.canva.com/design/DAFdDLYKQD4/view?embed"
+            allowfullscreen="allowfullscreen"
+            allow="fullscreen"
+          >
+          </iframe>
+        </div>
+        <a
+          href="https://www.canva.com/design/DAFdDLYKQD4/view?utm_content=DAFdDLYKQD4&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+          target="_blank"
+          rel="noopener"></a>
+      </p>
+      <div class="form-desc">Reference Material List</div>
+      <div class="window">
+        <iframe
+          id="material-frame"
+          loading="lazy"
+          src="https://drive.google.com/file/d/1PDuuF63lxgr_c5gzbb6qjJTVrtlGNuG-/preview"
+          style="position: relative; width: 100%; height: 60vh; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+          allow="autoplay"></iframe>
+      </div>
+    </div>
+  </div>
+</Layout>
+<style>
+  .form-desc {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: larger;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-size: 1.5rem;
+  }
+  .form-link {
+    text-align: center;
+    font-size: larger;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    border: 1px solid black;
+    font-size: 2rem;
+  }
+  .form-link:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  .text {
+    text-align: justify;
+  }
+  .sidebar {
+    position: relative;
+  }
+  .window {
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+</style>
