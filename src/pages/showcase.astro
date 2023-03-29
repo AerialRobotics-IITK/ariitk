@@ -1,4 +1,5 @@
 ---
+import { Image, Picture } from '@astrojs/image/components';
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
@@ -28,7 +29,7 @@ import Card from "../components/Card.astro";
           </div>
         </div>
         <div class="card-img">
-          <img src={"/showcase/contests/imav.JPG"} alt="" />
+          <img src={"/showcase/contests/imav.JPG"} alt="" loading="lazy" />
         </div>
       </div>
     </Card>
@@ -53,7 +54,7 @@ import Card from "../components/Card.astro";
           </div>
         </div>
         <div class="card-img">
-          <img src={"/showcase/contests/drdo_fleet.jpg"} alt="" />
+          <img src={"/showcase/contests/drdo_fleet.jpg"} alt="" loading="lazy" />
         </div>
       </div>
     </Card>
@@ -80,7 +81,7 @@ import Card from "../components/Card.astro";
           </div>
         </div>
         <div class="card-img">
-          <img src={"/showcase/contests/plutoX.png"} alt="" />
+          <img src={"/showcase/contests/plutoX.png"} alt="" loading="lazy" />
         </div>
       </div>
     </Card>
@@ -106,7 +107,7 @@ import Card from "../components/Card.astro";
           </div>
         </div>
         <div class="card-img">
-          <img src={"/showcase/contests/warehouse.jpg"} alt="" />
+          <img src={"/showcase/contests/warehouse.jpg"} alt="" loading="lazy" />
         </div>
       </div>
     </Card>
