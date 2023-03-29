@@ -12,16 +12,18 @@ import Loader from "../components/Loader.astro";
         <div class="name">ARIITK</div>
       </div>
     </a>
-    <nav>
-      <ul>
-        <li class="hidden-nav"><a href="/links">Links</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/team">Team</a></li>
-        <li><a href="/showcase">Showcase</a></li>
-        <li><a href="/blogs">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/recruitment">Recruitment</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="nav-wrapper">
+        <ul>
+          <li class="hidden-nav"><a href="/links">Links</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/showcase">Showcase</a></li>
+          <li><a href="/blogs">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a class="special" href="/recruitment">Recruitment</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
@@ -95,6 +97,11 @@ import Loader from "../components/Loader.astro";
     text-decoration-line: underline;
   }
 
+  .special {
+    border: 1px solid #fff;
+    border-radius: 2px;
+  }
+
   @media (max-width: 900px) {
     .name {
       display: none;
@@ -112,6 +119,9 @@ import Loader from "../components/Loader.astro";
       display: none;
     }
     .header nav ul :nth-child(5) {
+      display: none;
+    }
+    .header nav ul :nth-child(6) {
       display: none;
     }
     .hidden-nav {
