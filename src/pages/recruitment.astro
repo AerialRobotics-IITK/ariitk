@@ -10,16 +10,21 @@ import Card from "../components/Card.astro";
 >
   <div class="container">
     <div>
-      <div class="form-desc">
-        The below link is for the form for submitting the recruitment test
-        responses.
+      <div class="title-desc">
+        The below links maybe relevant to you
       </div>
-      <div class="form-link">
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSebyriZQihv5TNGpvkLIuSktkIa6XsUYsb9ChWUQZEVemkWrg/viewform?"
-          >Submission Form</a
-        >
-      </div>
+      <a href="https://drive.google.com/file/d/1ElST8rcqcNHNr1OXbbC3vZ0UIawIsye9/view?usp=sharing">
+        <div class="box-link ques">
+          Question Paper
+        </div>
+      </a>
+      <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSebyriZQihv5TNGpvkLIuSktkIa6XsUYsb9ChWUQZEVemkWrg/viewform?"
+      >
+      <div class="box-link form">
+          Submission Form
+        </div>
+      </a>
     </div>
     <div class="text">
       <p>
@@ -38,7 +43,7 @@ import Card from "../components/Card.astro";
         Check out the recruitment presentation and the intro video to learn more about what we
         do and what we have achieved over the years.
       </p>
-        <div class="form-desc">Reference Material List</div>
+        <div class="title-desc">Reference Material List</div>
       <div class="window">
         <iframe
           id="material-frame"
@@ -48,7 +53,7 @@ import Card from "../components/Card.astro";
           allow="autoplay"></iframe>
       </div>
       
-      <div class="form-desc">Introductory Presentation</div>
+      <div class="title-desc">Introductory Presentation</div>
         <div
           style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
 padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
@@ -67,24 +72,29 @@ border-radius: 8px; will-change: transform;"
   </div>
 </Layout>
 <style>
-  .form-desc {
-    margin-top: 2rem;
+  .title-desc {
+    margin-top: 1rem;
     text-align: center;
     font-size: larger;
     padding-left: 10vw;
     padding-right: 10vw;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
-  .form-link {
+  .box-link {
     text-align: center;
     font-size: larger;
-    margin: auto;
+    margin: 1rem;
     border: 1px solid black;
     font-size: 2rem;
   }
-  .form-link:hover {
-    background-color: #f46969;
+  .box-link:hover {
     cursor: pointer;
+  }
+  .ques:hover {
+    background-color: #5cccf0;
+  }
+  .form:hover {
+    background-color: #7eff6a;
   }
   .text {
     text-align: justify;
