@@ -15,6 +15,7 @@
     "astro": "^2.1.4"
   },
   "devDependencies": {
+    "@astrojs/partytown": "^1.2.0",
     "@types/jquery": "^3.5.16"
   }
 }
