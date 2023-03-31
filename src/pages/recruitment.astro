@@ -11,9 +11,19 @@ import Card from "../components/Card.astro";
   <div class="container">
     <div>
       <div class="title-desc">
-        The recruitment test has now been closed. Thank you for your interest! <br> If you had provided your response, we will be in touch soon.
+        The recruitment test has now been closed. Thank you for your interest! <br
+        /> Here is the list of the candidates selected for the interview.
       </div>
-      <a href="https://drive.google.com/file/d/1ElST8rcqcNHNr1OXbbC3vZ0UIawIsye9/view?usp=sharing">
+      <iframe
+        style="width: 100%; height: 60vh;"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1_DRsM9gPJHE_tL78qf-pEyviI5Zx0pKecyRScJFD08zCcBfnmUTDL_PTgXLkgiA2z9S0a032YFLI/pubhtml?gid=1521569258&single=true&widget=true&headers=false"
+      ></iframe>
+      <a
+        href="https://drive.google.com/file/d/1ElST8rcqcNHNr1OXbbC3vZ0UIawIsye9/view?usp=sharing"
+      >
+        <div class="box-link list">Interview Shortlist</div>
+      </a>
+      <!-- <a href="https://drive.google.com/file/d/1ElST8rcqcNHNr1OXbbC3vZ0UIawIsye9/view?usp=sharing">
         <div class="box-link ques">
           Question Paper
         </div>
@@ -24,26 +34,26 @@ import Card from "../components/Card.astro";
       <div class="box-link form">
           Submission Form
         </div>
-      </a>
+      </a> -->
     </div>
     <div class="text">
       <p>
-        We at Team Aerial Robotics are recruiting! The recruitment procedure
-        is straightforward. You must take a test that will be administered by
-        us.
+        We at Team Aerial Robotics are recruiting! The recruitment procedure is
+        straightforward. You must take a test that will be administered by us.
       </p>
       <p>
         You are not required to understand all of the material's specifics.
-        However, we would like you to read it and try to gain a general understanding
-        and concept. We do not expect you to have any prior knowledge, and the above
-        material will suffice to pass the exam. If you pass the examination, we will
-        have a chat with you to learn more. And that's it!
+        However, we would like you to read it and try to gain a general
+        understanding and concept. We do not expect you to have any prior
+        knowledge, and the above material will suffice to pass the exam. If you
+        pass the examination, we will have a chat with you to learn more. And
+        that's it!
       </p>
       <p>
-        Check out the recruitment presentation and the intro video to learn more about what we
-        do and what we have achieved over the years.
+        Check out the recruitment presentation and the intro video to learn more
+        about what we do and what we have achieved over the years.
       </p>
-        <div class="title-desc">Reference Material List</div>
+      <div class="title-desc">Reference Material List</div>
       <div class="window">
         <iframe
           id="material-frame"
@@ -52,22 +62,22 @@ import Card from "../components/Card.astro";
           style="position: relative; width: 100%; height: 60vh; top: 0; left: 0; border: none; padding: 0;margin: 0;"
           allow="autoplay"></iframe>
       </div>
-      
+
       <div class="title-desc">Introductory Presentation</div>
-        <div
-          style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+      <div
+        style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
 padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
 border-radius: 8px; will-change: transform;"
+      >
+        <iframe
+          loading="lazy"
+          style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+          src="https://www.canva.com/design/DAFdDLYKQD4/view?embed"
+          allowfullscreen="allowfullscreen"
+          allow="fullscreen"
         >
-          <iframe
-            loading="lazy"
-            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-            src="https://www.canva.com/design/DAFdDLYKQD4/view?embed"
-            allowfullscreen="allowfullscreen"
-            allow="fullscreen"
-          >
-          </iframe>
-        </div>
+        </iframe>
+      </div>
     </div>
   </div>
 </Layout>
@@ -92,6 +102,10 @@ border-radius: 8px; will-change: transform;"
   }
   .ques:hover {
     background-color: #f05c5c;
+  }
+
+  .list:hover {
+    background-color: #00cc00;
   }
   .form:hover {
     background-color: #f05c5c;
