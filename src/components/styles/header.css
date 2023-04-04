@@ -1,0 +1,83 @@
+.logo-outer {
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+.logo-outer > .name {
+  color: white;
+  font-size: 2.3rem;
+  margin-left: -0.1rem;
+  margin-top: 3.4rem;
+  font-weight: 700;
+}
+.logo {
+  margin-top: 1.5rem;
+  width: 8rem; /* or whatever width you want. */
+  height: 8rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+.logo > img {
+  height: 6rem;
+}
+/* Header */
+.hidden-nav {
+  display: none;
+}
+
+nav {
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 6.5rem;
+  background: var(--color-primary);
+  /* margin-top: 1.8rem; */
+  margin-bottom: 2rem;
+  z-index: 100;
+}
+
+.header .container-header {
+  position: sticky;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header nav ul {
+  display: flex;
+}
+
+.header nav ul li {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+.header nav ul li a {
+  color: #fff;
+}
+.header nav ul li a:hover {
+  font-weight: 500;
+  color: #b8ebff;
+  text-decoration-line: underline;
+}
+
+@media (max-width: 900px) {
+  .name {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header nav ul :nth-child(n + 2) {
+    display: none;
+  }
+  .hidden-nav {
+    display: block;
+  }
+}

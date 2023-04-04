@@ -1,7 +1,7 @@
 ---
 const height = 30;
-import Footer from "../components/Footer.astro";
 import Loader from "../components/Loader.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 const heightCSS = `${height}vw`;
@@ -30,14 +30,29 @@ const {
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+      integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0"
+      crossorigin="anonymous"
+    />
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+      integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+      integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
     <title>{title}</title>
   </head>
   <body>
@@ -46,16 +61,16 @@ const {
         <Loader height={heightCSS} type={"white"} />
       </div>
     </div>
-    <a href="/">
-      <div class="left-top-fixed">
+    <aside class="home">
+      <a href="/">
         <Loader
-          speed={"1000ms"}
+          speed={"0ms"}
           rotate={false}
           height={loaderHeightCSS}
           type={"light"}
         />
-      </div>
-    </a>
+      </a>
+    </aside>
     <slot />
   </body>
   <Footer />
@@ -86,6 +101,9 @@ const {
 </html>
 
 <style is:global define:vars={{ loaderHeightCSS }}>
+  .container {
+    max-width: 1050px;
+  }
   .loader-bg {
     position: fixed;
     margin-top: -2rem;
@@ -106,14 +124,33 @@ const {
   }
   .left-top-fixed {
     position: fixed;
-    margin: -14vh 0rem 0rem -7vw;
+  }
+
+  aside.home {
+    font-size: 17px;
+    --cip-gap: clamp(0.8em, 1.65vmax, 1.25em);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
+    max-width: 150px;
+    position: fixed;
+    bottom: 1.3em;
+    right: 1.3em;
+    display: flex;
+    align-items: center;
+    z-index: 1;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 1px 2px 5px rgb(0 0 0 / 0.8);
     cursor: pointer;
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 0.8);
   }
+
   img {
     max-width: 100%;
+  }
+
+  a {
+    /* border: 1px solid black; */
   }
 
   @media (max-width: 900px) {

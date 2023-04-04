@@ -1,52 +1,67 @@
 ---
-import BlogLayout from '../../layouts/BlogLayout.astro';
-import Card from '../../components/Card.astro';
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import Card from "../../components/Card.astro";
+
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../../../posts/*.md');
-  return posts.map(post => ({
+  const posts = await Astro.glob("../../../posts/*.md");
+  return posts.map((post) => ({
     params: {
-      slug: post.frontmatter.slug
+      slug: post.frontmatter.slug,
     },
     props: {
-      post
-    }
+      post,
+    },
   }));
 }
 const { Content, frontmatter } = Astro.props.post;
 const slug = frontmatter.slug;
 ---
 
-<BlogLayout title={frontmatter.title} showcase={false} showPicture={true} background={frontmatter.image}>
+<BlogLayout
+  title={frontmatter.title}
+  showcase={false}
+  showPicture={true}
+  background={frontmatter.image}
+>
   <section class="page-content">
     <div class="container">
       <Card>
         <a class="btn" href="/blogs">Other Blogs</a>
         <h2>{frontmatter.title}</h2>
-        Written by <strong>{frontmatter.author} </strong> on {new Date(frontmatter.date).toLocaleDateString()}
-        <hr/>
-        <div>
-        </div>
+        Written by <strong>{frontmatter.author}</strong> on {
+          new Date(frontmatter.date).toLocaleDateString()
+        }
+        <hr />
+        <div></div>
         <Content />
-        <hr/><br/>
+        <hr /><br />
       </Card>
+
+      <!-- Disqus Box -->
       <Card>
         <div id="disqus_thread"></div>
         <script define:vars={{ slug }}>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            var disqus_config = function () {
-            this.page.url = "https://aerialrobotics-iitk.github.io/blog/" + {slug};  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = "https://aerialrobotics-iitk.github.io/blog/" + {slug}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://aerialrobotics-iitk-github-io.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', + (new Date()).toString());
+          var disqus_config = function () {
+            this.page.url =
+              "https://aerialrobotics-iitk.github.io/blog/" + { slug };
+            this.page.identifier =
+              "https://aerialrobotics-iitk.github.io/blog/" + { slug };
+          };
+          (function () {
+            // DON'T EDIT BELOW THIS LINE
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://aerialrobotics-iitk-github-io.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date().toString());
             (d.head || d.body).appendChild(s);
-            })();
+          })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript
+          >Please enable JavaScript to view the <a
+            href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
       </Card>
     </div>
   </section>

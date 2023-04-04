@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200;300;500;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Raleway:wght@400;600;700&family=Roboto+Slab:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
 
 :root {
   --color-primary: #0f172a;
@@ -20,16 +21,30 @@ body {
 }
 
 body {
-  font-family: "Saira Semi Condensed", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 1.5;
+  font-weight: 500;
   background: #f8fafc;
   color: #333;
+}
+
+code {
+  font-family: "Space Mono", Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  background-color: #8d8c8c;
+  padding: 0 0.5rem;
+  color: #f6fbff;
+  border-radius: 5%;
 }
 
 a {
   text-decoration: none;
   color: #333;
+}
+
+a:hover {
+  color: #b8ebff;
 }
 
 p {
@@ -46,12 +61,16 @@ li {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Flex", sans-serif;
   line-height: 1.2;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -77,9 +96,15 @@ h3 {
   display: none;
 }
 
+.special {
+  background-color: #b8ebff;
+  border: 2px solid #b8ebff;
+  border-radius: 4%;
+}
+
 /* Page Content */
 .page-content {
-  text-align: justify;
+  /* text-align: justify; */
   margin: 20px -10px;
   /* padding: 0px 20vw; */
 }

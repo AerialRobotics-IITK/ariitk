@@ -1,5 +1,6 @@
 ---
-import { Image, Picture } from '@astrojs/image/components';
+import "../styles/showcase.css";
+import { Image, Picture } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
@@ -36,6 +37,13 @@ import Card from "../components/Card.astro";
 
     <Card>
       <div class="container contest">
+        <div class="card-img">
+          <img
+            src={"/showcase/contests/drdo_fleet.jpg"}
+            alt=""
+            loading="lazy"
+          />
+        </div>
         <div class="card">
           <div class="content">
             <div class="title">DRDO SASE's UAV Fleet Challenge</div>
@@ -52,9 +60,6 @@ import Card from "../components/Card.astro";
               the event.
             </div>
           </div>
-        </div>
-        <div class="card-img">
-          <img src={"/showcase/contests/drdo_fleet.jpg"} alt="" loading="lazy" />
         </div>
       </div>
     </Card>
@@ -88,6 +93,9 @@ import Card from "../components/Card.astro";
 
     <Card>
       <div class="container contest">
+        <div class="card-img">
+          <img src={"/showcase/contests/warehouse.jpg"} alt="" loading="lazy" />
+        </div>
         <div class="card">
           <div class="content">
             <div class="title">Warehouse Inventory Check</div>
@@ -106,61 +114,7 @@ import Card from "../components/Card.astro";
             </div>
           </div>
         </div>
-        <div class="card-img">
-          <img src={"/showcase/contests/warehouse.jpg"} alt="" loading="lazy" />
-        </div>
       </div>
     </Card>
   </div>
 </Layout>
-
-<style>
-  .contest {
-    display: grid;
-    overflow: hidden;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 1fr;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    max-width: 1200px;
-  }
-  .contest img {
-    /* position: absolute; */
-    margin: 1rem;
-    height: 50vh;
-  }
-  .card-img {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  .content {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 2rem;
-  }
-  .content > .title {
-    font-size: 3rem;
-    padding-bottom: 1rem;
-  }
-  .content > .text-2 {
-    color: grey;
-    margin-bottom: 2rem;
-  }
-
-  @media (max-width: 800px) {
-    .contest {
-      grid-template-columns: 1fr;
-      grid-auto-rows: repeat(2, 1fr);
-    }
-    .card-img > img {
-      width: 80vw;
-      height: auto;
-    }
-  }
-  @media (max-width: 600px) {
-    .card-img {
-      display: none;
-    }
-  }
-</style>

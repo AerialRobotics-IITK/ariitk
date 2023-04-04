@@ -1,0 +1,40 @@
+.title-desc {
+  align-items: center;
+  text-align: center;
+  font-size: larger;
+  font-size: 1.8rem;
+}
+.box-link {
+  text-align: center;
+  font-size: larger;
+  margin: 1rem;
+  border: 1px solid black;
+  font-size: 2rem;
+}
+.box-link:hover {
+  cursor: pointer;
+}
+.ques:hover {
+  background-color: #333;
+}
+
+.list:hover {
+  background-color: #00cc00;
+}
+.form:hover {
+  background-color: #f05c5c;
+}
+.text {
+  text-align: justify;
+}
+.sidebar {
+  position: relative;
+}
+.window {
+  margin-top: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+}
