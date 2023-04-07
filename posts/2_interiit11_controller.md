@@ -1,5 +1,5 @@
 ---
-title: InterIIT Techmeet Update
+title: Techmeet Update I
 slug: interiit-11-update
 excerpt: Milestone update on Drona Aviation PS
 date: 2023-01-28

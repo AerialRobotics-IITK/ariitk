@@ -27,14 +27,16 @@ const slug = frontmatter.slug;
     <div class="container">
       <Card>
         <a class="btn" href="/blogs">Other Blogs</a>
-        <h2>{frontmatter.title}</h2>
-        Written by <strong>{frontmatter.author}</strong> on {
-          new Date(frontmatter.date).toLocaleDateString()
-        }
-        <hr />
-        <div></div>
-        <Content />
-        <hr /><br />
+        <div class="post">
+          <div class="post-header">
+            <h2>{frontmatter.title}</h2>
+            Written by {frontmatter.author} on {
+              new Date(frontmatter.date).toLocaleDateString()
+            }
+          </div>
+          <hr />
+          <Content />
+        </div>
       </Card>
 
       <!-- Disqus Box -->
@@ -66,3 +68,16 @@ const slug = frontmatter.slug;
     </div>
   </section>
 </BlogLayout>
+
+<style>
+  .post {
+    margin: 0 3rem;
+    font-size: 1.4rem;
+  }
+  .post-header {
+    margin: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>

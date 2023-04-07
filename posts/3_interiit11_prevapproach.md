@@ -1,5 +1,5 @@
 ---
-title: InterIIT Techmeet Update 2
+title: Techmeet Update II
 slug: interiit-11-update-2
 excerpt: Previous approach update on Drona Aviation PS
 date: 2023-02-01
