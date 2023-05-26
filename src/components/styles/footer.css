@@ -41,7 +41,18 @@
 .footer a:hover {
   text-decoration: underline;
 }
-
+.footer .sponsor-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .sponsor-comp {
+  flex: auto;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  align-items: center;
+}
 @media (max-width: 700px) {
   .footer .container {
     flex-direction: column;
@@ -56,5 +67,11 @@
     padding-right: 0rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .footer .sponsor-comp {
+    flex: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    align-items: center;
   }
 }

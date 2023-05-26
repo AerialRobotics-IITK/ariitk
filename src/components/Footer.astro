@@ -1,5 +1,6 @@
 ---
 import "./styles/footer.css";
+import { Image, Picture } from "@astrojs/image/components";
 ---
 
 <footer class="footer">
@@ -38,6 +39,33 @@ import "./styles/footer.css";
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="sponsors">
+    <div class="head">
+      <h3>Our Sponsors</h3>
+    </div>
+    <div class="sponsor-row">
+      <div class="sponsor-comp">
+        <Picture
+          src={"../../public/sponsors/ANSS_BIG.D-6fc7505a.png"}
+          widths={[30, 20, 300]}
+          aspectRatio="7:2"
+          sizes="(max-width: 50vh) 100vw, 20vh"
+          formats={["avif", "jpeg", "png", "webp"]}
+          alt="cool dude ikyk"
+        />
+      </div>
+      <div class="sponsor-comp">
+        <Picture
+          src={"../../public/sponsors/Unknown-2.png"}
+          widths={[30, 20, 300]}
+          aspectRatio="1:1"
+          sizes="(max-width: 50vh) 100vw, 20vh"
+          formats={["avif", "jpeg", "png", "webp"]}
+          alt="cool dude ikyk"
+        />
+      </div>
     </div>
   </div>
 </footer>

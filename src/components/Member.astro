@@ -20,14 +20,17 @@ const {
     <Picture
       src={photo}
       widths={[30, 20, 300]}
-      aspectRatio="4:5"
+      aspectRatio="1:1"
       sizes="(max-width: 35vh) 100vw, 35vh"
       formats={["avif", "jpeg", "png", "webp"]}
       alt="cool dude ikyk"
     />
   </div>
   <div class="content">
-    <div class="name">{name}</div>
-    <!-- <div class="title">{title}</div> -->
+    <div class="title">
+      <p class="texter1">{name}</p>
+      <p class="texter2">{title}</p>
+    </div>
+    <!-- <p class="title">{title}</p> -->
   </div>
 </div>
