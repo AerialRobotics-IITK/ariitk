@@ -22,26 +22,51 @@
   flex-direction: column;
   align-items: center;
   margin-top: -2rem;
-  padding: 0.5rem 0rem 0.5rem 0rem;
+  /* padding: 0.5rem 0rem 0.5rem 0rem; */
   width: 18rem;
 }
 .name {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-top: 0vw;
+  margin-bottom: 0vw;
 }
 .title {
-  margin-top: -0.25rem;
+  margin-top: 0vw;
   color: gray;
+}
+.texter1 {
+  text-align: center;
+  color: black;
+  font-weight: 2000;
+  font-size: larger;
+}
+.texter2 {
+  text-align: center;
+  color: gray;
+  font-size: medium;
 }
 @media (max-width: 600px) {
   .card {
     margin-left: -2rem;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
   }
   .picture {
     height: auto;
     /* width: 75%; */
   }
   .content {
+    margin-top: 2vw;
     padding: 0rem;
-    width: 75%;
+    /* width: 75%; */
+  }
+  .name {
+    font-size: 2rem;
+    margin-top: 0.5vw;
+  }
+  .title {
+    /* font-size: 0vw; */
+    margin-top: 0vw;
+    color: gray;
   }
 }
