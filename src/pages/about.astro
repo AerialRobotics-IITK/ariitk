@@ -67,49 +67,49 @@ import Card from "../components/Card.astro";
       <img src="https://lh3.googleusercontent.com/pw/AIL4fc9ohtNsgy_7TZB2Dxn86PH_PNSHrWLZBkGNGpjpYXQTMcyAdgQXb9lEvXABNXmy2TjtVWVj2tBv3o5ThiapoR_Z82RePKBdtnMkmd-U1xqdHGRUbjeMxiNT_eIJ84ca4XiWXUZBqGM3iZKuurYSURl5eJhlqVL_NUqFxmMUcifLTikwJoF2J3o1SaPqAoGjM0C-rtxrkBEWbVd5bXvKWUgU7BuIJ2zg1_wU7zf3TeSCwZ0nPyMJhKeEsWDAXX5uF3GOeOkxxvxz753wStwKXbgE6ml8q3TEnKX4NLPctYBue_qefpLvH6NZFCFK7iTLwbugE9Q97g_z2N7ryRurweFzPbSTX5larSFRCZ2JHqwT-cCCoQ9mqnJEAvWYf0fPfl5W9fKWAfc8TwFqg-Oo9WccyUJSCWYSiV92hffcm4o6yM8zrP5vF9RzsvLe1fu8Po2ER3IST_hKh1eIhvMaakj2lrn-BLo8dXq8XuCnVek0HvrVH9aO5-lP-nlzjpyY_AWBntW_EY5unfEtl_Y2psfAUhR1wmJHxuA2Z1CNXdfPHkU-fAze-aq3WNBgjuKHyUxfDlZql_hHRFjEYss_ATnRIB-ajwP2IkQahYkpz9RztvIc8jHb3iFiBW0_NadjNx0fen5Elu-9_yMnwb_MHx-rDBzeWEJw-v6d8G_KSbFGU1K5fJUzCBTqkMZ0AQVnJ3ILwIQ9BceoEWQCJPphJykROBEcQW2ofVLryvh7mHcLQm1n9Q_zWXOknfeZNypYpw25VvVc4IvYy-dGjIl33ROkUyGF4Y5VdNqDELdgHRl-dpj36GsGk-u_063MSbOzT92nTVEaOqydg-yaD31J3pLENyzLHcURJGvKYyP7LG_1FRdc8QwCa8JfZK6OAtYfnTRSho6CQUqOYY0ePKfuRQ=w1190-h893-s-no?authuser=0" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="https://photos.google.com/partner/AF1QipO7qbBTvzwrD_6k4DtzlRtnADWG/photo/AF1QipOTfax8lBKd73QGPwkAldPDyan6DECqLWkLi0-u" class="grayscale">
+      <img src="2.JPG" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="3.JPG" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="4.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="5.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="6.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="7.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="8.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="9.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="10.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="11.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="12.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="16.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="13.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="14.jpg" class="grayscale">
     </div>
     <div class="image-container reveal">
-      <img src="drone.jpeg" class="grayscale">
+      <img src="15.JPG" class="grayscale">
     </div>
   </div>
 
@@ -157,18 +157,39 @@ import Card from "../components/Card.astro";
 window.addEventListener("scroll", reveal);
 
 </script>
+<script>
+  // import Typed from 'typed.js';
+  
+  //   var typed = new Typed('#boss-title', {
+  //     strings: ["Got_a_knack_for_Drones?", " __Your way to Robotics.__"," ^[-_-]^ All Aboard!!!"],
+  //     // stringsElement:$('#typed'),
+  //     typeSpeed: 50,
+  //     // smartBackspace:true,
+  //   });
+
+    var container = document.querySelector(".container-gallery");
+
+    container.addEventListener("mousemove", function (e) {
+      container.style.backgroundPositionX = -e.offsetX * 1.32 + "px";
+      container.style.backgroundPositionY = -e.offsetY * 0.455 + "px";
+    });
+
+    //reset the background positions back to the original on mouseleave
+
+    container.addEventListener("mouseleave", function () {
+      container.style.backgroundPosition = "0px 0px";
+    });
+</script>
 </Layout>
 
 <style>
   * {
     box-sizing: border-box;
   }
-
-  /* body {
-    margin: 0;
-    /* font-family: Arial, sans-serif; */
-    /* background-color: #f0f0f0; */
-  /* }  */
+/* 
+ body {
+  background:url('/background.png')
+ } */
 
   /* .header {
     text-align: center;
@@ -182,6 +203,7 @@ window.addEventListener("scroll", reveal);
     display: grid;
     grid-template-columns:repeat(3,1fr);
     grid-template-rows:repeat(6,1fr);
+    background: url('/background.png');
   }
 
   .column {
@@ -253,16 +275,20 @@ window.addEventListener("scroll", reveal);
 
   img {
     width:100%;
+    
+    border:10px solid white;
   }
 
+  .
+
   .grayscale {
+  /* filter: grayscale(0%); */
     box-shadow: 0px 10px 20px black;
   border: 7px solid white;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   transition: filter 0.3s ease, transform 0.4s;
   }
    img:hover {
-  filter: grayscale(0%);
   transform: scale(1.2) rotate(3deg);
   }
   img:hover::before {

@@ -1,7 +1,7 @@
 
 .footer {
   width: 100vw;
-  padding: 2rem 4rem 2rem 9rem;
+  padding: 2rem 4rem 2rem 4rem;
   background-color: #000925;
 }
 .footer_head{
@@ -34,9 +34,9 @@
 }
 
 .social {
-  margin-left:8rem;
-  display:inline-block;
-  width:30%;
+  margin-left: 5rem;
+  display: inline-block;
+  width: 34%;
 }
 
 .map {

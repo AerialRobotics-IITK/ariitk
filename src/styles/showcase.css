@@ -17,6 +17,7 @@
 }
 .contest img {
   /* position: absolute; */
+  border:10px solid white;
   margin: 1rem;
   height: 50vh;
 }
