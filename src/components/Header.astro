@@ -8,23 +8,77 @@ import Loader from "../components/Loader.astro";
     <a href="/">
       <div class="logo-outer">
         <div class="logo">
-          <Loader height={"6rem"} type={"dark"} speed={"0ms"} />
+          <Loader height={"6rem"} type={"dark"} speed={"3000ms"} />
         </div>
         <div class="name">ARIITK</div>
       </div>
     </a>
-    <nav class="navbar">
-      <div class="nav-wrapper">
-        <ul>
-          <li class="hidden-nav"><a href="/links">Links</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/team">Team</a></li>
-          <li><a href="/showcase">Showcase</a></li>
-          <li><a href="/blogs">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/recruitment">Recruitment</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="nav-wrapper">
+          <div class="hidden-nav">  
+            <button class="dropbtn">Links</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="/showcase">Showcase</a>
+              <!-- <a href="/about">Gallery</a> -->
+              <a href="/blogs">Blog</a>
+              <a href="/team">Team</a>
+              <a href="/recruitment">Recruitment</a>
+              <a href="/contact">Contact</a>
+            </div>
+          </div>
+          <ul>
+            <li><a href="/showcase">Showcase</a></li>
+            <!-- <li><a href="/about">Gallery</a></li> -->
+            <li><a href="/blogs">Blog</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/recruitment">Recruitment</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </div>
 </header>
+
+<script>
+  import $ from 'jquery';
+  $(window).on("scroll",function() {
+  if ($(document).scrollTop() > 100) {
+    $('.header').addClass('color-change');
+    $('.logo').addClass('logo-new');
+    $('.dropbtn').addClass('color-change');
+    $('.dropdown-content').addClass('color-change-dropdown');
+  } else {
+    $('.header').removeClass('color-change');
+    $('.logo').removeClass('logo-new');
+    $('.dropbtn').removeClass('color-change');
+    $('.dropdown-content').removeClass('color-change-dropdown');
+  }
+});
+</script>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+document.querySelector(".dropbtn").addEventListener("click", myFunction);
+
+function myFunction() {
+  document.querySelector("#myDropdown").classList.toggle("show");
+  document.querySelector(".dropbtn").classList.toggle("dropbtn-focus")
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

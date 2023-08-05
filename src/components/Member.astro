@@ -1,20 +1,25 @@
 ---
+import Card_team from "./Card_team.astro";
+import Card from "./Card.astro";
 import "./styles/member.css";
 import { Image, Picture } from "@astrojs/image/components";
 export interface Props {
   photo?: string;
   name: string;
   title: string;
+  email:string;
 }
 
 const {
   photo = "https://picsum.photos/400?random=1",
   name,
   title,
+  email,
 } = Astro.props as Props;
 ---
 
-<div class="card">
+<div class="card-container">
+  <center>
   <div class="picture">
     <!--Local image with multiple sizes and formats-->
     <Picture
@@ -29,8 +34,15 @@ const {
   <div class="content">
     <div class="title">
       <p class="texter1">{name}</p>
-      <p class="texter2">{title}</p>
+      <!-- <p class="texter2">{title}</p> -->
     </div>
-    <!-- <p class="title">{title}</p> -->
+    <p class="title">{title}</p>
+  </div>
+  </center>
+  <div class="team-contact">
+      <center>
+      <a href={email}>{email}</a>
+    </center>
   </div>
 </div>
+

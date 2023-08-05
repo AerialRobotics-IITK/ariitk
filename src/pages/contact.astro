@@ -1,6 +1,7 @@
 ---
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
+import "../components/styles/contact.css";
 // import Gajendra from "../images/gajendra_gazing.jpg";
 ---
 
@@ -9,50 +10,111 @@ import Layout from "../layouts/Layout.astro";
   showPicture={true}
   background={"/gajendra_gazing.jpg"}
 >
-  <div class="container cards">
-    <div class="card">
-      <Card>
-        <h3>Looking to Join?</h3>
-        <p>
-          First rule, show up at our doors.
-          If you have any interest in robotics, planes, imaging, electronics,
-          computers, programming or just enjoying building things then you would
-          fit right in!
-        </p>
-        <h3>
-          Reach out to us at <a href="mailto:aerialroboticsiitk@gmail.com"
-            >aerialroboticsiitk@gmail.com</a
-          >
-        </h3>
-      </Card>
-    </div>
-    <div class="card">
-      <Card>
+  <div class="cards container-index" id="contact-index" style="grid-template-columns: repeat(3,1fr); column-gap: 7rem; margin-left: -4px;">
+    <div class="container-group" id="get_sponsor">
+      <div class="contact_card">
+        <center>
         <h3>Looking to sponsor us?</h3>
         <p>
           Aerial Robotics IITK is always keen on working with potential sponsors
           since it helps bring our projects to fruition!
         </p>
+        <br>
         <h3>
           Please send any questions to: <a
             href="mailto:aerialroboticsiitk@gmail.com"
             >aerialroboticsiitk@gmail.com</a
           >
         </h3>
-      </Card>
+      </center>
+      </div>
+      <div class="contact_card picture">
+        <center>
+          <img src="/agreement.gif" width="250px" height="230px">
+          <h2>We won't let you down.</h2>
+        </center>
+      </div>
+      <div class="contact_card">
+      <center>
+        <h3>Got questions or suggestions?</h3>
+        <p>
+            Get in touch with one of our team heads and say it,
+            You are welcome!! 
+
+        </p>
+        <h3>         
+          Drop a mail for ~
+
+        </h3>
+        <h6>
+          <a href="varunsappa21@iitk.ac.in">Varun Sappa</a>
+          <br>
+          <a href="pulakg21@iitk.ac.in">Pulak Gautam</a>
+          <br>
+          <a href="hardikag21@iitk.ac.in">Hardik Agarwal</a>     
+          <br>    
+          <a href="aatulya21@iitk.ac.in">Atulya Sundaram</a>
+          <br>
+          <a href="harshitc21@iitk.ac.in">Harshit Chaudhary</a>
+          <br>
+          
+        </h6>
+      </center>
+      </div>
     </div>
+    <div class="container-group" id="reach">
+      <div class="contact_card picture">
+        <center>
+          <img src="/email.gif" width="250px" height="230px">
+          <h2>Feel Free To Reach!</h2>
+        </center>
+      </div>
+      <div class="contact_card" id="touch">
+        <center>
+          <h3>Looking to Join?</h3>
+          <p>
+            First rule, show up at our doors.
+            If you have any interest in robotics, planes, imaging, electronics,
+            computers, programming or just enjoying building things then you would
+            fit right in!
+          </p>
+          <h3>
+            Reach out to us at <a href="mailto:aerialroboticsiitk@gmail.com"
+              >aerialroboticsiitk@gmail.com</a
+            >
+          </h3>
+        </center>
+      </div>
+      <div class="contact_card picture">
+        <center>
+          <img src="/speech-bubble.gif" width="250px" height="175px">
+          <h2>We would love to hear from you!</h2>
+        </center>
+      </div>
+    </div>
+    
   </div>
+  <div class="container" id="qr">
+    <Card>
+      <img src="/qr.jpg">
+    </Card>
+  </div>
+
 </Layout>
 
 <style>
   .cards {
+    margin-left:20px;
+    margin-right: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     column-gap: 1rem;
   }
   .card {
-    width: 100%;
+    /* background-color:#84b0d1 ; */
+    display:inline-block;
+    width: 60%;
   }
   .cards a {
     text-decoration: underline;

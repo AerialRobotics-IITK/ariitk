@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import "../components/styles/card.css"
 let posts = await Astro.glob("../../posts/*.md");
 
 function sortByKey(array: any) {
@@ -15,40 +16,261 @@ posts = sortByKey(posts);
 
 <Layout title="Anecdotes" showPicture={true} background={"/ironman_bw.JPG"}>
   <section class="page-content">
-    <center>
-      <h1>Documentation</h1>
-      <Card>
-        <p>We keep documenting our work at Aerial Robotics GitBook!</p><a
-          href="https://aerial-robotics-iitk.gitbook.io/wiki/"
-          class="btn">Check it out</a
-        >
-      </Card>
-    </center>
-    <div class="container">
-      <center><h1>Blogs</h1></center>
-      <p>
-        {
-          posts.map((post) => (
-            <Card>
-              <h3>{post.frontmatter.title}</h3>
-              <div class="right">
-                Written by <strong>{post.frontmatter.author} </strong> on{" "}
-                {new Date(post.frontmatter.date).toLocaleDateString()}
-              </div>
-              <p>{post.frontmatter.excerpt}</p>
-              <a class="btn" href={`/blog/${post.frontmatter.slug}`}>
-                Read More
-              </a>
-            </Card>
-          ))
-        }
-      </p>
+
+    <div class="container-group" id="document-container" style="padding:2rem; gap:20px;">
+      <div class="container-body" id="document">
+        <center>
+          <h1>Documentation</h1>
+          <Card>
+            <p>We keep documenting our work at Aerial Robotics GitBook!</p><a
+              href="https://aerial-robotics-iitk.gitbook.io/wiki/"
+              class="btn">Check it out</a
+            >
+          </Card>
+        </center>
+      </div>
+      <div id="search" style="flex: 2 2 0;">
+          <center>
+            <img src="/search.gif" height="300px">
+          </center>
+      </div>
     </div>
+    <div class="container-body" style="margin:0px auto; max-width:95%;">
+      <div class="container-index">
+        <center>
+          <center><h1>Blogs</h1></center>
+          <div class="container-grid" id="blog-grid">
+            <div class="container blog-card">
+              <p>
+                {
+                posts.map((post, index) => 
+                  {
+                    if((index % 3) !== 0) {
+                      return null;
+                    }
+                    else return ( <Card>
+                        <h3>{post.frontmatter.title}</h3>
+                        <div class="right">
+                          Written by <strong>{post.frontmatter.author} </strong> on{" "}
+                          {new Date(post.frontmatter.date).toLocaleDateString()}
+                        </div>
+                        <p>{post.frontmatter.excerpt}</p>
+                        <a class="btn" href={`/blog/${post.frontmatter.slug}`}>
+                          Read More
+                        </a>
+                      </Card>)
+                  }
+                )
+                }
+              </p>
+            </div>
+            <div class="container blog-card">
+              <p>
+                {
+                posts.map((post, index) => 
+                  {
+                    if((index % 3) !== 1){
+                      return null;
+                    }
+                    else return ( <Card>
+                        <h3>{post.frontmatter.title}</h3>
+                        <div class="right">
+                          Written by <strong>{post.frontmatter.author} </strong> on{" "}
+                          {new Date(post.frontmatter.date).toLocaleDateString()}
+                        </div>
+                        <p>{post.frontmatter.excerpt}</p>
+                        <a class="btn" href={`/blog/${post.frontmatter.slug}`}>
+                          Read More
+                        </a>
+                      </Card>)
+                  }
+                )
+                }
+              </p>
+            </div>
+            <div class="container blog-card">
+              <p>
+                {
+                posts.map((post, index) => 
+                  {
+                    if((index % 3) !== 2){
+                      return null;
+                    } 
+                    else return ( <Card>
+                        <h3>{post.frontmatter.title}</h3>
+                        <div class="right">
+                          Written by <strong>{post.frontmatter.author} </strong> on{" "}
+                          {new Date(post.frontmatter.date).toLocaleDateString()}
+                        </div>
+                        <p>{post.frontmatter.excerpt}</p>
+                        <a class="btn" href={`/blog/${post.frontmatter.slug}`}>
+                          Read More
+                        </a>
+                      </Card>)
+                  }
+                )
+                }
+              </p>
+            </div>
+          </div>
+        </center>
+      </div>
   </section>
 </Layout>
 
 <style>
-  .right {
-    margin: -0.2rem 0rem 0rem 0rem;
+  .page-content {
+    padding: 2rem 0;
   }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  #document {
+    display:inline-block;
+     width:90%;
+      padding:0rem 2rem;
+       flex:8 8 0
+  }
+
+
+
+  @media (max-width:1300px) {
+    #document-container {
+    flex-direction: row;
+  }  
+  
+  #document {
+    width:70%;
+  }
+
+@media (max-width:600px) {
+  #document-container {
+    flex-direction: column;
+  } 
+
+  #document {
+    width:102%;
+  }
+
+  #document h1 {
+    margin: 1rem 10rem 0 0rem;
+  }
+
+  #blog-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(3,1fr);
+  }
+
+  #blog-card {
+    overflow:scroll;
+  }
+
+}
+
+  }
+
+/* 
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  } */
+
+  .card {
+    padding: 2rem;
+    border-radius: 8px;
+    /* background-color: #f5f5f5; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .card-text {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #555;
+  }
+
+  .blog-container {
+    padding:1rem;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .blog-card {
+    padding: 1rem;
+    /* border-radius: 8px; */
+    /* background-color: #fff; */
+    /* box-shadow: 0 4px 8px black; */
+    transition: transform 0.3s ease;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-8px) scale(1.05);
+  
+  }
+
+  .blog-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .author {
+    font-weight: bold;
+  }
+
+  .excerpt {
+    color: #555;
+    margin-bottom: 1rem;
+  }
+
+  /* .read-more {
+    display: inline-block;
+    font-size: 1rem;
+    color: #001838;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .read-more:hover {
+    color: #001838;
+  } */
 </style>
+
