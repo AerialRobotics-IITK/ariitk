@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 
+import react from "@astrojs/react";
 import image from "@astrojs/image";
 import partytown from "@astrojs/partytown";
 import mdx from "@astrojs/mdx";
@@ -14,7 +15,16 @@ export default defineConfig({
       wrap: true,
     },
   },
+  scripts: [
+    //Include the Bootstrap javascript
+    {type: 'module', src: '/_merged_assets/bootstrap/dist/js/bootstrap.bundle.min.js'}
+  ],
+  stylesheets: [
+    //Include the Bootstrap CSS
+    {href: '/_merged_assets/bootstrap/dist/css/bootstarp.min.css'}
+  ],
   integrations: [
+    react(),
     mdx({
       syntaxHighlight: "shiki",
       shikiConfig: { theme: "dracula" },

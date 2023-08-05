@@ -1,0 +1,11 @@
+---
+import "./styles/card.css";
+export interface Props {
+  dark?: boolean;
+}
+const { dark = false } = Astro.props as Props;
+---
+
+<div class={`card-team ${dark && "dark"}`}>
+  <slot />
+</div>
