@@ -6,115 +6,123 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Showcase" showPicture={true} background={"/pence_manual.jpg"}>
-  <center><h1>Previous Contests</h1></center>
-  <div class="contests">
-    <Card>
-      <div class="container contest">
-        <div class="card">
-          <div class="content">
-            <div class="title">IMAV 2019</div>
-            <div class="text-1">
-              The 11th edition (2019) outdoor problem statement involved
-              detection of coloured mailboxes in a 300m X 100m field and the
-              subsequent delivery of boxes of matching colour to the mailboxes,
-              along with the delivery of a fragile object to a house in the
-              arena as well as the detection of a crashed MAV and mapping of the
-              arena using a swarm of autonomous MAVs.
-            </div>
-            <div class="text-2">
-              IMAV gathers around 200 researchers all over the world to
-              demonstrate their capabilities for fulfilling new challenges in
-              autonomous drone missions. We successfully analysed their problem
-              statement and placed among the top 10 teams globally.
-            </div>
-          </div>
+  <center><h1 style="color:#6caddf; font-weight:bold; margin:30px 0px;">Previous Contests</h1></center>
+  <div class="contests container-index">
+    <div class="container-group contest reveal">
+      <div class="content" id="first">
+        <div class="title reveal">IMAV 2019</div>
+        <div class="text-1 reveal" id="first-1">
+          The 11th edition (2019) outdoor problem statement involved
+          detection of coloured mailboxes in a 300m X 100m field and the
+          subsequent delivery of boxes of matching colour to the mailboxes,
+          along with the delivery of a fragile object to a house in the
+          arena as well as the detection of a crashed MAV and mapping of the
+          arena using a swarm of autonomous MAVs
         </div>
-        <div class="card-img">
-          <img src={"/showcase/contests/imav.JPG"} alt="" loading="lazy" />
+        <div class="text-2 reveal" id="first-2">
+          IMAV gathers around 200 researchers all over the world to
+          demonstrate their capabilities for fulfilling new challenges in
+          autonomous drone missions. We successfully analysed their problem
+          statement and placed among the top 10 teams globally.
         </div>
       </div>
-    </Card>
+      <div class="card-img">
+        <img src={"/showcase/contests/imav.JPG"} alt="" loading="lazy" />
+      </div>
+    </div>
 
-    <Card>
-      <div class="container contest">
-        <div class="card-img">
-          <img
-            src={"/showcase/contests/drdo_fleet.jpg"}
-            alt=""
-            loading="lazy"
-          />
+    <div class="container-group contest reveal" id="fourth">
+      <div class="card-img">
+        <img
+          src={"/showcase/contests/drdo_fleet.jpg"}
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div class="content">
+        <div class="title reveal">DRDO SASE's UAV Fleet Challenge</div>
+        <div class="text-1 reveal" id="second-1">
+          The problem statement involved detection and accurate estimation
+          of GPS coordinates estimation of green cubical boxes placed
+          randomly in a 40m x 40m green grass field while simultaneously
+          demonstrating swarm technology through the use of multiple MAVs.
         </div>
-        <div class="card">
-          <div class="content">
-            <div class="title">DRDO SASE's UAV Fleet Challenge</div>
-            <div class="text-1">
-              The problem statement involved detection and accurate estimation
-              of GPS coordinates estimation of green cubical boxes placed
-              randomly in a 40m x 40m green grass field while simultaneously
-              demonstrating swarm technology through the use of multiple MAVs.
-            </div>
-            <div class="text-2">
-              Our team managed to complete the problem statement in the least
-              possible time (3 mins), with the maximum possible accuracy (~1m
-              GPS error) using three UAVs. Our team secured the 1st position in
-              the event.
-            </div>
-          </div>
+        <div class="text-2 reveal" id="second-2">
+          Our team managed to complete the problem statement in the least
+          possible time (3 mins), with the maximum possible accuracy (~1m
+          GPS error) using three UAVs. Our team secured the 1st position in
+          the event.
         </div>
       </div>
-    </Card>
+    </div>
 
-    <Card>
-      <div class="container contest">
-        <div class="card">
-          <div class="content">
-            <div class="title">PlutoX Hackathon 2019</div>
-            <div class="text-1">
-              This was an on-the-spot 24-hour long hackathon on the PlutoX
-              platform, developed by Drona Aviation. The problem statement was
-              to program the PlutoX to autonomously pass through parallel walls
-              without any collisions. The event was followed by presentation
-              rounds.
-            </div>
-            <div class="text-2">
-              Our team managed to complete the problem statement. Our solution
-              involved mounting ultrasonic sensors on the PlutoX and
-              implementing a high-level PID controller using filtered and
-              denoised feedback from the sensors. Our team secured the 2nd
-              position in the event.
-            </div>
-          </div>
+    <div class="container-group contest reveal" id="second">
+      <div class="content">
+        <div class="title reveal">PlutoX Hackathon 2019</div>
+        <div class="text-1 reveal" id="third-1">
+          This was an on-the-spot 24-hour long hackathon on the PlutoX
+          platform, developed by Drona Aviation. The problem statement was
+          to program the PlutoX to autonomously pass through parallel walls
+          without any collisions. The event was followed by presentation
+          rounds.
         </div>
-        <div class="card-img">
-          <img src={"/showcase/contests/plutoX.png"} alt="" loading="lazy" />
+        <div class="text-2 reveal" id="third-2">
+          Our team managed to complete the problem statement. Our solution
+          involved mounting ultrasonic sensors on the PlutoX and
+          implementing a high-level PID controller using filtered and
+          denoised feedback from the sensors. Our team secured the 2nd
+          position in the event.
         </div>
       </div>
-    </Card>
+      <div class="card-img">
+        <img src={"/showcase/contests/plutoX.png"} alt="" loading="lazy" />
+      </div>
+    </div>
 
-    <Card>
-      <div class="container contest">
-        <div class="card-img">
-          <img src={"/showcase/contests/warehouse.jpg"} alt="" loading="lazy" />
-        </div>
-        <div class="card">
-          <div class="content">
-            <div class="title">Warehouse Inventory Check</div>
-            <div class="text-1">
-              The primary objective was to develop a MAV which could fly indoors
-              (with any onboard or offboard computational and tracking system)
-              and localize itself using lines on the warehouse floor. The aerial
-              robot had to perform a complete warehouse inventory check mission,
-              starting with autonomous take-off, line following, scanning the
-              warehouse goods, and finally autonomous landing.
-            </div>
-            <div class="text-2">
-              This project served as a catalyst to our team. The Team developed
-              a novel tilt-quadrotor system and successfully managed to complete
-              the problem statement securing the 3rd position.
-            </div>
+    <div class="container-group contest reveal" id="third">
+      <div class="card-img">
+        <img src={"/showcase/contests/warehouse.jpg"} alt="" loading="lazy" />
+      </div>
+      <div class="blur">
+        <div class="content">
+          <div class="title reveal">Warehouse Inventory Check</div>
+          <div class="text-1 reveal" id="fourth-1">
+            The primary objective was to develop a MAV which could fly indoors
+            (with any onboard or offboard computational and tracking system)
+            and localize itself using lines on the warehouse floor. The aerial
+            robot had to perform a complete warehouse inventory check mission,
+            starting with autonomous take-off, line following, scanning the
+            warehouse goods, and finally autonomous landing.
+          </div>
+          <div class="text-2 reveal" id="fourth-2">
+            This project served as a catalyst to our team. The Team developed
+            a novel tilt-quadrotor system and successfully managed to complete
+            the problem statement securing the 3rd position.
           </div>
         </div>
       </div>
-    </Card>
+    </div>
   </div>
+
+  <script>
+    function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+</script>
+
 </Layout>

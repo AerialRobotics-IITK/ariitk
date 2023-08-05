@@ -1,7 +1,12 @@
 ---
 import "../styles/index.css";
+// import "../styles/index.js"
 import Layout from "../layouts/Layout.astro";
+import Layout_index from "../layouts/Layout_index.astro";
 import Card from "../components/Card.astro";
+import Carousel from "../components/Carousel.astro";
+import Carousel1 from "../components/Carousel1.astro";
+import { Image, Picture } from "@astrojs/image/components";
 let posts = await Astro.glob("../../posts/*.md");
 
 function sortByKey(array: any) {
@@ -14,138 +19,711 @@ function sortByKey(array: any) {
 posts = sortByKey(posts);
 ---
 
-<Layout
+<Layout_index
   title="Aerial Robotics IITK"
   showPicture={false}
   background={"/UAVs_Merge_Compressed.mp4"}
   text={"We build drones so you don't have to"}
->
-  <div class="container">
-    <center><h1>What's New?</h1></center>
-    <div class="new-posts">
-      <!-- Show latest 2 blogs -->
-      <!-- Latest is defined according to blog file number -->
-      <div class="post">
-        {
-          (
-            <Card>
-              <h3>{posts[0].frontmatter.title}</h3>
-              <div>
-                Written on{" "}
-                {new Date(posts[0].frontmatter.date).toLocaleDateString()}
-              </div>
-              <p>{posts[0].frontmatter.excerpt}</p>
-              <a class="btn" href={`/blog/${posts[0].frontmatter.slug}`}>
-                Read More
-              </a>
-            </Card>
-          )
-        }
+> 
+
+<div class="container-index">
+  <!-- <div class="typed">
+    <center><h1 id="typed"> </h1></center>
+  </div> -->
+  <div class="container-body" id="first-group">
+    <center><h1>Awards and Recognition</h1></center>
+    <div class="container-group" id="award">
+      <div class="award reveal">
+        <Card>
+          <img class="award-img" src="/imav.jpg"/>
+          <p class="d-block w-100 reveal">
+            <center>
+              Secured a place in Top 10 Teams internationally in IMAV 2019 competing against 200 Teams from around the world.
+            </center>
+          </p>
+        </Card>
       </div>
-      <div class="post">
-        {
-          (
-            <Card>
-              <h3>{posts[1].frontmatter.title}</h3>
-              <div>
-                Written on{" "}
-                {new Date(posts[1].frontmatter.date).toLocaleDateString()}
-              </div>
-              <p>{posts[1].frontmatter.excerpt}</p>
-              <a class="btn" href={`/blog/${posts[1].frontmatter.slug}`}>
-                Read More
-              </a>
-            </Card>
-          )
-        }
+      <div class="award reveal">
+        <Card>
+          <img class="award-img" src="https://mma.prnewswire.com/media/2032110/AUVSI_2.jpg?p=facebook"/>
+          <p class="d-block w-100 reveal">
+            <center>
+              Chosen as one of only 11 teams
+              worldwide to compete in Mission 9 of the AUVSI Foundation International Aerial Robotics Competition,
+              alongside prestigious institutions such as Cornell University and IIT Bombay
+            </center>
+          </p>
+        </Card>
+      </div>
+      <div class="award reveal">
+        <Card>
+          <img class="award-img" src="/techmeet-iit.JPG"/>
+          <p class="d-block w-100 reveal">
+            <center>
+              Podium finishes at the Inter IIT Tech Meet for five consecutive years, earning
+              prestigious honours such as the Sole Gold Medal Winner with a perfect score of 400/400 and a Special Mention
+              from DRDO
+            </center>
+          </p>
+        </Card>
       </div>
     </div>
   </div>
-
-  <div class="container">
+  <div class="container-body" id="second-group">
     <center><h1>What We Do?</h1></center>
-    <div class="doing">
-      <div class="thing">
-        <!-- Made by surang -->
-        {
-          (
-            <Card>
-              <div class="content">
-                <div class="top">
-                  <h1>Automated UAV</h1>
+    <div class="container-group" id="new">
+      <div class="new">
+        <Carousel1>
+          <div slot="first">
+            <div class="thing">
+              <!-- Made by surang -->
+              <Card>
+                <div class="content">
+                  <div class="top">
+                    <h2>Make Software Stacks</h2>
+                  </div>
+                  <div class="mid">
+                    <img src={"/php.gif"} alt="" max-width="100%" />
+                  </div>
+                  <div class="bottom">
+                    <h2>Solve Problem Statements</h2>
+                  </div>
                 </div>
-                <div class="mid">
-                  <img src={"/automated-process.png"} alt="" />
+              </Card>
+            </div>
+          </div>
+          <div slot="third">
+            <div class="thing">
+              <!-- Made by srip -->
+              <Card>
+                <div class="content">
+                  <div class="top">
+                    <h2>Fly Efficient</h2>
+                  </div>
+                  <div class="mid">
+                    <img src={"/drone.gif"} alt="" max-width=100% />
+                  </div>
+                  <div class="bottom">
+                    <h2>Autonomous Drones</h2>
+                  </div>
                 </div>
-                <div class="bottom">
-                  <h1>Software and Systems</h1>
+              </Card>
+            </div>
+          </div>
+          <div slot="second">
+            <div class="thing">
+              <!-- Made by srip -->
+              <Card>
+                <div class="content">
+                  <div class="top">
+                    <h2>Assemble Airframe</h2>
+                  </div>
+                  <div class="mid">
+                    <img src={"/gear.gif"} alt="" max-width=100%/>
+                  </div>
+                  <div class="bottom">
+                    <h2>Hardware Integration</h2>
+                  </div>
                 </div>
-              </div>
-            </Card>
-          )
-        }
-      </div>
-      <div class="thing">
-        <!-- Made by srip -->
-        {
-          (
-            <Card>
-              <div class="content">
-                <div class="top">
-                  <h1>Airframe</h1>
+              </Card>
+            </div>
+          </div>
+          <div slot="fourth">
+            <div class="thing">
+              <!-- Made by Octopocto -->
+              <Card>
+                <div class="content">
+                  <div class="top">
+                    <h2>Win Competitions</h2>
+                  </div>
+                  <div class="mid">
+                    <img src={"/award.gif"} alt="" />
+                  </div>
+                  <div class="bottom">
+                    <h2>Indian and International</h2>
+                  </div>
                 </div>
-                <div class="mid">
-                  <img src={"/uav.png"} alt="" />
-                </div>
-                <div class="bottom">
-                  <h1>Hardware Integration</h1>
-                </div>
-              </div>
-            </Card>
-          )
-        }
-      </div>
-      <div class="thing">
-        <!-- Made by Octopocto -->
-        {
-          (
-            <Card>
-              <div class="content">
-                <div class="top">
-                  <h1>Competitions</h1>
-                </div>
-                <div class="mid">
-                  <img src={"/award.png"} alt="" />
-                </div>
-                <div class="bottom">
-                  <h1>Indian and International</h1>
-                </div>
-              </div>
-            </Card>
-          )
-        }
+              </Card>
+            </div>
+          </div>
+        </Carousel1>
       </div>
     </div>
   </div>
-
-  <center><h1>Our Competitions?</h1></center>
-  <div class="container">
-    <Card>
-      <p>
-        Throughout the year, ARIITK designs and develops autonomous aircraft for
-        student competitions, where we perform a full flight demonstration of
-        our aircraft. We have attended the following competitions:
-      </p>
-      <div class="points">
-        <div class="point">
-          <a href="https://interiit-tech.org/" class="btn">InterIIT Techmeet</a>
-          Podium finish streak of 5 years!
-        </div>
-        <div class="point">
-          <a href="https://www.imavs.org/" class="btn">IMAV</a>
-          International Micro Air Vehicles, Conferences and Competitions
+  <div class="container-group" id="third-group">
+    <div class="container" id="blogs">
+      <center><h1>What's New?</h1></center>
+      <div class="container-group">
+        <div class="new-posts"> 
+          <!-- Show latest 2 blogs -->
+          <!-- Latest is defined according to blog file number -->
+          <div class="post">
+            {
+              (
+                <Card>
+                  <h3>{posts[0].frontmatter.title}</h3>
+                  <div>
+                    Written on{" "}
+                    {new Date(posts[0].frontmatter.date).toLocaleDateString()}
+                  </div>
+                  <p>{posts[0].frontmatter.excerpt}</p>
+                  <a class="btn" href={`/blog/${posts[0].frontmatter.slug}`}>
+                    Read More
+                  </a>
+                </Card>
+              )
+            }
+          </div>
+          <div class="post">
+            {
+              (
+                <Card>
+                  <h3>{posts[1].frontmatter.title}</h3>
+                  <div>
+                    Written on{" "}
+                    {new Date(posts[1].frontmatter.date).toLocaleDateString()}
+                  </div>
+                  <p>{posts[1].frontmatter.excerpt}</p>
+                  <a class="btn" href={`/blog/${posts[1].frontmatter.slug}`}>
+                    Read More
+                  </a>
+                </Card>
+              )
+            }
+          </div>
         </div>
       </div>
-    </Card>
+    </div>
+
+  <!-- <div class="container-index">
+    <div class="container-body" id="first-group">
+      <center><h1>Awards and Recognition</h1></center>
+      <div class="container-group" id="award">
+        <div class="award">
+          <Card>
+            <img
+              src="/gajendra_gazing.jpg"
+              style="max-width: 800px; max-height: 300px;"
+            />
+            <p class="d-block w-100">
+              <center>
+                Secured a place in Top 10 Teams internationally in IMAV 2019
+                competing against 200 Teams from around the world.
+              </center>
+            </p>
+          </Card>
+        </div>
+        <div class="award">
+          <Card>
+            <img
+              src="/gajendra_gazing.jpg"
+              style="max-width: 800px; max-height: 300px;"
+            />
+            <p class="d-block w-100">
+              <center>
+                Chosen as one of only 11 teams worldwide to compete in Mission 9
+                of the AUVSI Foundation International Aerial Robotics
+                Competition, alongside prestigious institutions such as Cornell
+                University and IIT Bombay
+              </center>
+            </p>
+          </Card>
+        </div>
+        <div class="award">
+          <Card>
+            <img
+              src="/gajendra_gazing.jpg"
+              style="max-width: 700px; max-height: 300px;"
+            />
+            <p class="d-block w-100">
+              <center>
+                Podium finishes at the Inter IIT Tech Meet for five consecutive
+                years, earning prestigious honours such as the Sole Gold Medal
+                Winner with a perfect score of 400/400 and a Special Mention
+                from DRDO
+              </center>
+            </p>
+          </Card>
+        </div>
+      </div>
+    </div>
+    <div class="container-body" id="second-group">
+      <center><h1>What We Do?</h1></center>
+      <div class="container-group" id="new">
+        <div class="new">
+          <Carousel1>
+            <div slot="first">
+              <div class="thing">
+                <!-- Made by surang -->
+                <!-- <Card>
+                  <div class="content">
+                    <div class="top">
+                      <h2>Make Software Stacks</h2>
+                    </div>
+                    <div class="mid">
+                      <img src={"/php.gif"} alt="" max-width="100%" />
+                    </div>
+                    <div class="bottom">
+                      <h2>Solve Problem Statements</h2>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+            <div slot="third">
+              <div class="thing"> -->
+                <!-- Made by srip -->
+                <!-- <Card>
+                  <div class="content">
+                    <div class="top">
+                      <h2>Fly Efficient</h2>
+                    </div>
+                    <div class="mid">
+                      <img src={"/drone.gif"} alt="" max-width="100%" />
+                    </div>
+                    <div class="bottom">
+                      <h2>Autonomous Drones</h2>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+            <div slot="second">
+              <div class="thing"> -->
+                <!-- Made by srip -->
+                <!-- <Card>
+                  <div class="content">
+                    <div class="top">
+                      <h2>Assemble Airframe</h2>
+                    </div>
+                    <div class="mid">
+                      <img src={"/gear.gif"} alt="" max-width="100%/" />
+                    </div>
+                    <div class="bottom">
+                      <h2>Hardware Integration</h2>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+            <div slot="fourth">
+              <div class="thing"> -->
+                <!-- Made by Octopocto -->
+                <!-- <Card>
+                  <div class="content">
+                    <div class="top">
+                      <h2>Win Competitions</h2>
+                    </div>
+                    <div class="mid">
+                      <img src={"/award.gif"} alt="" />
+                    </div>
+                    <div class="bottom">
+                      <h2>Indian and International</h2>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </Carousel1>
+        </div>
+      </div>
+    </div>
+    <div class="container-group" id="third-group">
+      <div class="container" id="blogs">
+        <center><h1>What's New?</h1></center>
+        <div class="container-group">
+          <div class="new-posts"> -->
+            <!-- Show latest 2 blogs -->
+            <!-- Latest is defined according to blog file number -->
+            <!-- <div class="post">
+              {
+                (
+                  <Card>
+                    <h3>{posts[0].frontmatter.title}</h3>
+                    <div>
+                      Written on{" "}
+                      {new Date(posts[0].frontmatter.date).toLocaleDateString()}
+                    </div>
+                    <p>{posts[0].frontmatter.excerpt}</p>
+                    <a class="btn" href={`/blog/${posts[0].frontmatter.slug}`}>
+                      Read More
+                    </a>
+                  </Card>
+                )
+              }
+            </div>
+            <div class="post">
+              {
+                (
+                  <Card>
+                    <h3>{posts[1].frontmatter.title}</h3>
+                    <div>
+                      Written on{" "}
+                      {new Date(posts[1].frontmatter.date).toLocaleDateString()}
+                    </div>
+                    <p style="margin-bottom: 3vw">
+                      {posts[1].frontmatter.excerpt}
+                    </p>
+                    <a class="btn" href={`/blog/${posts[1].frontmatter.slug}`}>
+                      Read More
+                    </a>
+                  </Card>
+                )
+              }
+            </div>
+          </div>
+        </div>
+      </div>  -->
+
+      <div class="container" id="competition">
+        <center><h1>Our Competitions?</h1></center>
+        <div class="container-group">
+          <Card>
+            <p>
+              Throughout the year, ARIITK designs and develops autonomous
+              aircraft for student competitions, where we perform a full flight
+              demonstration of our aircraft. We have attended the following
+              competitions:
+            </p>
+            <div class="points">
+              <div class="point">
+                <a href="https://interiit-tech.org/" class="btn"
+                  >InterIIT Techmeet <br /> Podium finish streak of 5 years!</a
+                >
+              </div>
+              <div class="point">
+                <a href="https://www.imavs.org/" class="btn"
+                  >IMAV <br /> International Micro Air Vehicles, Conferences and
+                  Competitions</a
+                >
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container" id="about">
+      <center><h2>Still Confused?</h2></center>
+      <p>
+        ARIITK is an undergraduate team working to provide autonomous UAV based
+        open-source solutions for real-life problems. We design and build our
+        own UAV systems, typically of similar size to radio controlled model
+        airplanes. Every year a system is designed, built, tested and then
+        competed internationally. We offer the opportunity for students to put
+        theory into practice and gain valuable design and management experience
+      </p>
+    </div>
+    <div class="typed">
+      <center><h1>Got_a_knack_for_Drones?<br />All Aboard!!!</h1></center>
+    </div>
+  </div> -->
+
+  <div class="container reveal" id="about">
+    <center><h2>Still Confused?</h2></center>
+    <p class="reveal">ARIITK is an undergraduate team working to provide autonomous UAV based open-source solutions for real-life problems. We design and build our own UAV systems, typically of similar size to radio controlled model airplanes. Every year a system is designed, built, tested and then competed internationally. We offer the opportunity for students to put theory into practice and gain valuable design and management experience</p>
   </div>
+</div>
+
+  <!-- <div class="container-index">
+    <div class="container-group" id="first_group">
+      <div class="container-body" id="award">
+        <center><h1>Awards and Recognition</h1></center>
+        <Carousel>
+          <!-- adding Achievements in numbered slots of carousel -->
+  <!-- <div slot="first" class="award">
+            <Card>
+              <img src="/gajendra_gazing.jpg" style="max-height:400px; width:auto;" class="d-block w-100" alt="Slide 1" />
+              <p class="d-block w-100">
+                <center>
+                  Secured a place in Top 10 Teams internationally in IMAV 2019 competing against 200 Teams from around the world.
+                </center>
+              </p>
+            </Card>
+          </div>
+
+          <div slot="second" class="award">
+            <Card>
+              <img src="/gajendra_gazing.jpg" style="max-height:400px; width:auto;" class="d-block w-100" alt="Slide 2" />
+              <p class="d-block w-100">
+                <center>
+                  Chosen as one of only 11 teams
+                  worldwide to compete in Mission 9 of the AUVSI Foundation International Aerial Robotics Competition,
+                  alongside prestigious institutions such as Cornell University and IIT Bombay
+                </center>
+              </p>
+            </Card>
+          </div>
+
+          <div slot="third" class="award">
+            <Card>
+              <img src="/gajendra_gazing.jpg" style="max-height:400px; width:auto;" class="d-block w-100" alt="Slide 3" />
+              <p class="d-block w-100">
+                <center>
+                  Podium finishes at the Inter IIT Tech Meet for five consecutive years, earning
+                  prestigious honours such as the Sole Gold Medal Winner with a perfect score of 400/400 and a Special Mention
+                  from DRDO
+                </center>
+              </p>
+            </Card>
+          </div>
+        </Carousel>
+      </div>
+      <div class="container-body" id="about_award">
+        <Card>
+          <p>
+            ARIITK is an undergraduate team working to provide autonomous UAV based open-source solutions for real-life problems. We design and build our own UAV systems, typically of similar size to radio controlled model airplanes. Every year a system is designed, built, tested and then competed internationally. We offer the opportunity for students to put theory into practice and gain valuable design and management experience
+          </p>
+        </Card>
+      </div>
+    </div>
+
+    <div class="container-group" id="second_group">
+      <div class="container-body" id="about_new">
+        <Card>
+          <p>
+            Some opportunities in the Team include:
+            <ul>
+              <li>Making new friends</li>
+              <li>Designing airframe structures</li>
+              <li>  Programing autopilot behavior</li>
+              <li>  Coding on an embedded system platform</li>
+              <li>  Creating electrical systems to power the Drone</li>
+              <li> Traveling internationally</li> 
+            </ul>
+          </p>
+        </Card>
+      </div>
+      <div class="container-body" id="intro">
+        <center><h1>What We Do?</h1></center>
+        <Carousel1>
+          <div slot="first">
+            <div class="thing">
+              <!-- Made by surang -->
+  <!-- <Card>
+                  <div class="content">
+                    <div class="top">
+                      <h2>Make Software Stacks</h2>
+                    </div>
+                    <div class="mid">
+                      <img src={"/php.gif"} alt="" max-width="100%" />
+                    </div>
+                    <div class="bottom">
+                      <h2>Solve Problem Statements</h2>
+                    </div>
+                  </div>
+                </Card>
+            </div>
+          </div>
+          <div slot="third">
+            <div class="thing">
+              <!-- Made by srip -->
+  <!-- <Card>
+                <div class="content">
+                  <div class="top">
+                    <h2>Fly Efficient</h2>
+                  </div>
+                  <div class="mid">
+                    <img src={"/drone.gif"} alt="" max-width=100% />
+                  </div>
+                  <div class="bottom">
+                    <h2>Autonomous Drones</h2>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+          <div slot="second">
+            <div class="thing">
+              <!-- Made by srip -->
+  <!-- <Card>
+                <div class="content">
+                  <div class="top">
+                    <h2>Assemble Airframe</h2>
+                  </div>
+                  <div class="mid">
+                    <img src={"/gear.gif"} alt="" max-width=100%/>
+                  </div>
+                  <div class="bottom">
+                    <h2>Hardware Integration</h2>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+          <div slot="fourth">
+            <div class="thing"> -->
+  <!-- Made by Octopocto -->
+  <!-- <Card>
+                  <div class="content">
+                    <div class="top">
+                      <h2>Win Competitions</h2>
+                    </div>
+                    <div class="mid">
+                      <img src={"/award.gif"} alt="" />
+                    </div>
+                    <div class="bottom">
+                      <h2>Indian and International</h2>
+                    </div>
+                  </div>
+                </Card>
+            </div>
+          </div>
+        </Carousel1>
+      </div>
+    </div>
+
+    <div class="container-group" id="third_group">
+      <div class="container-body" id="new">
+        <center><h1>What's New?</h1></center>
+        <div class="new-posts"> -->
+  <!-- Show latest 2 blogs -->
+  <!-- Latest is defined according to blog file number -->
+  <!-- <div class="post">
+            {
+              (
+                <Card>
+                  <h3>{posts[0].frontmatter.title}</h3>
+                  <div>
+                    Written on{" "}
+                    {new Date(posts[0].frontmatter.date).toLocaleDateString()}
+                  </div>
+                  <p>{posts[0].frontmatter.excerpt}</p>
+                  <a class="btn" href={`/blog/${posts[0].frontmatter.slug}`}>
+                    Read More
+                  </a>
+                </Card>
+              )
+            }
+          </div>
+          <div class="post">
+            {
+              (
+                <Card>
+                  <h3>{posts[1].frontmatter.title}</h3>
+                  <div>
+                    Written on{" "}
+                    {new Date(posts[1].frontmatter.date).toLocaleDateString()}
+                  </div>
+                  <p>{posts[1].frontmatter.excerpt}</p>
+                  <a class="btn" href={`/blog/${posts[1].frontmatter.slug}`}>
+                    Read More
+                  </a>
+                </Card>
+              )
+            }
+          </div>
+        </div>
+      </div> -->
+
+  <!-- <div class="container-body" id="competition">
+        <center><h1>Our Competitions?</h1></center>
+        <Card>
+          <p>
+            Throughout the year, ARIITK designs and develops autonomous aircraft for
+            student competitions, where we perform a full flight demonstration of
+            our aircraft. We have attended the following competitions:
+          </p>
+          <div class="points">
+            <div class="point">
+              <a href="https://interiit-tech.org/" class="btn">InterIIT Techmeet <br> Podium finish streak of 5 years!</a>          
+            </div>
+            <div class="point">
+              <a href="https://www.imavs.org/" class="btn">IMAV <br> International Micro Air Vehicles, Conferences and Competitions</a>           
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </div>  -->
+
+  <!-- <div class="sponsors">
+    <div class="head">
+      <center><h1>Powered by</h1></center>
+    </div>
+    <div class="sponsor-row">
+      <div class="sponsor-comp">
+        <Picture
+          src={"/sponsors/ANSS_BIG.D-6fc7505a.png"}
+          widths={[30, 20, 300]}
+          aspectRatio="7:2"
+          sizes="(max-width: 50vh) 20vw, 30vh"
+          formats={["avif", "jpeg", "png", "webp"]}
+          alt="Ansys"
+        />
+      </div>
+      <div class="sponsor-comp">
+        <Picture
+          src={"/sponsors/Unknown-2.png"}
+          widths={[30, 20, 300]}
+          aspectRatio="1:1"
+          sizes="(max-width: 50vh) 20vw, 30vh"
+          formats={["avif", "jpeg", "png", "webp"]}
+          alt="IIT Kanpur"
+        />
+      </div>
+      <div class="sponsor-comp">
+        <Picture
+          src={"/sponsors/nvidia.png"}
+          widths={[30, 20, 300]}
+          aspectRatio="1200:675"
+          sizes="(max-width: 50vh) 20vw, 30vh"
+          formats={["avif", "jpeg", "png", "webp"]}
+          alt="Nvidia"
+        />
+      </div>
+      <div class="sponsor-comp">
+        <Picture
+          src={"/sponsors/tata motors.png"}
+          widths={[30, 20, 300]}
+          aspectRatio="1:1"
+          sizes="(max-width: 50vh) 20vw, 30vh"
+          formats={["avif", "jpeg", "png", "webp"]}
+          alt="Tata Motors"
+        />
+      </div>
+    </div>
+  </div> -->
+  <script>
+    function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+</script>
+  <script>
+    // import Typed from 'typed.js';
+    
+    //   var typed = new Typed('#boss-title', {
+    //     strings: ["Got_a_knack_for_Drones?", " __Your way to Robotics.__"," ^[-_-]^ All Aboard!!!"],
+    //     // stringsElement:$('#typed'),
+    //     typeSpeed: 50,
+    //     // smartBackspace:true,
+    //   });
+
+      var container = document.querySelector("#second-group");
+
+      container.addEventListener("mousemove", function (e) {
+        container.style.backgroundPositionX = -e.offsetX * 1.32 + "px";
+        container.style.backgroundPositionY = -e.offsetY * 0.455 + "px";
+      });
+
+      //reset the background positions back to the original on mouseleave
+
+      container.addEventListener("mouseleave", function () {
+        container.style.backgroundPosition = "0px 0px";
+      });
+</script>
 </Layout>

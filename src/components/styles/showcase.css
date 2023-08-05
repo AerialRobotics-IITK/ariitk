@@ -1,11 +1,12 @@
 /* Showcase */
 .showcase {
   margin-top: -2rem;
-  margin-bottom: 3rem;
-  height: auto;
+  /* margin-bottom: 3rem; */
+  height:auto;
 }
 
 .showcase-text {
+  margin-top: 50px;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -18,9 +19,33 @@
   margin: auto;
 }
 
+#boss_title_index {
+  margin-top:500px;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-delay:8s;
+}
+
+#boss_title {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-delay:1s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+ 
 .showcase h1 {
-  box-shadow: 0 2px 10px rgb(0 0 0 / 0.8);
-  text-decoration: double;
+  /* box-shadow: 0 2px 10px rgb(0 0 0 / 0.8); */
+  text-shadow:0px 15px 25px rgb(0, 0, 0);
   padding: 0rem 1rem;
   font-size: 100px;
   margin-bottom: 20px;
@@ -45,10 +70,87 @@
   font-weight: 300;
 }
 
+.typed {
+  /* margin-bottom:-50px;
+  padding:5rem 0rem;
+  background-repeat: no-repeat;
+  background-position: center; */
+  /* background-size:20%; */
+  /* background-position: 0px, 0px; */
+  /* border: 2px solid #000; */
+  /* width: 6650px; */
+  /* height: 575px;
+  background:url('public/background.jpg'); */
+
+  /* display: flex;
+  justify-content: center; */
+}
+
+.typed > center > h1 {
+  display: inline-block;
+  font-family:Handjet;
+  font-weight: 700;
+  font-size: 6vw;
+  color:white;
+  margin-top:110px;
+
+}
+
+@media (max-width:1130px) {
+  .typed > center > h1 {
+    display: inline-block;
+    font-family:Handjet;
+    font-weight: 700;
+    font-size: 15vw;
+    color:white;
+    margin-top:110px;
+
+  }
+  
+    .typed-cursor {
+      display:none;
+    }
+
+    .contest img {
+      border: 10px solid white;
+    width: 80%;
+    margin: rem;
+    height: 50vh;
+
+    }
+  
+  }
+
+@media (max-width:800px) {
+  .typed > center > h1 {
+    display: inline-block;
+    font-family:Handjet;
+    font-weight: 700;
+    font-size: 28vw;
+    color:white;
+    margin-top:110px;
+
+  }
+  
+    .typed-cursor {
+      display:none;
+    }
+}
+
+.typed-cursor {
+  color: orange;
+  height: 50px;
+  background: orange;
+  width: 5px;
+  border: 4px solid orange;
+  border-top-width: 66px;
+
+}
+
 /* Video */
 .video-container {
   z-index: -2;
-  height: 60vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   background-color: black;
@@ -84,4 +186,10 @@
   .showcase-text {
     scale: 0.6;
   }
+
+@media (max-width:600px) {
+  #boss_title_index {
+    margin-top:900px;
+  }
+}
 }

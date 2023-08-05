@@ -4,15 +4,15 @@ import { Image, Picture } from "@astrojs/image/components";
 ---
 
 <footer class="footer">
-  <div class="container">
-    <div class="intro">
+ <!-- <div class="container">
+     <div class="intro">
       <h3>Aerial Robotics IITK</h3>
       <p>
         The team was formed with a vision to increase awareness and promote the
         utility of UAVs. Since 2018, the team is working to provide autonomous
         UAV based open-source solutions for real-life problems.
       </p>
-    </div>
+    </div> 
     <div class="contact-group">
       <div class="contact">
         <h4>Mail to:</h4>
@@ -29,43 +29,55 @@ import { Image, Picture } from "@astrojs/image/components";
           Uttar Pradesh - 208016
         </p>
       </div>
-    </div>
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.1470967064415!2d80.22877127232319!3d26.510661199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c36ffac6f195f%3A0x21cbfa3e6d7fb5e9!2sHall%20of%20Residence%20II%2C%20Sixth%20Ave%2C%20Nankari%2C%20Kalyanpur%2C%20Kanpur%2C%20Uttar%20Pradesh%20208016!5e0!3m2!1sen!2sin!4v1673700874882!5m2!1sen!2sin"
-        width="500"
-        height="250"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-  <div class="sponsors">
-    <div class="head">
-      <h3>Our Sponsors</h3>
-    </div>
-    <div class="sponsor-row">
-      <div class="sponsor-comp">
-        <Picture
-          src={"/sponsors/ANSS_BIG.D-6fc7505a.png"}
-          widths={[30, 20, 300]}
-          aspectRatio="7:2"
-          sizes="(max-width: 50vh) 100vw, 20vh"
-          formats={["avif", "jpeg", "png", "webp"]}
-          alt="Ansys"
-        />
+    </div> -->
+
+    <!-- <div class="footer_head">
+      <img height='46px' width='262px' src="/footer_logo_ariitk.png">
+      <div class="social">
+        <a href="https://www.instagram.com/ar.iitk/?hl=hi" id="insta"><img src="/insta.svg"></a>
+        <a href="https://github.com/AerialRobotics-IITK" id="github"><img src="/github.svg"></a>
+        <a href="#" id="github"><img src="/gitbook.svg"></a>
+        <a href="https://www.linkedin.com/company/aerial-robotics-iitk/?originalSubdomain=in" id="linkedin"><img src="/linkedin.svg"></a>
       </div>
-      <div class="sponsor-comp">
-        <Picture
-          src={"/sponsors/Unknown-2.png"}
-          widths={[30, 20, 300]}
-          aspectRatio="1:1"
-          sizes="(max-width: 50vh) 100vw, 20vh"
-          formats={["avif", "jpeg", "png", "webp"]}
-          alt="IIT Kanpur"
-        />
+    </div> -->
+    <div class="footer_body">
+      <div class="interact">
+        <img height='46px' width='262px' src="/footer_logo_ariitk.png">
+        <div class="social">
+          <a href="https://www.instagram.com/ar.iitk/?hl=hi" id="insta"><img src="/insta.svg"></a>
+          <a href="https://github.com/AerialRobotics-IITK" id="github"><img src="/github.svg"></a>
+          <a href="#" id="github"><img src="/gitbook.svg"></a>
+          <a href="https://www.linkedin.com/company/aerial-robotics-iitk/?originalSubdomain=in" id="linkedin"><img src="/linkedin.svg"></a>
+        </div>
+        <br>
+        <p class="footer_des">
+          The team was formed with a vision to increase awareness and promote the utility of UAVs. Since 2018, the team is working to provide autonomous UAV based open-source solutions for real-life problems.
+        </p>
       </div>
+      <div class="sponsers">
+        <center>
+        <div>
+        <p style="font-size: 1.5rem; color:#efefef;">Our proud sponsors</p>
+        <div class="sp_con_logo">
+          <a href="#"><img height="32px" src="/sponsors/sponser1.png"></a>
+          <a href="#" style="margin-left: 10px;"><img height="55px"  src="/sponsors/sponser2.png"></a>
+          <a href="#" style="margin-left: 10px;"><img height="55px"  src="/sponsors/sponser3.png"></a>
+          <a href="#" style="margin-left: 10px;"><img height="55px"  src="/sponsors/sponser4.png"></a>
+        </div>
+        </div>
+      </center>
+      </div>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.1470967064415!2d80.22877127232319!3d26.510661199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c36ffac6f195f%3A0x21cbfa3e6d7fb5e9!2sHall%20of%20Residence%20II%2C%20Sixth%20Ave%2C%20Nankari%2C%20Kalyanpur%2C%20Kanpur%2C%20Uttar%20Pradesh%20208016!5e0!3m2!1sen!2sin!4v1673700874882!5m2!1sen!2sin"
+            width="235"
+            height="250"
+            style="border:0; border-radius: 1rem; margin:0 0 0 30px"
+            allowfullscreen=""
+            loading="lazy"
+             referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
-  </div>
+  </section>
+
 </footer>
