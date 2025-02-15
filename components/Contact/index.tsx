@@ -20,52 +20,52 @@ const Contact = () => {
         <br />
         <a
           className=""
-          href="mailto:varunsappa21@iitk.ac.in"
+          href="mailto:sanskary22@iitk.ac.in"
           target="_blank"
           rel="noreferrer"
         >
           {" "}
-          Varun Sappa
+          Sanskar Yaduka
         </a>
         <br />
         <a
           // className="underline"
-          href="mailto:aatulya21@iitk.ac.in"
+          href="mailto:dhillon22@iitk.ac.in"
           target="_blank"
           rel="noreferrer"
         >
           {" "}
-          Atulya Sundaram
+          Anmoldeep Singh Dhillon
         </a>
         <br />
         <a
           // className="underline"
-          href="mailto:pulakg21@iitk.ac.in"
+          href="mailto:amansg22@iitk.ac.in"
           target="_blank"
           rel="noreferrer"
         >
           {" "}
-          Pulak Gautam
+          Aman Singh Gill
         </a>
         <br />
         <a
           // className="underline"
-          href="mailto:harshitc21@iitk.ac.in"
+          href="mailto:shrutird22@iitk.ac.in"
           target="_blank"
           rel="noreferrer"
         >
           {" "}
-          Harshit Chaudhary
+          Shruti Ramchandra Dalvi
         </a>
         <br />
         <a
           // className="underline"
-          href="mailto:hardikag21@iitk.ac.in"
+          href="mailto:adityant22@iitk.ac.in"
           target="_blank"
           rel="noreferrer"
         >
           {" "}
-          Hardik Agarwal
+          Aditya Nalin Thakur
         </a>
       </div>
     </div>

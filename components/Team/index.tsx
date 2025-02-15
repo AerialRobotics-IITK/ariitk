@@ -2,81 +2,81 @@ import Image from "next/image";
 import React from "react";
 const teamMembersY22 = [
   {
-    name: "Varun Sappa",
-    role: "Team Member",
-    image: "https://via.placeholder.com/150",
+    name: "Aditya Nalin Thakur",
+    role: "Team Head",
+    image: "/images/team/y22/aditya.jpeg",
   },
   {
-    name: "Pulak Gautam",
-    role: "Team Member",
-    image: "https://via.placeholder.com/150",
+    name: "Aman Singh Gill",
+    role: "Team Head",
+    image: "images/team/y22/aman.jpeg",
   },
   {
-    name: "Atulya Sundaram",
-    role: "Team Member",
-    image: "https://via.placeholder.com/150",
+    name: "Anmoldeep Singh Dhillon",
+    role: "Team Head",
+    image: "images/team/y22/anmol.jpg",
   },
   {
-    name: "Harshit Chaudhary",
-    role: "Team Member",
-    image: "/images/blog/blog-details-01.jpg",
+    name: "Sanskar Yaduka",
+    role: "Team Head",
+    image: "images/team/y22/sanskar.jpeg",
   }, 
   {
-    name: "Hardik Agarwal",
-    role: "Team Member",
-    image: "https://via.placeholder.com/150",
+    name: "Shruti Ramchandra Dalvi",
+    role: "Team Head",
+    image: "images/team/y22/shruti.jpg",
   },
   {
-    name: "Shreya Rajak",
-    role: "Team Member",
-    image: "https://via.placeholder.com/150",
+    name: "Shubh Jain",
+    role: "Senior Member",
+    image: "images/team/y22/shubh.jpeg",
   },
   {
-    name: "Vegi Teja Varshit",
-    role: "Team Member",
-    image: "https://via.placeholder.com/150",
+    name: "Suhana Krishya",
+    role: "Senior Member",
+    image: "images/team/y22/suhana.jpeg",
   },
   // Add more team members here
 ];
 const teamMembersY21 = [
   {
     name: "Varun Sappa",
-    role: "Team Head",
+    role: "Alumnus",
     image: "/images/team/y21/varun1.jpg",
   },
   {
     name: "Pulak Gautam",
-    role: "Team Head",
+    role: "Alumnus",
     image: "/images/team/y21/pulak2.jpg",
   },
   {
     name: "Atulya Sundaram",
-    role: "Team Head",
+    role: "Alumnus",
     image: "/images/team/y21/atulya1.jpg",
   },
   {
     name: "Harshit Chaudhary",
-    role: "Team Head",
+    role: "Alumnus",
     image: "/images/team/y21/harshit2.jpeg",
   },
   {
     name: "Hardik Agarwal",
-    role: "Team Head",
+    role: "Alumnus",
     image: "/images/team/y21/hardik1.jpg",
   },
   {
     name: "Shreya Rajak",
-    role: "Senior Member",
+    role: "Alumnus",
     image: "/images/team/y21/shreya1.jpg",
   },
   {
     name: "Kalika",
-    role: "Senior Member",
+    role: "Alumnus",
     image: "/images/team/y21/kalika1.jpg",
   },
   {
     name: "Vegi Teja Varshit",
-    role: "Team Member",
+    role: "Alumnus",
     image: "/images/team/y21/IMG_8548.jpg",
   },
   // Add more team members here
@@ -212,6 +212,22 @@ const TeamCard = ({ member }) => {
 const Team = () => {
   return (
     <div>
+
+      {/* y22s */}
+      <div className="mt-10 ml-20 text-6xl mb-4 font-bold">
+        Y22s
+      </div>
+    <div className="flex flex-wrap justify-center">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        {teamMembersY22.map((member, index) => (
+          <div key={index}>
+            
+            <TeamCard member={member} />
+          </div>
+        ))}
+      </div>
+    </div>
+
       {/* y21s */}
       <div className="mb-4 ml-20 mt-10 text-6xl font-bold">Y21s</div>
       <div className="flex flex-wrap justify-center">
@@ -225,20 +241,6 @@ const Team = () => {
         </div>
       </div>
 
-      {/* y22s */}
-      {/* <div className="mt-10 ml-20 text-6xl mb-4 font-bold">
-        Y22s
-      </div>
-    <div className="flex flex-wrap justify-center">
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        {teamMembersY22.map((member, index) => (
-          <div key={index}>
-            
-            <TeamCard member={member} />
-          </div>
-        ))}
-      </div>
-    </div> */}
 
       {/* y20s */}
       <div className="mb-4 ml-20 mt-10 text-6xl font-bold">Y20s</div>
