@@ -13,8 +13,9 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Y23 Recruitments have begin!"
-        description="The recruitment test is scheduled for March 8th at Lecture Hall 7, beginning at 2:30 pm. Please ensure your laptops are fully charged. If you have any questions or suggestions, please don't hesitate to contact us."
+        pageName="Y24 Recruitments will begin soon!"
+        // description="The recruitment test is scheduled for March 8th at Lecture Hall 7, beginning at 2:30 pm. Please ensure your laptops are fully charged. If you have any questions or suggestions, please don't hesitate to contact us."
+        description="The introduction session will be held on March 18th. If you have any questions or suggestions, please don't hesitate to contact us."
       />
 
       {/* Embed Canva */}
@@ -24,7 +25,7 @@ const ContactPage = () => {
       <a href="https://www.canva.com/design/DAF-XIp_3_I/g9ql-YVGbhQzH2YpTNQQdQ/view?utm_content=DAF-XIp_3_I&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener"></a> 
             <div className="google-docs-embed" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100vh' }}>
         <iframe
-          src="https://docs.google.com/document/d/e/2PACX-1vT4KrW-KlqopLiPkWh0ZmUJW7tHtzJ87HGDixV4CXApQ1Rig5dil87kRmlY1xmTjUKHDMhsIqdqBaX4/pub?embedded=true"
+          src="https://docs.google.com/document/d/e/2PACX-1vQ49x4SfVEKTQTGjpqor7UFo5V6KhDHx1SVQvB6l8257Odn5NNTRoRU87UBhrs1uHDa1c3SLdz_If4n/pub?embedded=true"
           title="Google Docs Embed"
           style={{ width: '50%', height: '80%' }}
           frameBorder="0"
