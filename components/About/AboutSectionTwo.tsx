@@ -7,18 +7,18 @@ const AboutSectionTwo = () => {
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
             <div
-              className="wow fadeInUp relative mx-auto mb-12 aspect-[30/24] max-w-[550px] text-center lg:m-0"
+              className="wow fadeInUp relative mx-auto mb-12 aspect-[32/24] max-w-[550px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
               <Image
-                src="/images/imav.jpg"
-                alt="about image"
+                src="/images/icuas25.jpg"
+                alt="icuas 2025 winners"
                 fill
                 className="drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
               <Image
-                src="/images/imav.jpg"
-                alt="about image"
+                src="/images/icuas25.jpeg"
+                alt="icuas 2025 winners"
                 fill
                 className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
               />
@@ -28,6 +28,15 @@ const AboutSectionTwo = () => {
             <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                  🥇 ICUAS
+                </h3>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  International Conference on Unmanned Aircraft Systems
+                  <br />First position at ICUAS 2025 - Charlotte, NC, USA.
+                </p>
+              </div>
+              <div className="mb-9">
+                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   InterIIT Techmeet
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
@@ -35,7 +44,7 @@ const AboutSectionTwo = () => {
                   event in 2019.
                 </p>
               </div>
-              <div className="mb-9">
+              <div className="mb-0">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   IMAV
                 </h3>
@@ -43,15 +52,6 @@ const AboutSectionTwo = () => {
                   International Micro Air Vehicles, Conferences and Competitions
                 </p>
               </div>
-              {/* <div className="mb-1">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
-                </p>
-              </div> */}
             </div>
           </div>
         </div>

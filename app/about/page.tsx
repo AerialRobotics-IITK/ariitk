@@ -8,9 +8,8 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="A little bit, about us"
-        description=""
-        //about shruti bhej 
+        pageName="About us"
+        description="We build drones for fun and also take part in competitions sometimes"
       />
       <AboutSectionOne />
       <AboutSectionTwo />
