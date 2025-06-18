@@ -239,7 +239,7 @@ const TeamCard = ({ member }) => {
 
 const Team = () => {
   return (
-    <div>
+    <div className="pt-24">
       {/*y23s*/}
       <div className="mt-10 ml-20 text-6xl mb-4 font-bold">
         Y23s
