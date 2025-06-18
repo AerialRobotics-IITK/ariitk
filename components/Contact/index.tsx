@@ -2,9 +2,16 @@ import NewsLatterBox from "./NewsLatterBox";
 
 const Contact = () => {
   return (
-    <div>
-      <div className="mb-10 ml-20 mt-10 text-2xl">
-        Email:
+    <div className="container mx-auto px-4">
+      <div className="flex items-center gap-4 mb-10 text-3xl">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          className="w-10 h-10 text-white"
+        >
+          <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z" />
+        </svg>
         <a
           className=""
           href="mailto:aerial_snt@iitk.ac.in"
@@ -15,14 +22,15 @@ const Contact = () => {
           aerial_snt@iitk.ac.in
         </a>
       </div>
-      <div className="mb-10 ml-20 mt-10 text-2xl">
+      <div className="mt-10 mb-3 text-2xl">
         Reach out to our heads:
-        <br />
+      </div>
+      <div className="mb-10 text-lg">
         <a
-          className=""
-          href="mailto:sanskary22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
+          // className=""
+          // href="mailto:sanskary22@iitk.ac.in"
+          // target="_blank"
+          // rel="noreferrer"
         >
           {" "}
           Ayush Goyal
@@ -30,9 +38,9 @@ const Contact = () => {
         <br />
         <a
           // className="underline"
-          href="mailto:dhillon22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
+          // href="mailto:dhillon22@iitk.ac.in"
+          // target="_blank"
+          // rel="noreferrer"
         >
           {" "}
           Prasun Shrivastav
@@ -40,9 +48,9 @@ const Contact = () => {
         <br />
         <a
           // className="underline"
-          href="mailto:amansg22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
+          // href="mailto:amansg22@iitk.ac.in"
+          // target="_blank"
+          // rel="noreferrer"
         >
           {" "}
           Shivang Sonker
@@ -50,9 +58,9 @@ const Contact = () => {
         <br />
         <a
           // className="underline"
-          href="mailto:shrutird22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
+          // href="mailto:shrutird22@iitk.ac.in"
+          // target="_blank"
+          // rel="noreferrer"
         >
           {" "}
           Somya Garg
@@ -60,9 +68,9 @@ const Contact = () => {
         <br />
         <a
           // className="underline"
-          href="mailto:adityant22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
+          // href="mailto:adityant22@iitk.ac.in"
+          // target="_blank"
+          // rel="noreferrer"
         >
           {" "}
           Sunraj Patel
