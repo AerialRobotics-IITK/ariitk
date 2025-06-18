@@ -1,5 +1,33 @@
 import Image from "next/image";
 import React from "react";
+const teamMembersY23=[
+  {
+    name: "Ayush Goyal",
+    role: "Team Head",
+    image: "",
+  },
+  {
+    name: "Prasun Shrivastav",
+    role: "Team Head",
+    image: "",
+  },
+  {
+    name: "Shivang Sonker",
+    role: "Team Head",
+    image: "",
+  },
+  {
+    name: "Somya Garg",
+    role: "Team Head",
+    image: "",
+  },
+  {
+    name: "Sunraj Patel",
+    role: "Team Head",
+    image: "",
+  }
+  
+]
 const teamMembersY22 = [
   {
     name: "Aditya Nalin Thakur",
@@ -212,6 +240,19 @@ const TeamCard = ({ member }) => {
 const Team = () => {
   return (
     <div>
+      {/*y23s*/}
+      <div className="mt-10 ml-20 text-6xl mb-4 font-bold">
+        Y23s
+      </div>
+      <div className="flex flex-wrap justify-center">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+          {teamMembersY23.map((member, index) => (
+            <div key={index}>
+              <TeamCard member={member} />
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* y22s */}
       <div className="mt-10 ml-20 text-6xl mb-4 font-bold">

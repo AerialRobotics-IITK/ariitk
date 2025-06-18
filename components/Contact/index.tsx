@@ -25,7 +25,7 @@ const Contact = () => {
           rel="noreferrer"
         >
           {" "}
-          Sanskar Yaduka
+          Ayush Goyal
         </a>
         <br />
         <a
@@ -35,7 +35,7 @@ const Contact = () => {
           rel="noreferrer"
         >
           {" "}
-          Anmoldeep Singh Dhillon
+          Prasun Shrivastav
         </a>
         <br />
         <a
@@ -45,7 +45,7 @@ const Contact = () => {
           rel="noreferrer"
         >
           {" "}
-          Aman Singh Gill
+          Shivang Sonker
         </a>
         <br />
         <a
@@ -55,7 +55,7 @@ const Contact = () => {
           rel="noreferrer"
         >
           {" "}
-          Shruti Ramchandra Dalvi
+          Somya Garg
         </a>
         <br />
         <a
@@ -65,7 +65,7 @@ const Contact = () => {
           rel="noreferrer"
         >
           {" "}
-          Aditya Nalin Thakur
+          Sunraj Patel
         </a>
       </div>
     </div>
