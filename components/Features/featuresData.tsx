@@ -3,6 +3,13 @@ import Image from "next/image";
 const featuresData: Feature[] = [
   {
     id: 1,
+    icon: "/images/icuas25.jpeg",
+    title: "🥇 ICUAS 2025",
+    paragraph:
+      "Secured first place in ICUAS 2025 held in Charlotte, NC, USA in May 2025. Cleared several rounds, competing against teams from around the world.",
+  },
+  {
+    id: 1,
 
     icon: "/images/imav.jpg",
 

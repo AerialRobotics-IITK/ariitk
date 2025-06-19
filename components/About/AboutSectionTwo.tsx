@@ -11,7 +11,7 @@ const AboutSectionTwo = () => {
               data-wow-delay=".15s"
             >
               <Image
-                src="/images/icuas25.jpg"
+                src="/images/icuas25.jpeg"
                 alt="icuas 2025 winners"
                 fill
                 className="drop-shadow-three dark:hidden dark:drop-shadow-none"
