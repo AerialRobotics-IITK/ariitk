@@ -51,6 +51,12 @@ const menuData: Menu[] = [
   },
   {
     id: 9,
+    title: "Current projects",
+    path: "/current-projects",
+    newTab: false,
+  },
+  {
+    id: 9,
     title: "Wiki",
     path: "https://wiki.ariitk.in/wiki",
     newTab: true,
