@@ -87,7 +87,7 @@ const Footer = () => {
 
         {/* Social Links at the bottom */}
         <div className="flex justify-center gap-8 mt-12 mb-4">
-          <a href="https://github.com/ariitk" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/AerialRobotics-IITK" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
             <svg className="w-8 h-8 text-gray-100 hover:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1.01.07 1.54 1.06 1.54 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.37-2.22-.26-4.56-1.15-4.56-5.13 0-1.13.39-2.05 1.03-2.77-.1-.26-.45-1.31.1-2.74 0 0 .84-.28 2.75 1.05A9.37 9.37 0 0112 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.48.1 2.74.64.72 1.03 1.64 1.03 2.77 0 4-2.34 4.87-4.57 5.13.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .26.18.57.69.48A10.01 10.01 0 0022 12.26C22 6.58 17.52 2 12 2z" />
             </svg>
@@ -102,7 +102,7 @@ const Footer = () => {
               <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l7.99 7.99c.39.39 1.02.39 1.41 0L20 10.01V20H4z"/>
             </svg>
           </a>
-          <a href="https://youtube.com/@ariitk" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@aerialroboticsiitkanpur7921" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
             <svg className="w-8 h-8 text-gray-100 hover:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
               <path d="M21.8 8.001s-.2-1.43-.8-2.06c-.77-.8-1.64-.8-2.04-.85C16.23 5 12 5 12 5h-.01s-4.23 0-6.96.09c-.4.05-1.27.05-2.04.85-.6.63-.8 2.06-.8 2.06S2 9.57 2 11.13v1.74c0 1.56.2 3.13.2 3.13s.2 1.43.8 2.06c.77.8 1.78.77 2.23.86C7.77 19 12 19 12 19s4.23 0 6.96-.09c.45-.09 1.46-.06 2.23-.86.6-.63.8-2.06.8-2.06s.2-1.57.2-3.13v-1.74c0-1.56-.2-3.13-.2-3.13zM9.75 15.02V8.98l6.5 3.02-6.5 3.02z"/>
             </svg>
