@@ -37,7 +37,7 @@ const Footer = () => {
             {/* Larger Team Photo */}
             <div className="mb-6">
               <img
-                src="/images/current team/teamphoto.jpeg"
+                src="/images/team/current/teamphoto.jpg"
                 alt="ARIITK Team"
                 className="rounded-lg shadow-lg w-72 h-44 object-cover"
               />

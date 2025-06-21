@@ -4,27 +4,37 @@ const teamMembersY23=[
   {
     name: "Ayush Goyal",
     role: "Team Head",
-    image: "",
+    image: "/images/team/y23/ayush.jpeg",
   },
   {
     name: "Prasun Shrivastav",
     role: "Team Head",
-    image: "",
+    image: "/images/team/y23/prasun.jpeg",
   },
   {
     name: "Shivang Sonker",
     role: "Team Head",
-    image: "",
+    image: "/images/team/y23/shivang.jpeg",
   },
   {
     name: "Somya Garg",
     role: "Team Head",
-    image: "",
+    image: "/images/team/y23/somya.jpeg",
   },
   {
     name: "Sunraj Patel",
     role: "Team Head",
-    image: "",
+    image: "/images/team/y23/sunraj.jpeg",
+  },
+  {
+    name: "Meher Narula",
+    role: "Senior Team Member",
+    image: "/images/team/y23/meher.jpeg",
+  },
+  {
+    name: "Akshyat Bansal",
+    role: "Senior Team Member",
+    image: "/images/team/y23/akshyat.jpeg",
   }
   
 ]
@@ -40,14 +50,14 @@ const teamMembersY22 = [
     image: "images/team/y22/aman.jpeg",
   },
   {
-    name: "Anmoldeep Singh Dhillon",
-    role: "Team Head",
-    image: "images/team/y22/anmol.jpg",
-  },
-  {
     name: "Sanskar Yaduka",
     role: "Team Head",
     image: "images/team/y22/sanskar.jpeg",
+  },
+  {
+    name: "Anmoldeep Singh Dhillon",
+    role: "Team Head",
+    image: "images/team/y22/anmol.jpg",
   }, 
   {
     name: "Shruti Ramchandra Dalvi",
@@ -56,12 +66,12 @@ const teamMembersY22 = [
   },
   {
     name: "Shubh Jain",
-    role: "Senior Member",
+    role: "Senior Team Member",
     image: "images/team/y22/shubh.jpeg",
   },
   {
     name: "Suhana Krishya",
-    role: "Senior Member",
+    role: "Senior Team Member",
     image: "images/team/y22/suhana.jpeg",
   },
   // Add more team members here
@@ -94,12 +104,12 @@ const teamMembersY21 = [
   },
   {
     name: "Shreya Rajak",
-    role: "Alumnus",
+    role: "Alumna",
     image: "/images/team/y21/shreya1.jpg",
   },
   {
     name: "Kalika",
-    role: "Alumnus",
+    role: "Alumna",
     image: "/images/team/y21/kalika1.jpg",
   },
   {
@@ -131,7 +141,7 @@ const teamMembersY20 = [
     image: "/images/team/y20/rajarshi.jpg",
   },
   {
-    name: "B.Anshuman",
+    name: "B. Anshuman",
     role: "Alumnus",
     image: "/images/team/y20/anshuman.jpg",
   },
@@ -219,33 +229,52 @@ const teamMembersY16 = [
     image: "/images/team/y16/nitish.jpg",
   },
 ];
+
 const TeamCard = ({ member }) => {
   return (
-    <div className="square-lg bg-gray-200 p-6 shadow-md dark:bg-gray-700">
-      <img
-        src={member.image}
-        alt={member.name}
-        className="square-full hover: mx-auto mb-4 h-64 w-64 scale-105 transition-all duration-300 ease-in-out"
-      />
-      <h2 className="mb-2 text-xl font-bold text-gray-800 dark:text-gray-100">
-        {member.name}
-      </h2>
-      <h3 className="mb-4 text-lg text-gray-600 dark:text-gray-100">
-        {member.role}
-      </h3>
+    <div className="w-60 bg-gray-200 rounded-xl shadow-md text-white p-4 flex flex-col items-start dark:bg-gray-800">
+      <div className="w-full aspect-square overflow-hidden rounded-md mb-4">
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="w-full text-left">
+        <h2 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+          {member.name}
+        </h2>
+        <p className="text-base text-gray-800 dark:text-gray-100">
+          {member.role}
+        </p>
+      </div>
     </div>
   );
 };
 
 const Team = () => {
   return (
-    <div className="pt-24">
+    <div>
+      {/* current team banner */}
+      <div className="relative h-screen w-full">
+        <img
+          src="/images/team/current/teamphoto.jpg"
+          alt="Team Banner"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute top-[20%] left-0 w-full bg-black/50 py-6">
+          <h1 className="text-center text-5xl font-extrabold text-white">Meet the Team</h1>
+        </div>
+      </div>
+
       {/*y23s*/}
-      <div className="mt-10 ml-20 text-6xl mb-4 font-bold">
-        Y23s
+      <div className="flex items-center my-12 mt-64">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <span className="mx-4 text-6xl font-semibold text-gray-800 dark:text-gray-200">Y23s</span>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
       </div>
       <div className="flex flex-wrap justify-center">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 mb-16">
           {teamMembersY23.map((member, index) => (
             <div key={index}>
               <TeamCard member={member} />
@@ -255,27 +284,31 @@ const Team = () => {
       </div>
 
       {/* y22s */}
-      <div className="mt-10 ml-20 text-6xl mb-4 font-bold">
-        Y22s
+      <div className="flex items-center my-12">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <span className="mx-4 text-6xl font-semibold text-gray-800 dark:text-gray-200">Y22s</span>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
       </div>
-    <div className="flex flex-wrap justify-center">
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        {teamMembersY22.map((member, index) => (
-          <div key={index}>
-            
-            <TeamCard member={member} />
-          </div>
-        ))}
+      <div className="flex flex-wrap justify-center">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 mb-16">
+          {teamMembersY22.map((member, index) => (
+            <div key={index}>
+              <TeamCard member={member} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
 
       {/* y21s */}
-      <div className="mb-4 ml-20 mt-10 text-6xl font-bold">Y21s</div>
+      <div className="flex items-center my-12">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <span className="mx-4 text-6xl font-semibold text-gray-800 dark:text-gray-200">Y21s</span>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+      </div>
       <div className="flex flex-wrap justify-center">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 mb-16">
           {teamMembersY21.map((member, index) => (
             <div key={index}>
-              {/* className="w-1/3 md:w-1/4 lg:w-1/5" */}
               <TeamCard member={member} />
             </div>
           ))}
@@ -284,24 +317,31 @@ const Team = () => {
 
 
       {/* y20s */}
-      <div className="mb-4 ml-20 mt-10 text-6xl font-bold">Y20s</div>
+      <div className="flex items-center my-12">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <span className="mx-4 text-6xl font-semibold text-gray-800 dark:text-gray-200">Y20s</span>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+      </div>
       <div className="flex flex-wrap justify-center">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 mb-16">
           {teamMembersY20.map((member, index) => (
             <div key={index}>
-              {/* className="w-1/3 md:w-1/4 lg:w-1/5" */}
               <TeamCard member={member} />
             </div>
           ))}
         </div>
       </div>
+
       {/* Y19s */}
-      <div className="mb-4 ml-20 mt-10 text-6xl font-bold">Y19s</div>
+      <div className="flex items-center my-12">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <span className="mx-4 text-6xl font-semibold text-gray-800 dark:text-gray-200">Y19s</span>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+      </div>
       <div className="flex flex-wrap justify-center">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 mb-16">
           {teamMembersY19.map((member, index) => (
             <div key={index}>
-              {/* className="w-1/3 md:w-1/4 lg:w-1/5" */}
               <TeamCard member={member} />
             </div>
           ))}
@@ -309,12 +349,15 @@ const Team = () => {
       </div>
 
       {/* y18s */}
-      <div className="mb-4 ml-20 mt-10 text-6xl font-bold">Y18s</div>
+      <div className="flex items-center my-12">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <span className="mx-4 text-6xl font-semibold text-gray-800 dark:text-gray-200">Y18s</span>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+      </div>
       <div className="flex flex-wrap justify-center">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 mb-16">
           {teamMembersY18.map((member, index) => (
             <div key={index}>
-              {/* className="w-1/3 md:w-1/4 lg:w-1/5" */}
               <TeamCard member={member} />
             </div>
           ))}
@@ -322,12 +365,15 @@ const Team = () => {
       </div>
 
       {/* y17s */}
-      <div className="mb-4 ml-20 mt-10 text-6xl font-bold">Y17s</div>
+      <div className="flex items-center my-12">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <span className="mx-4 text-6xl font-semibold text-gray-800 dark:text-gray-200">Y17s</span>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+      </div>
       <div className="flex flex-wrap justify-center">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 mb-16">
           {teamMembersY17.map((member, index) => (
             <div key={index}>
-              {/* className="w-1/3 md:w-1/4 lg:w-1/5" */}
               <TeamCard member={member} />
             </div>
           ))}
@@ -335,18 +381,20 @@ const Team = () => {
       </div>
 
       {/* Y16s */}
-      <div className="mb-4 ml-20 mt-10 text-6xl font-bold">Y16s</div>
+      <div className="flex items-center my-12">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <span className="mx-4 text-6xl font-semibold text-gray-800 dark:text-gray-200">Y16s</span>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+      </div>
       <div className="flex flex-wrap justify-center">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 mb-64">
           {teamMembersY16.map((member, index) => (
             <div key={index}>
-              {/* className="w-1/3 md:w-1/4 lg:w-1/5" */}
               <TeamCard member={member} />
             </div>
           ))}
         </div>
       </div>
-      <br />
     </div>
   );
 };
@@ -355,3 +403,4 @@ export default Team;
 //
 //       ¯\(ツ)/¯
 // Harshit Chaudhary was here, if you see this, feel lucky
+// revamped by saatvik on 21/6/25 
