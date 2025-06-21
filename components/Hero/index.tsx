@@ -1,63 +1,54 @@
 import Link from "next/link";
 import Image from "next/image";
+import AnimatedImage from "@/components/Common/AnimatedImage";
+
 const Hero = () => {
   return (
-    <>
-      <section
-        id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
-      >
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
+    <section
+      id="home"
+      className="relative overflow-hidden bg-white dark:bg-gray-dark min-h-screen flex items-center justify-center"
+    >
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <video
+          className="min-w-full min-h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/images/UAVs_Merge.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-
-            <div className="absolute right-0 top-0 w-full h-full">
-              <video
-              className="h-full w-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-              >
-                <source src="/images/UAVs_Merge.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-              </video>
-            </div>
-            <div
-                className="relative wow fadeInUp mx-auto max-w-[800px] text-center"
-                data-wow-delay=".2s"
-              >
-                
-                <h1 className="backdrop-blur-sm bg-gray-300 bg-opacity-40 mb-4 text-7xl font-extrabold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-8xl md:leading-tight">
-                  Team Aerial Robotics IITK
-                </h1>
-                <p className="backdrop-blur-sm bg-gray-300 bg-opacity-40 mb-12 text-3xl  !leading-relaxed text-black dark:text-white sm:text-lg md:text-3xl">
-                  A group of drone enthusiasts working for a common goal.
-                </p>
-
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"></div>
-              </div>
-            </div>
-          </div>
+      {/* Content */}
+      <div className="container relative z-10 flex flex-col items-center justify-center min-h-screen">
+        <div className="w-full max-w-3xl flex flex-col items-center justify-center">
+          <h1 className="mb-4 px-4 py-2 text-5xl sm:text-6xl md:text-7xl font-extrabold text-white text-center rounded bg-gray-900 bg-opacity-40">
+            Team Aerial <br /> Robotics IITK
+          </h1>
+          <p className="mb-8 px-4 py-2 text-lg sm:text-2xl md:text-3xl font-medium text-white text-center rounded bg-gray-900 bg-opacity-40">
+            A group of drone enthusiasts working for a common goal.
+          </p>
+          {/* Example animated image (optional, remove if not needed) */}
+          {/* <AnimatedImage side="right" delay={0.2}>
+            <Image
+              src="/images/drone.png"
+              alt="Aerial Robotics Drone"
+              width={400}
+              height={400}
+              className="rounded-2xl shadow-xl"
+              priority
+            />
+          </AnimatedImage> */}
         </div>
-        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
-          <div className="relative">
-            <video
-              className="h-full w-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              <source src="/public/images/UAVs_Merge.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
 export default Hero;
+
+
+

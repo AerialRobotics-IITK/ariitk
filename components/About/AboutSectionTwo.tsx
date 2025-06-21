@@ -1,14 +1,17 @@
 import Image from "next/image";
+import AnimatedImage from "../Common/AnimatedImage"; // <-- Import AnimatedImage
 
 const AboutSectionTwo = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
+          {/* Animated image on the left */}
           <div className="w-full px-4 lg:w-1/2">
-            <div
-              className="wow fadeInUp relative mx-auto mb-12 aspect-[32/24] max-w-[550px] text-center lg:m-0"
-              data-wow-delay=".15s"
+            <AnimatedImage
+              side="left"
+              delay={0.2}
+              className="relative mx-auto mb-12 aspect-[32/24] max-w-[550px] text-center lg:m-0"
             >
               <Image
                 src="/images/icuas25.jpeg"
@@ -22,8 +25,9 @@ const AboutSectionTwo = () => {
                 fill
                 className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
               />
-            </div>
+            </AnimatedImage>
           </div>
+          {/* Description on the right */}
           <div className="w-full px-4 lg:w-1/2">
             <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
               <div className="mb-9">
@@ -61,3 +65,5 @@ const AboutSectionTwo = () => {
 };
 
 export default AboutSectionTwo;
+
+
