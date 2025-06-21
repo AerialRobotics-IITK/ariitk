@@ -2,9 +2,31 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
-const projects = [
+// TypeScript interfaces for better type safety
+interface ProjectLink {
+  href: string;
+  label: string;
+}
+
+interface ProjectDetail {
+  label: string;
+  value: React.ReactNode;
+}
+
+interface Project {
+  id: number;
+  image: string;
+  alt: string;
+  title: string;
+  description: string;
+  problemStatement: string[];
+  details?: ProjectDetail[];
+  links: ProjectLink[];
+}
+
+const projects: Project[] = [
   {
     id: 1,
     image: "/images/imav2025.jpg",
@@ -64,7 +86,8 @@ const projects = [
   }
 ];
 
-const cardAnimation = (direction: 'left' | 'right', delay: number) => ({
+// Animation variants for Framer Motion
+const cardVariants = (direction: 'left' | 'right', delay: number): Variants => ({
   initial: {
     opacity: 0,
     x: direction === 'left' ? -100 : 100,
@@ -77,21 +100,25 @@ const cardAnimation = (direction: 'left' | 'right', delay: number) => ({
     x: 0,
     y: 0,
     scale: 1,
-    boxShadow: "0 8px 32px #3b82f680"
+    boxShadow: "0 8px 32px #3b82f680",
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+      delay: delay,
+      boxShadow: { duration: 1.2, ease: "easeOut", delay: delay }
+    }
   },
   hover: {
     scale: 1.03,
-    boxShadow: "0 12px 40px #3b82f6cc"
-  },
-  transition: {
-    duration: 0.8,
-    ease: "easeOut",
-    delay: delay,
-    boxShadow: { duration: 1.2, ease: "easeOut", delay: delay }
+    boxShadow: "0 12px 40px #3b82f6cc",
+    transition: {
+      duration: 0.3,
+      ease: "easeOut"
+    }
   }
 });
 
-const CurrentProjectsPage = () => {
+const CurrentProjectsPage: React.FC = () => {
   return (
     <div className="pt-28 px-4 max-w-6xl mx-auto mb-20">
       <h1 className="text-4xl font-bold mb-12 text-center text-blue-900 dark:text-white">
@@ -106,11 +133,11 @@ const CurrentProjectsPage = () => {
           <motion.section
             key={project.id}
             className="mb-20 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8"
-            initial={cardAnimation(direction, delay).initial}
-            whileInView={cardAnimation(direction, delay).animate}
-            whileHover={cardAnimation(direction, delay).hover}
+            initial="initial"
+            whileInView="animate"
+            whileHover="hover"
             viewport={{ once: true, amount: 0.2 }}
-            transition={cardAnimation(direction, delay).transition}
+            variants={cardVariants(direction, delay)}
           >
             <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-1/3 flex items-center justify-center">
@@ -120,6 +147,7 @@ const CurrentProjectsPage = () => {
                   width={400}
                   height={320}
                   className="rounded-xl object-cover"
+                  priority={idx === 0}
                 />
               </div>
               <div className="md:w-2/3">
@@ -176,5 +204,6 @@ const CurrentProjectsPage = () => {
 };
 
 export default CurrentProjectsPage;
+
 
 
