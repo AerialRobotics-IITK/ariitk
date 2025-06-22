@@ -3,179 +3,113 @@ import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
 
 const Footer = () => {
-  // Popup state for social links
-  const [showSocial, setShowSocial] = useState(false);
-  const socialRef = useRef(null);
-
-  // Close popup on outside click
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (socialRef.current && !socialRef.current.contains(event.target)) {
-        setShowSocial(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   return (
-    <footer className="relative z-10 bg-gray-800 pt-16 pb-6 md:pt-20 lg:pt-24 text-gray-100">
-      <div className="container mx-auto px-4">
+    <footer className="relative z-10 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 pt-16 pb-6 md:pt-20 lg:pt-24 ">
+
+      <div className="container mx-auto px-20">
         <div className="flex flex-wrap justify-between items-start gap-y-12">
-          {/* Left: Info & Team Photo */}
-          <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-            <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-white">
+
+          {/* Left: goal and since*/}
+          <div className="w-full px-4 md:w-1/2 lg:w-3/8">
+            <h1 className="mb-2 text-3xl font-extrabold">
               ARIITK
             </h1>
-            <p className="mb-4 text-base leading-relaxed text-gray-200">
-              <span className="font-semibold text-blue-400">Mission:</span> To advance UAV technology and promote its real-world utility through open-source, autonomous solutions.
+            <p className="mb-10 text-base leading-relaxed">
+              We are a student led team at IIT Kanpur, supported by our college.
             </p>
-            <p className="mb-6 text-sm text-gray-400">
-              <span className="font-semibold text-blue-400">Since 2018:</span> Our passionate team at IIT Kanpur has tackled real-life challenges, winning accolades and building a vibrant UAV community.
+            <p className="mb-4 text-base leading-relaxed">
+              <span className="font-semibold text-base text-blue-400">Mission: </span>
+              To advance UAV technology and promote its real-world utility through open-source, autonomous solutions.
             </p>
-            {/* Team Photo without blue border or glow */}
-            <div className="mb-6">
-              <div className="rounded-lg w-72 h-44 overflow-hidden shadow-lg">
-                <Image
-                  src="/images/team/current/teamphoto.jpg"
-                  alt="ARIITK Team"
-                  width={288}
-                  height={176}
-                  className="object-cover w-full h-full"
-                  priority
-                />
-              </div>
-            </div>
+            <p className="mb-6 text-base">
+              <span className="font-semibold text-base text-blue-400">Since 2018: </span>
+              Our passionate team at IIT Kanpur has tackled real-life challenges, winning accolades and building a vibrant UAV community.
+            </p>
           </div>
 
           {/* Right: Contact & Map */}
           <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-            <h2 className="mb-6 text-xl font-bold text-white">
-              Reach Out to Our HQ
+            <h2 className="mb-4 text-2xl font-bold">
+              Reach us at
             </h2>
-            <div className="mb-4 flex items-center gap-2 text-gray-200">
-              <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M16.72 11.06a2.5 2.5 0 1 1-3.44-3.44 2.5 2.5 0 0 1 3.44 3.44z"></path>
-                <path d="M12 21c-4.97-4.29-8-7.36-8-11A8 8 0 0 1 20 10c0 3.64-3.03 6.71-8 11z"></path>
-              </svg>
-              <span>
-                Hall of Residence II, IIT Kanpur, UP 208016
-              </span>
-            </div>
-            <div className="mb-4 flex items-center gap-2 text-gray-200">
-              <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M16 2a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8z"></path>
-              </svg>
-              <a href="mailto:aerial_snt@iitk.ac.in" className="hover:text-blue-400">aerial_snt@iitk.ac.in</a>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-md mb-6">
+            <div className="flex justify-left mb-4">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.1470967064415!2d80.22877127232319!3d26.510661199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c36ffac6f195f%3A0x21cbfa3e6d7fb5e9!2sHall%20of%20Residence%20II%2C%20Sixth%20Ave%2C%20Nankari%2C%20Kalyanpur%2C%20Kanpur%2C%20Uttar%20Pradesh%20208016!5e0!3m2!1sen!2sin!4v1673700874882!5m2!1sen!2sin"
-                width="100%"
-                height="180"
+                className="w-64 h-44 md:w-80 md:h-30 rounded-lg"
                 loading="lazy"
                 title="ARIITK Location"
               ></iframe>
             </div>
-            {/* Contact Us Button */}
-            <div className="flex justify-center">
-              <a
-                href="/contact"
-                className="inline-block rounded-full bg-blue-600 px-8 py-3 text-white font-semibold shadow hover:bg-blue-700 transition"
-              >
-                Contact Us
-              </a>
+            <div className="mb-8 text-sm flex items-center gap-2">
+              <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M15.5 11.06a2.5 2.5 0 1 1-3.44-3.44 2.5 2.5 0 0 1 3.44 3.44z"></path>
+                <path d="M12 21c-4.97-4.29-8-7.36-8-11A8 8 0 0 1 20 10c0 3.64-3.03 6.71-8 11z"></path>
+               </svg>
+              <span>Hall 2, IIT Kanpur, UP - 208016</span>
             </div>
           </div>
+
         </div>
 
-        {/* Social Links Popup Trigger */}
-        <div className="flex justify-center mt-12 mb-4">
-          <button
-            className="px-6 py-2 bg-blue-600 rounded-full text-white font-semibold shadow hover:bg-blue-700 transition"
-            onClick={() => setShowSocial((v) => !v)}
-          >
-            Social Links
-          </button>
-        </div>
+        {/*footy social links bozo*/}
+        <div className="flex flex-col items-center justify-center">
+          <div className="flex items-center gap-6">
+            {/*linkedin*/}
+            <a href="https://www.linkedin.com/company/aerial-robotics-iitk/" target="_blank" aria-label="LinkedIn"
+              className="w-6 h-10 flex items-center justify-center text-body-color duration-300 hover:text-[#0A66C2] dark:text-body-color-dark dark:hover:text-[#0A66C2]"
+            >
+              <svg width="28" height="28" viewBox="0 0 17 16" className="fill-current" >
+                <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
+              </svg>
+            </a>
 
-        {/* Social Links Popup */}
-        {showSocial && (
-          <div
-            ref={socialRef}
-            className="flex justify-center gap-8 mt-2 mb-4 transition-all animate-fadeIn"
-          >
-            <SocialLinks />
+            {/*insta*/}
+            <a href="https://www.instagram.com/ar.iitk/" target="_bank" aria-label="Instagram"
+              className="w-6 h-10 flex items-center justify-center text-body-color duration-300 hover:text-[#C13584] dark:text-body-color-dark dark:hover:text-[#C13584]"
+            >
+              <svg width="20" height="20" viewBox="0 0 16 16" className="fill-current">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+              </svg>
+            </a>
+
+            {/*github*/}
+            <a href="https://github.com/AerialRobotics-IITK" target="_blank" aria-label="GitHub"
+              className="w-6 h-10 flex items-center justify-center text-body-color duration-300 hover:text-black dark:text-body-color-dark dark:hover:text-white"
+            >
+              <svg width="22" height="22" viewBox="0 0 16 16" className="fill-current" >
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+            </a>
+
+            {/*youtube*/}
+            <a href="https://www.youtube.com/@aerialroboticsiitkanpur7921/featured" target="_blank"  aria-label="YouTube"
+              className="w-6 h-10 flex items-center justify-center text-body-color duration-300 hover:text-[#FF0000] dark:text-body-color-dark dark:hover:text-[#FF0000]"
+            >
+              <svg width="28" height="28" viewBox="0 0 18 14" className="fill-current" >
+                <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
+              </svg>
+            </a>
+
+            {/*facebook*/}
+            <a href="https://www.facebook.com/ariitk/" target="_bank" aria-label="Facebook"
+              className="w-4 h-10 flex items-center justify-center text-body-color duration-300 hover:text-[#1877F2] dark:text-body-color-dark dark:hover:text-[#1877F2]"
+            >
+              <svg width="20" height="20" viewBox="0 0 9 18" className="fill-current" >
+                <path d="M8.13643 7H6.78036H6.29605V6.43548V4.68548V4.12097H6.78036H7.79741C8.06378 4.12097 8.28172 3.89516 8.28172 3.55645V0.564516C8.28172 0.254032 8.088 0 7.79741 0H6.02968C4.11665 0 2.78479 1.58064 2.78479 3.92339V6.37903V6.94355H2.30048H0.65382C0.314802 6.94355 0 7.25403 0 7.70564V9.7379C0 10.1331 0.266371 10.5 0.65382 10.5H2.25205H2.73636V11.0645V16.7379C2.73636 17.1331 3.00273 17.5 3.39018 17.5H5.66644C5.81174 17.5 5.93281 17.4153 6.02968 17.3024C6.12654 17.1895 6.19919 16.9919 6.19919 16.8226V11.0927V10.5282H6.70771H7.79741C8.11222 10.5282 8.35437 10.3024 8.4028 9.96371V9.93548V9.90726L8.74182 7.95968C8.76604 7.7621 8.74182 7.53629 8.59653 7.31048C8.54809 7.16935 8.33016 7.02823 8.13643 7Z" />
+              </svg>
+            </a>
+
+            
           </div>
-        )}
+        </div>
 
-        {/* Divider */}
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-700 to-transparent my-4"></div>
-        {/* Copyright */}
-        <div className="text-center text-sm text-gray-400">
-          {"\u00A9"} {new Date().getFullYear()} ARIITK, IIT Kanpur. All rights reserved.
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500 to-transparent my-4"></div>
+        <div className="text-center text-sm text-body-color dark:text-body-color-dark">
+          {"\u00A9"} {new Date().getFullYear()} ARIITK, IIT Kanpur | All rights reserved
         </div>
       </div>
     </footer>
   );
 };
 
-// Social Links Component with hover animation and original SVGs
-function SocialLinks() {
-  // Tailwind group-hover for smooth scale/rotate/shadow
-  const base =
-    "group w-12 h-12 flex items-center justify-center rounded-full bg-gray-700 shadow-lg transition-transform transform hover:scale-110 hover:rotate-6 hover:bg-blue-600 hover:shadow-2xl focus:outline-none";
-  const icon =
-    "w-8 h-8 text-gray-100 transition-colors duration-300 group-hover:text-white";
-
-  return (
-    <>
-      <a
-        href="https://github.com/AerialRobotics-IITK"
-        aria-label="GitHub"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={base}
-      >
-        <svg className={icon} fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1.01.07 1.54 1.06 1.54 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.37-2.22-.26-4.56-1.15-4.56-5.13 0-1.13.39-2.05 1.03-2.77-.1-.26-.45-1.31.1-2.74 0 0 .84-.28 2.75 1.05A9.37 9.37 0 0112 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.48.1 2.74.64.72 1.03 1.64 1.03 2.77 0 4-2.34 4.87-4.57 5.13.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .26.18.57.69.48A10.01 10.01 0 0022 12.26C22 6.58 17.52 2 12 2z" />
-        </svg>
-      </a>
-      <a
-        href="https://facebook.com/ariitk"
-        aria-label="Facebook"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={base}
-      >
-        <svg className={icon} fill="currentColor" viewBox="0 0 24 24">
-          <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24h-1.918c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .593 23.406 0 22.675 0"/>
-        </svg>
-      </a>
-      <a
-        href="mailto:aerial_snt@iitk.ac.in"
-        aria-label="Email"
-        className={base}
-      >
-        <svg className={icon} fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l7.99 7.99c.39.39 1.02.39 1.41 0L20 10.01V20H4z"/>
-        </svg>
-      </a>
-      <a
-        href="https://www.youtube.com/@aerialroboticsiitkanpur7921"
-        aria-label="YouTube"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={base}
-      >
-        <svg className={icon} fill="currentColor" viewBox="0 0 24 24">
-          <path d="M21.8 8.001s-.2-1.43-.8-2.06c-.77-.8-1.64-.8-2.04-.85C16.23 5 12 5 12 5h-.01s-4.23 0-6.96.09c-.4.05-1.27.05-2.04.85-.6.63-.8 2.06-.8 2.06S2 9.57 2 11.13v1.74c0 1.56.2 3.13.2 3.13s.2 1.43.8 2.06c.77.8 1.78.77 2.23.86C7.77 19 12 19 12 19s4.23 0 6.96-.09c.45-.09 1.46-.06 2.23-.86.6-.63.8-2.06.8-2.06s.2-1.57.2-3.13v-1.74c0-1.56-.2-3.13-.2-3.13zM9.75 15.02V8.98l6.5 3.02-6.5 3.02z"/>
-        </svg>
-      </a>
-    </>
-  );
-}
-
 export default Footer;
-
-

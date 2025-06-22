@@ -29,16 +29,25 @@ const teamMembersY23=[
     image: "/images/team/y23/sunraj.jpeg",
   },
   {
+    name: "Akshyat Bansal",
+    role: "Senior Team Member",
+    image: "/images/team/y23/akshyat.jpeg",
+  },
+  {
     name: "Meher Narula",
     role: "Senior Team Member",
     image: "/images/team/y23/meher.jpeg",
   },
   {
-    name: "Akshyat Bansal",
+    name: "Rishabh Chandrakar",
     role: "Senior Team Member",
-    image: "/images/team/y23/akshyat.jpeg",
+    image: "/images/team/y23/rishabh.jpeg",
+  },
+  {
+    name: "Ronit Kumar",
+    role: "Senior Team Member",
+    image: "/images/team/y23/ronit.jpeg",
   }
-  
 ]
 const teamMembersY22 = [
   {
