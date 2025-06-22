@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import ParallaxTeam from "./ParallaxTeam";
+
 const teamMembersY23=[
   {
     name: "Ayush Goyal",
@@ -254,21 +256,11 @@ const TeamCard = ({ member }) => {
 
 const Team = () => {
   return (
+    <main>
+    <ParallaxTeam />
     <div>
-      {/* current team banner */}
-      <div className="relative h-screen w-full">
-        <img
-          src="/images/team/current/teamphoto.jpg"
-          alt="Team Banner"
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute top-[20%] left-0 w-full bg-black/50 py-6">
-          <h1 className="text-center text-5xl font-extrabold text-white">Meet the Team</h1>
-        </div>
-      </div>
-
       {/*y23s*/}
-      <div className="flex items-center my-12 mt-64">
+      <div className="flex items-center my-12 mt-40">
         <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
         <span className="mx-4 text-6xl font-semibold text-gray-800 dark:text-gray-200">Y23s</span>
         <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
@@ -396,6 +388,7 @@ const Team = () => {
         </div>
       </div>
     </div>
+    </main>
   );
 };
 
