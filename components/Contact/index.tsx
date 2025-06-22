@@ -5,15 +5,20 @@ const Contact = () => {
     <div className="container mx-auto px-4">
       <div className="flex items-center gap-4 mb-10 text-3xl">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
           viewBox="0 0 24 24"
-          className="w-10 h-10 text-white"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-10 h-10"
         >
-          <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z" />
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M4 7L10.94 11.3375C11.5885 11.7428 12.4115 11.7428 13.06 11.3375L20 7M5 18H19C20.1046 18 21 17.1046 21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </path>
+          </g>
         </svg>
         <a
-          className=""
+          className="hover:text-primary transition-colors duration-200"
           href="mailto:aerial_snt@iitk.ac.in"
           target="_blank"
           rel="noreferrer"

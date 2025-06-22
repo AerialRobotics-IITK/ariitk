@@ -18,11 +18,11 @@ const Footer = () => {
               We are a student led team at IIT Kanpur, supported by our college.
             </p>
             <p className="mb-4 text-base leading-relaxed">
-              <span className="font-semibold text-base text-blue-400">Mission: </span>
+              <span className="font-semibold text-base text-primary">Mission: </span>
               To advance UAV technology and promote its real-world utility through open-source, autonomous solutions.
             </p>
             <p className="mb-6 text-base">
-              <span className="font-semibold text-base text-blue-400">Since 2018: </span>
+              <span className="font-semibold text-base text-primary">Since 2018: </span>
               Our passionate team at IIT Kanpur has tackled real-life challenges, winning accolades and building a vibrant UAV community.
             </p>
           </div>
@@ -41,7 +41,7 @@ const Footer = () => {
               ></iframe>
             </div>
             <div className="mb-8 text-sm flex items-center gap-2">
-              <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path d="M15.5 11.06a2.5 2.5 0 1 1-3.44-3.44 2.5 2.5 0 0 1 3.44 3.44z"></path>
                 <path d="M12 21c-4.97-4.29-8-7.36-8-11A8 8 0 0 1 20 10c0 3.64-3.03 6.71-8 11z"></path>
                </svg>
@@ -103,7 +103,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500 to-transparent my-4"></div>
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-primary to-transparent my-4"></div>
         <div className="text-center text-sm text-body-color dark:text-body-color-dark">
           {"\u00A9"} {new Date().getFullYear()} ARIITK, IIT Kanpur | All rights reserved
         </div>
