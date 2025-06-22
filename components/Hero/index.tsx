@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import AnimatedImage from "@/components/Common/AnimatedImage";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section
       id="home"
@@ -49,6 +49,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
 
 

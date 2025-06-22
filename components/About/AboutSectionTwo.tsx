@@ -1,7 +1,8 @@
+import React from "react";
 import Image from "next/image";
-import AnimatedImage from "../Common/AnimatedImage"; // <-- Import AnimatedImage
+import AnimatedImage from "../Common/AnimatedImage";
 
-const AboutSectionTwo = () => {
+const AboutSectionTwo: React.FC = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -17,13 +18,13 @@ const AboutSectionTwo = () => {
                 src="/images/icuas25.jpeg"
                 alt="icuas 2025 winners"
                 fill
-                className="drop-shadow-three dark:hidden dark:drop-shadow-none"
+                className="dark:hidden"
               />
               <Image
                 src="/images/icuas25.jpeg"
                 alt="icuas 2025 winners"
                 fill
-                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
+                className="hidden dark:block"
               />
             </AnimatedImage>
           </div>

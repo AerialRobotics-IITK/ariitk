@@ -1,9 +1,9 @@
 import { Brand } from "@/types/brand";
 import Image from "next/image";
 import brandsData from "@/components/Brands/brandsData";
-import AnimatedImage from "@/components/Common/AnimatedImage"; // Import AnimatedImage
+import AnimatedImage from "@/components/Common/AnimatedImage";
 
-const Brands = () => {
+const Brands: React.FC = () => {
   return (
     <section className="pt-16">
       <div className="container">
@@ -26,13 +26,12 @@ const Brands = () => {
 
 export default Brands;
 
-const SingleBrand = ({
-  brand,
-  index,
-}: {
+type SingleBrandProps = {
   brand: Brand;
   index: number;
-}) => {
+};
+
+const SingleBrand: React.FC<SingleBrandProps> = ({ brand, index }) => {
   const { href, image, name } = brand;
   const side = index % 2 === 0 ? "left" : "right";
 
@@ -53,5 +52,6 @@ const SingleBrand = ({
     </AnimatedImage>
   );
 };
+
 
 

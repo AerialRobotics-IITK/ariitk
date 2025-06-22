@@ -22,13 +22,13 @@ const AnimatedImage = ({
         opacity: 0,
         x: side === 'left' ? -100 : 100,
         scale: 0.8,
-        boxShadow: '0 0 0px rgba(59, 130, 246, 0)'
+        boxShadow: '0 0 0px rgba(0,0,0,0)'
       }}
       whileInView={{
         opacity: 1,
         x: 0,
         scale: 1,
-        boxShadow: '0 8px 32px rgba(59, 130, 246, 0.5)'
+        boxShadow: '0 8px 32px rgba(0,0,0,0.18)' // neutral shadow
       }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{
@@ -40,7 +40,7 @@ const AnimatedImage = ({
       className={className}
       whileHover={{
         scale: 1.05,
-        boxShadow: '0 12px 40px rgba(59, 130, 246, 0.8)'
+        boxShadow: '0 12px 40px rgba(0,0,0,0.28)' // neutral shadow
       }}
     >
       {children}
@@ -49,3 +49,5 @@ const AnimatedImage = ({
 };
 
 export default AnimatedImage;
+
+

@@ -1,7 +1,7 @@
+import React from "react";
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
-import React from "react";
-import AnimatedImage from "../Common/AnimatedImage"; // Import the AnimatedImage component
+import AnimatedImage from "../Common/AnimatedImage";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -9,16 +9,20 @@ const checkIcon = (
   </svg>
 );
 
-const AboutSectionOne = () => {
-  const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-        {checkIcon}
-      </span>
-      {text}
-    </p>
-  );
+type ListProps = {
+  text: string;
+};
 
+const List: React.FC<ListProps> = ({ text }) => (
+  <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+    <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+      {checkIcon}
+    </span>
+    {text}
+  </p>
+);
+
+const AboutSectionOne: React.FC = () => {
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
@@ -54,7 +58,6 @@ const AboutSectionOne = () => {
             </div>
 
             <div className="w-full px-4 lg:w-1/2">
-              {/* Animated image wrapper */}
               <AnimatedImage
                 side="right"
                 delay={0.2}
@@ -64,13 +67,13 @@ const AboutSectionOne = () => {
                   src="/images/2.JPG"
                   alt="about-image"
                   fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto max-w-full dark:hidden lg:mr-0"
                 />
                 <Image
                   src="/images/2.JPG"
                   alt="about-image"
                   fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto hidden max-w-full dark:block lg:mr-0"
                 />
               </AnimatedImage>
             </div>
@@ -82,5 +85,7 @@ const AboutSectionOne = () => {
 };
 
 export default AboutSectionOne;
+
+
 
 
