@@ -43,3 +43,5 @@ export default function ParallaxTeam() {
     </div>
   );
 }
+
+// saatvik was here on 21/6/25 
