@@ -1,8 +1,12 @@
 "use client";
-import React from "react";
+import React, {useState} from "react";
 import { FaLinkedin, FaInstagram, FaGithub, FaYoutube, FaFacebookF } from "react-icons/fa";
+import { useTheme } from "next-themes";
 
 const Footer = () => {
+  const [hovered, setHovered] = useState(false);
+  const { theme } = useTheme();
+  const isDarkMode = theme === "dark";
   return (
     <footer className="relative z-10 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 pt-16 pb-6 md:pt-20 lg:pt-24 ">
 
@@ -61,11 +65,40 @@ const Footer = () => {
               <FaLinkedin />
             </a>
 
-            {/*insta*/}
+            {/* insta without gradient
             <a href="https://www.instagram.com/ar.iitk/" target="_bank" aria-label="Instagram"
               className="text-2xl flex items-center justify-center text-body-color duration-300 hover:text-[#C13584] dark:text-body-color-dark dark:hover:text-[#C13584]"
             >
               <FaInstagram />
+            </a> */}
+
+            {/*insta gradient*/}
+            <svg width="0" height="0" className="absolute">
+              <defs>
+                <linearGradient id="insta-gradient" x1="0%" y1="115%" x2="-20%" y2="10%">
+                  <stop stopColor="#feda77" offset="0%" />
+                  <stop stopColor="#f58529" offset="17%" />
+                  <stop stopColor="#dd2a7b" offset="50%" />
+                  <stop stopColor="#8134af" offset="80%" />
+                  <stop stopColor="#515bd4" offset="100%" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <a href="https://www.instagram.com/ar.iitk/" target="_blank" rel="noopener noreferrer"
+              className="duration-300 text-2xl"
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+            >
+              <FaInstagram
+                style={{
+                  fill: hovered
+                    ? "url(#insta-gradient)"
+                    : isDarkMode
+                    ? "#959CB1"  // body-color-dark
+                    : "#788293", // body-color
+                  transition: "fill 0.3s ease",
+                }}
+              />
             </a>
 
             {/*github*/}

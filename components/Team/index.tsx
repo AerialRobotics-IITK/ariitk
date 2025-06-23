@@ -1,5 +1,5 @@
 'use client';
-import React from "react";
+import React, {useState} from "react";
 import ParallaxTeam from "./ParallaxTeam";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
@@ -269,13 +269,14 @@ const teamMembersY16 = [
 
 
 const TeamCard = ({ member }) => {
+  const [hovered, setHovered] = useState(false);
   return (
     <div className="group w-60 h-80 [perspective:1000px]">
       <div
         className="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
         style={{ transformStyle: "preserve-3d" }}
       >
-        {/* Front Side */}
+        {/* front */}
         <div
           className="absolute w-full h-full bg-gray-200 dark:bg-gray-800 rounded-xl shadow-md p-4 flex flex-col items-center justify-center"
           style={{
@@ -299,7 +300,7 @@ const TeamCard = ({ member }) => {
           </div>
         </div>
 
-        {/* Back Side */}
+        {/* back */}
         <div
           className="absolute w-full h-full bg-gray-200 dark:bg-gray-800 rounded-xl shadow-md p-4 flex flex-col items-center justify-center text-center"
           style={{
@@ -311,19 +312,40 @@ const TeamCard = ({ member }) => {
             {member.name}
           </h2>
           <div className="flex space-x-4">
+            {/* insta */}
+            <svg width="0" height="0" className="absolute">
+              <defs>
+                <linearGradient id="insta-gradient" x1="0%" y1="115%" x2="-20%" y2="10%">
+                  <stop stopColor="#feda77" offset="0%" />
+                  <stop stopColor="#f58529" offset="17%" />
+                  <stop stopColor="#dd2a7b" offset="50%" />
+                  <stop stopColor="#8134af" offset="80%" />
+                  <stop stopColor="#515bd4" offset="100%" />
+                </linearGradient>
+              </defs>
+            </svg>
             <a
               href={member.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="duration-300 hover:text-pink-500 text-2xl"
+              className="duration-300 text-2xl hover:scale-110 transition-transform"
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
             >
-              <FaInstagram />
+              <FaInstagram
+                style={{
+                  fill: hovered ? "url(#insta-gradient)" : "currentColor",
+                  transition: "fill 0.3s ease",
+                }}
+              />
             </a>
+
+            {/* linkedin */}
             <a
               href={member.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="duration-300 hover:text-[#0A66C2] dark:hover:text-[#2774c2] text-2xl"
+              className="duration-300 hover:scale-110 hover:text-[#0A66C2] dark:hover:text-[#2774c2] text-2xl"
             >
               <FaLinkedin />
             </a>
