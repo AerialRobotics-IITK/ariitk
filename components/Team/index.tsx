@@ -1,11 +1,14 @@
-import Image from "next/image";
+'use client';
 import React from "react";
 import ParallaxTeam from "./ParallaxTeam";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const teamMembersY23=[
   {
     name: "Ayush Goyal",
     role: "Team Head",
+    instagram: "https://www.instagram.com/",
+    linkedin: "https://www.linkedin.com/feed/",
     image: "/images/team/y23/ayush.jpeg",
   },
   {
@@ -241,27 +244,96 @@ const teamMembersY16 = [
   },
 ];
 
+// OLD TEM CARD WITHOUT SOCIAL & FLIPPING
+// const TeamCard = ({ member }) => {
+//   return (
+//     <div className="w-60 bg-gray-200 rounded-xl shadow-md text-white p-4 flex flex-col items-start dark:bg-gray-800">
+//       <div className="w-full aspect-square overflow-hidden rounded-md mb-4">
+//         <img
+//           src={member.image}
+//           alt={member.name}
+//           className="w-full h-full object-cover"
+//         />
+//       </div>
+//       <div className="w-full text-left">
+//         <h2 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+//           {member.name}
+//         </h2>
+//         <p className="text-base text-gray-800 dark:text-gray-100">
+//           {member.role}
+//         </p>
+//       </div>
+//     </div>
+//   );
+// };
+
+
 const TeamCard = ({ member }) => {
   return (
-    <div className="w-60 bg-gray-200 rounded-xl shadow-md text-white p-4 flex flex-col items-start dark:bg-gray-800">
-      <div className="w-full aspect-square overflow-hidden rounded-md mb-4">
-        <img
-          src={member.image}
-          alt={member.name}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="w-full text-left">
-        <h2 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
-          {member.name}
-        </h2>
-        <p className="text-base text-gray-800 dark:text-gray-100">
-          {member.role}
-        </p>
+    <div className="group w-60 h-80 [perspective:1000px]">
+      <div
+        className="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {/* Front Side */}
+        <div
+          className="absolute w-full h-full bg-gray-200 dark:bg-gray-800 rounded-xl shadow-md p-4 flex flex-col items-center justify-center"
+          style={{
+            backfaceVisibility: "hidden",
+          }}
+        >
+          <div className="w-full aspect-square overflow-hidden rounded-md mb-4">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover rounded-md"
+            />
+          </div>
+          <div className="w-full text-left">
+            <h2 className="text-xl font-semibold mb-2">
+              {member.name}
+            </h2>
+            <p className="text-base">
+              {member.role}
+            </p>
+          </div>
+        </div>
+
+        {/* Back Side */}
+        <div
+          className="absolute w-full h-full bg-gray-200 dark:bg-gray-800 rounded-xl shadow-md p-4 flex flex-col items-center justify-center text-center"
+          style={{
+            transform: "rotateY(180deg)",
+            backfaceVisibility: "hidden",
+          }}
+        >
+          <h2 className="text-xl font-semibold mb-2">
+            {member.name}
+          </h2>
+          <div className="flex space-x-4">
+            <a
+              href={member.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="duration-300 hover:text-pink-500 text-2xl"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="duration-300 hover:text-[#0A66C2] dark:hover:text-[#2774c2] text-2xl"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
+
 
 const Team = () => {
   return (
