@@ -9,47 +9,47 @@ const teamMembersY23=[
     role: "Team Head",
     instagram: "https://www.instagram.com/",
     linkedin: "https://www.linkedin.com/feed/",
-    image: "/images/team/y23/ayush.jpeg",
+    image: "/images/team/y23/ayush.jpg",
   },
   {
     name: "Prasun Shrivastav",
     role: "Team Head",
-    image: "/images/team/y23/prasun.jpeg",
+    image: "/images/team/y23/prasun.jpg",
   },
   {
     name: "Shivang Sonker",
     role: "Team Head",
-    image: "/images/team/y23/shivang.jpeg",
+    image: "/images/team/y23/shivang.jpg",
   },
   {
     name: "Somya Garg",
     role: "Team Head",
-    image: "/images/team/y23/somya.jpeg",
+    image: "/images/team/y23/somya.jpg",
   },
   {
     name: "Sunraj Patel",
     role: "Team Head",
-    image: "/images/team/y23/sunraj.jpeg",
+    image: "/images/team/y23/sunraj.jpg",
   },
   {
     name: "Akshyat Bansal",
     role: "Senior Team Member",
-    image: "/images/team/y23/akshyat.jpeg",
+    image: "/images/team/y23/akshyat.jpg",
   },
   {
     name: "Meher Narula",
     role: "Senior Team Member",
-    image: "/images/team/y23/meher.jpeg",
+    image: "/images/team/y23/meher.jpg",
   },
   {
     name: "Rishabh Chandrakar",
     role: "Senior Team Member",
-    image: "/images/team/y23/rishabh.jpeg",
+    image: "/images/team/y23/rishabh.jpg",
   },
   {
     name: "Ronit Kumar",
     role: "Senior Team Member",
-    image: "/images/team/y23/ronit.jpeg",
+    image: "/images/team/y23/ronit.jpg",
   }
 ]
 const teamMembersY22 = [
