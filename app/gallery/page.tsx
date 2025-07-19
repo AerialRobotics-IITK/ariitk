@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: "Gallery | ARIITK",
   description: "Media gallery for team ARIITK",
   // other metadata
-  //V!g8n35h was here and if you found this, you deserve a chocolate
 };
 
 const GalleryPage = () => {
