@@ -10,7 +10,7 @@ const Brands: React.FC = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
-              className="wow fadeInUp flex flex-wrap items-center justify-center rounded-sm bg-gray-100 px-6 py-6 dark:bg-gray-500 sm:px-10 md:px-[50px] md:py-[40px] xl:p-[60px] 2xl:px-[80px] 2xl:py-[80px]"
+              className="wow fadeInUp flex flex-wrap items-center justify-center bg-gray-100 px-6 py-6 dark:bg-gray-500 sm:px-10 md:px-[50px] md:py-[40px] xl:p-[60px] 2xl:px-[80px] 2xl:py-[80px]"
               data-wow-delay=".1s"
             >
               {brandsData.map((brand, index) => (
@@ -45,13 +45,10 @@ const SingleBrand: React.FC<SingleBrandProps> = ({ brand, index }) => {
         href={href}
         target="_blank"
         rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100"
+        className="relative h-12 w-full bg-white dark:bg-gray-200 rounded-sm"
       >
-        <Image src={image} alt={name} fill />
+        <Image src={image} alt={name} fill className="object-contain"/>
       </a>
     </AnimatedImage>
   );
 };
-
-
-

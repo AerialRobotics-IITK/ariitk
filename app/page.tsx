@@ -22,6 +22,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 <meta property="og:image" content="/images/logo/Official Logo-02-white.svg" />
 
+export const metadata: Metadata = {
+  title: "Home | ARIITK",
+  description: "Home page for team ARIITK",
+  // other metadata
+};
 
 export default function Home() {
   return (

@@ -4,11 +4,11 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
 
-// export const metadata: Metadata = {
-//   title: "Anecdotes",
-//   description: "Anecdotal records for team AR-IITK",
-//   // other metadata
-// };
+export const metadata: Metadata = {
+  title: "Anecdotes | ARIITK",
+  description: "Anecdotal records for team AR-IITK",
+  // other metadata
+};
 
 const Blog = () => {
   return (

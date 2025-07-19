@@ -4,8 +4,8 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Join Us | AR-IITK",
-  description: "Recruitment page for AR-IITK",
+  title: "Join Us | ARIITK",
+  description: "Recruitment page for ARIITK",
   // other metadata
 };
 
@@ -13,14 +13,15 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Y24 Recruitments"
+        pageName="Recruitment"
         // description="The recruitment test is scheduled for March 8th at Lecture Hall 7, beginning at 2:30 pm. Please ensure your laptops are fully charged. If you have any questions or suggestions, please don't hesitate to contact us."
         description="In case of any questions, please don't hesitate to contact us."
       />
 
       <div style={{ textAlign: 'center', marginBottom: '1em' }}>
       {/* <p style={{ fontSize: '1.1em' }}>Get ready to tackle the challenges! Can't wait to see you awesome peeps joining our team for some serious fun and learning! Let's do this!<br/> Here's the <a href="https://drive.google.com/file/d/1HoSzhonLO_KQzDN9fJdJvYdMuOAVYx1c/view" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'underline'}}>link for the paper</a>, dive in and let the fun begin! 🚀🚁 All the best and have fun!</p> */}
-      <p style={{ fontSize: '2.3em' }}>The Y24 recruitment is over!</p>
+      <p style={{ fontSize: '2.5em' }}>The Y24 recruitment is over!</p>
+      <p style={{ fontSize: '1.2em' }}>Y25 recruitment details will be shared later.</p>
       </div>
 
       {/* Embed Canva */}
