@@ -1,17 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import AnimatedImage from "@/components/Common/AnimatedImage";
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden bg-white dark:bg-gray-dark min-h-screen flex items-center justify-center"
-    >
-      {/* Video Background */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+    <>
+      <section
+        id="home"
+        className="relative h-screen overflow-hidden"
+      >
         <video
-          className="min-w-full min-h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover"
+          className="absolute left-0 top-0 z-[-1] h-full w-full object-cover"
           autoPlay
           loop
           muted
@@ -20,36 +18,27 @@ const Hero: React.FC = () => {
           <source src="/images/UAVs_Merge.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      </div>
 
-      {/* Content */}
-      <div className="container relative z-10 flex flex-col items-center justify-center min-h-screen">
-        <div className="w-full max-w-3xl flex flex-col items-center justify-center">
-          <h1 className="mb-4 px-4 py-2 text-5xl sm:text-6xl md:text-7xl font-extrabold text-white text-center rounded bg-gray-900 bg-opacity-40">
-            Team Aerial <br /> Robotics IITK
-          </h1>
-          <p className="mb-8 px-4 py-2 text-lg sm:text-2xl md:text-3xl font-medium text-white text-center rounded bg-gray-900 bg-opacity-40">
-            A group of drone enthusiasts working for a common goal.
-          </p>
-          {/* Example animated image (optional, remove if not needed) */}
-          {/* <AnimatedImage side="right" delay={0.2}>
-            <Image
-              src="/images/drone.png"
-              alt="Aerial Robotics Drone"
-              width={400}
-              height={400}
-              className="rounded-2xl shadow-xl"
-              priority
-            />
-          </AnimatedImage> */}
+        <div className="container">
+          <div className="flex h-screen items-center justify-center">
+            <div className="w-full px-4">
+              <div
+                className="wow fadeInUp mx-auto max-w-[800px] text-center"
+                data-wow-delay=".2s"
+              >
+                <h1 className="mb-4 rounded-md bg-white bg-opacity-30 p-4 text-5xl font-extrabold leading-tight text-black backdrop-blur-sm dark:text-white sm:text-4xl md:text-7xl">
+                  Team Aerial Robotics IITK
+                </h1>
+                <p className="mb-12 rounded-md bg-white bg-opacity-30 p-4 text-xl !leading-relaxed text-black backdrop-blur-sm dark:text-white sm:text-lg md:text-2xl">
+                  A group of drone enthusiasts working for a common goal.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 export default Hero;
-
-
-
-

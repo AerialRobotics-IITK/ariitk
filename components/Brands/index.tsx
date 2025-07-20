@@ -1,9 +1,8 @@
 import { Brand } from "@/types/brand";
 import Image from "next/image";
 import brandsData from "@/components/Brands/brandsData";
-import AnimatedImage from "@/components/Common/AnimatedImage";
 
-const Brands: React.FC = () => {
+const Brands = () => {
   return (
     <section className="pt-16">
       <div className="container">
@@ -14,7 +13,7 @@ const Brands: React.FC = () => {
               data-wow-delay=".1s"
             >
               {brandsData.map((brand, index) => (
-                <SingleBrand key={brand.id} brand={brand} index={index} />
+                <SingleBrand key={brand.id} brand={brand}/>
               ))}
             </div>
           </div>
@@ -26,29 +25,18 @@ const Brands: React.FC = () => {
 
 export default Brands;
 
-type SingleBrandProps = {
-  brand: Brand;
-  index: number;
-};
-
-const SingleBrand: React.FC<SingleBrandProps> = ({ brand, index }) => {
+const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, name } = brand;
-  const side = index % 2 === 0 ? "left" : "right";
-
   return (
-    <AnimatedImage
-      side={side}
-      delay={0.1 * index}
-      className="mx-3 flex w-full max-w-[160px] items-center justify-center py-[15px] sm:mx-4 lg:max-w-[150px] xl:mx-6 xl:max-w-[150px] 2xl:mx-8 2xl:max-w-[160px]"
-    >
+    <div className="mx-3 flex w-full max-w-[200px] items-center justify-center py-[15px] sm:mx-4 lg:max-w-[180px] xl:mx-6 xl:max-w-[180px] 2xl:mx-8 2xl:max-w-[200px]">
       <a
         href={href}
         target="_blank"
         rel="nofollow noreferrer"
-        className="relative h-12 w-full bg-white dark:bg-gray-200 rounded-sm"
+        className="relative h-16 w-full bg-white dark:bg-gray-200 transition duration-500ms hover:scale-105 rounded-sm"
       >
         <Image src={image} alt={name} fill className="object-contain"/>
       </a>
-    </AnimatedImage>
+    </div>
   );
 };

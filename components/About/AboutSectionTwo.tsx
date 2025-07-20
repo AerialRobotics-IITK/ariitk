@@ -1,34 +1,29 @@
-import React from "react";
 import Image from "next/image";
-import AnimatedImage from "../Common/AnimatedImage";
 
-const AboutSectionTwo: React.FC = () => {
+const AboutSectionTwo = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
-          {/* Animated image on the left */}
           <div className="w-full px-4 lg:w-1/2">
-            <AnimatedImage
-              side="left"
-              delay={0.2}
-              className="relative mx-auto mb-12 aspect-[32/24] max-w-[550px] text-center lg:m-0"
+            <div
+              className="wow fadeInUp relative mx-auto mb-12 aspect-[30/24] max-w-[550px] text-center lg:m-0"
+              data-wow-delay=".15s"
             >
               <Image
                 src="/images/icuas25.jpeg"
-                alt="icuas 2025 winners"
+                alt="about image"
                 fill
-                className="dark:hidden"
+                className="drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
               <Image
                 src="/images/icuas25.jpeg"
-                alt="icuas 2025 winners"
+                alt="about image"
                 fill
-                className="hidden dark:block"
+                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
               />
-            </AnimatedImage>
+            </div>
           </div>
-          {/* Description on the right */}
           <div className="w-full px-4 lg:w-1/2">
             <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
               <div className="mb-9">
@@ -49,7 +44,7 @@ const AboutSectionTwo: React.FC = () => {
                   event in 2019.
                 </p>
               </div>
-              <div className="mb-0">
+              <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   IMAV
                 </h3>
@@ -66,5 +61,3 @@ const AboutSectionTwo: React.FC = () => {
 };
 
 export default AboutSectionTwo;
-
-
