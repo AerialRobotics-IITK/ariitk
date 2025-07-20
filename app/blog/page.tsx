@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const Blog = () => {
   return (
     <>
-      <Breadcrumb pageName="Anecdote" description="" />
+      <Breadcrumb pageName="Anecdotes" description="" />
 
       <section className="pb-[120px] pt-[120px]">
         <div className="container">
