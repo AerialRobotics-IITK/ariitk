@@ -13,7 +13,7 @@ const featuresData: Feature[] = [
     id: 2,
     icon: "/images/imav.jpg",
     title: "- IMAV 2019",
-    head: "Secured a place in Top 10 team globally",
+    head: "Secured a place in Top 10 teams globally",
     paragraph:
       "In IMAV 2019, held in Madrid, Spain. Competing against 200 teams from around the world.",
   },
@@ -23,7 +23,7 @@ const featuresData: Feature[] = [
     title: "- AUVSI",
     head: "Chosen as one of only 11 teams worldwide",
     paragraph:
-      "To compete in Mission 9 of the AUVSI Foundation International Aerial Robotics Competition, alongside prestigious institutions such as Cornell University and IIT Bombay",
+      "To compete in Mission 9 of the AUVSI Foundation International Aerial Robotics Competition, alongside prestigious institutions such as Cornell University and IIT Bombay.",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const featuresData: Feature[] = [
     title: "- INTER-IIT TECH MEET",
     head: "Podium finishes at the Inter IIT Tech Meet",
     paragraph:
-      "For 5 consecutive years, earning prestigious honours such as the Sole Gold Medal Winner with a perfect score of 400/400 and a Special Mention from DRDO",
+      "For 5 consecutive years, earning prestigious honours such as the Sole Gold Medal Winner with a perfect score of 400/400 and a Special Mention from DRDO.",
   },
 ];
 export default featuresData;
