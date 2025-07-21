@@ -7,13 +7,15 @@ const teamMembersY23=[
   {
     name: "Ayush Goyal",
     role: "Team Head",
-    instagram: "https://www.instagram.com/",
-    linkedin: "https://www.linkedin.com/feed/",
+    instagram: "https://www.instagram.com/a_yu_sh_g/",
+    linkedin: "https://www.linkedin.com/in/ayush-goyal-20247127b/",
     image: "/images/team/y23/ayush.jpg",
   },
   {
     name: "Prasun Shrivastav",
     role: "Team Head",
+    instagram: "https://www.instagram.com/prasunshrivastav_/",
+    linkedin: "https://www.linkedin.com/in/prasun-shrivastav-0674b528b/",
     image: "/images/team/y23/prasun.jpg",
   },
   {
@@ -24,11 +26,15 @@ const teamMembersY23=[
   {
     name: "Somya Garg",
     role: "Team Head",
+    instagram: "https://www.instagram.com/somya_duhh/",
+    linkedin: "https://www.linkedin.com/in/somya-garg-7589b3280/",
     image: "/images/team/y23/somya.jpg",
   },
   {
     name: "Sunraj Patel",
     role: "Team Head",
+    instagram: "https://instagram.com/sunraj_pat/",
+    linkedin: "https://www.linkedin.com/in/sunraj-patel-b55a80196/",
     image: "/images/team/y23/sunraj.jpg",
   },
   {
@@ -39,6 +45,8 @@ const teamMembersY23=[
   {
     name: "Meher Narula",
     role: "Senior Team Member",
+    instagram: "https://www.instagram.com/brewsters_angle/",
+    linkedin: "https://www.linkedin.com/in/meher-narula-26b07b298/",
     image: "/images/team/y23/meher.jpg",
   },
   {
@@ -61,21 +69,27 @@ const teamMembersY22 = [
   {
     name: "Aman Singh Gill",
     role: "Team Head",
+    linkedin: "https://www.linkedin.com/in/gillsingha/",
     image: "images/team/y22/aman.jpeg",
   },
   {
     name: "Sanskar Yaduka",
     role: "Team Head",
+    linkedin: "https://www.linkedin.com/in/sanskar-yaduka-6aa154254/",
     image: "images/team/y22/sanskar.jpeg",
   },
   {
     name: "Anmoldeep Singh Dhillon",
     role: "Team Head",
+    instagram: "https://www.instagram.com/xx___anmol___xx/",
+    linkedin: "https://www.linkedin.com/in/anmoldeep-singh-796888247/",
     image: "images/team/y22/anmol.jpg",
   }, 
   {
     name: "Shruti Ramchandra Dalvi",
     role: "Team Head",
+    instagram: "https://www.instagram.com/shruti.dalvii/",
+    linkedin: "https://www.linkedin.com/in/shruti-r-dalvi/",
     image: "images/team/y22/shruti.jpg",
   },
   {
@@ -244,7 +258,7 @@ const teamMembersY16 = [
   },
 ];
 
-// OLD TEM CARD WITHOUT SOCIAL & FLIPPING
+// OLD TEAM CARD WITHOUT SOCIAL & FLIPPING
 // const TeamCard = ({ member }) => {
 //   return (
 //     <div className="w-60 bg-gray-200 rounded-xl shadow-md text-white p-4 flex flex-col items-start dark:bg-gray-800">
@@ -268,7 +282,8 @@ const teamMembersY16 = [
 // };
 
 
-const TeamCard = ({ member }) => {
+const TeamCard = ({ member }) => { 
+//updated team card with flipping and socials backside
   const [hovered, setHovered] = useState(false);
   return (
     <div className="group w-60 h-80 [perspective:1000px]">

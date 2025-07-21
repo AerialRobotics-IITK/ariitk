@@ -1,85 +1,91 @@
 import NewsLatterBox from "./NewsLatterBox";
+import { FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="container mx-auto px-4">
-      <div className="flex items-center gap-4 mb-10 text-3xl">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-10 h-10"
-        >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <path d="M4 7L10.94 11.3375C11.5885 11.7428 12.4115 11.7428 13.06 11.3375L20 7M5 18H19C20.1046 18 21 17.1046 21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            </path>
-          </g>
-        </svg>
+    <div>
+      <div className="flex items-center justify-center gap-1 pt-5 pb-16">
+        <p className="text-2xl px-5">
+          Get in touch with us:
+        </p>
         <a
-          className="hover:text-primary transition-colors duration-200"
+          className="text-3xl hover:text-primary transition-colors duration-200"
           href="mailto:aerial_snt@iitk.ac.in"
           target="_blank"
           rel="noreferrer"
         >
-          {" "}
-          aerial_snt@iitk.ac.in
+          <div className="flex items-center justify-center gap-2">
+            <FaEnvelope/> aerial_snt@iitk.ac.in
+          </div>
         </a>
       </div>
-      <div className="mt-10 mb-3 text-2xl">
-        Reach out to our heads:
+      
+      <div className="flex items-center my-4">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <span className="mx-4 text-2xl font-semibold">Reach out to our heads</span>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
       </div>
-      <div className="mb-10 text-lg">
-        <a
-          // className=""
-          // href="mailto:sanskary22@iitk.ac.in"
-          // target="_blank"
-          // rel="noreferrer"
-        >
-          {" "}
-          Ayush Goyal
-        </a>
-        <br />
-        <a
-          // className="underline"
-          // href="mailto:dhillon22@iitk.ac.in"
-          // target="_blank"
-          // rel="noreferrer"
-        >
-          {" "}
-          Prasun Shrivastav
-        </a>
-        <br />
-        <a
-          // className="underline"
-          // href="mailto:amansg22@iitk.ac.in"
-          // target="_blank"
-          // rel="noreferrer"
-        >
-          {" "}
-          Shivang Sonker
-        </a>
-        <br />
-        <a
-          // className="underline"
-          // href="mailto:shrutird22@iitk.ac.in"
-          // target="_blank"
-          // rel="noreferrer"
-        >
-          {" "}
-          Somya Garg
-        </a>
-        <br />
-        <a
-          // className="underline"
-          // href="mailto:adityant22@iitk.ac.in"
-          // target="_blank"
-          // rel="noreferrer"
-        >
-          {" "}
-          Sunraj Patel
-        </a>
+
+      <div className="flex flex-wrap items-center justify-center mb-24 gap-16 pt-16 text-3xl">
+        <div className="text-center">
+          Ayush Goyal <br />
+          {/* <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:xxxxxx@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            xxxxxx@iitk.ac.in
+          </a> */}
+        </div>
+
+        <div className="text-center">
+          Prasun Shrivastav <br />
+          {/* <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:xxxxxx@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            xxxxxx@iitk.ac.in
+          </a> */}
+        </div>
+
+        <div className="text-center">
+          Shivang Sonker <br />
+          {/* <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:xxxxxx@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            xxxxxx@iitk.ac.in
+          </a> */}
+        </div>
+
+        <div className="text-center">
+          Somya Garg <br />
+          {/* <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:xxxxxx@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            xxxxxx@iitk.ac.in
+          </a> */}
+        </div>
+
+        <div className="text-center">
+          Sunraj Patel <br />
+          <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:sunrajp23@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            sunrajp23@iitk.ac.in
+          </a>
+        </div>
       </div>
     </div>
 
