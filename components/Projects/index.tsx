@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 
-// TypeScript interfaces for better type safety
 interface ProjectLink {
   href: string;
   label: string;
@@ -39,10 +38,28 @@ const projects: Project[] = [
       "Precision landing and payload delivery",
       "Multi-vehicle coordination challenges"
     ],
+    details: [
+      {
+        label: "Timeline",
+        value: (
+          <ul className="text-sm space-y-1">
+            <li>Final Round: November 3-7, 2025</li>
+          </ul>
+        )
+      },
+      {
+        label: "Venue",
+        value: <p className="text-sm">San Andres Cholula in Puebla, Mexico</p>
+      }
+    ],
     links: [
       {
-        href: "https://www.imavs.org",
+        href: "https://femexrobotica.org/imav2025/",
         label: "Official Website"
+      },
+      {
+        href: "https://femexrobotica.org/imav2025/index.php/rulebook-imav-2025/",
+        label: "Rulebook"
       }
     ]
   },
@@ -75,70 +92,69 @@ const projects: Project[] = [
     ],
     links: [
       {
-        href: "https://www.ursc.gov.in/IRoC-U2025/RulebookIRoC-U2025_V2.0.pdf",
-        label: "Rulebook (PDF)"
-      },
-      {
         href: "https://www.ursc.gov.in/IRoC-U2025/",
         label: "Official Website"
+      },
+      {
+        href: "https://www.ursc.gov.in/IRoC-U2025/RulebookIRoC-U2025_V2.0.pdf",
+        label: "Rulebook (PDF)"
       }
     ]
   }
 ];
 
 // Animation variants for Framer Motion
-const cardVariants = (direction: 'left' | 'right', delay: number): Variants => ({
-  initial: {
-    opacity: 0,
-    x: direction === 'left' ? -100 : 100,
-    y: 40,
-    scale: 0.85,
-    boxShadow: "0 0 0px #3b82f6"
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    scale: 1,
-    boxShadow: "0 8px 32px #3b82f680",
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-      delay: delay,
-      boxShadow: { duration: 1.2, ease: "easeOut", delay: delay }
-    }
-  },
-  hover: {
-    scale: 1.03,
-    boxShadow: "0 12px 40px #3b82f6cc",
-    transition: {
-      duration: 0.3,
-      ease: "easeOut"
-    }
-  }
-});
+// const cardVariants = (direction: 'left' | 'right', delay: number): Variants => ({
+//   initial: {
+//     opacity: 0,
+//     x: direction === 'left' ? -100 : 100,
+//     y: 40,
+//     scale: 0.85,
+//     boxShadow: "0 0 0px #3b82f6"
+//   },
+//   animate: {
+//     opacity: 1,
+//     x: 0,
+//     y: 0,
+//     scale: 1,
+//     boxShadow: "0 8px 32px #3b82f680",
+//     transition: {
+//       duration: 0.8,
+//       ease: "easeOut",
+//       delay: delay,
+//       boxShadow: { duration: 1.2, ease: "easeOut", delay: delay }
+//     }
+//   },
+//   hover: {
+//     scale: 1.03,
+//     boxShadow: "0 12px 40px #3b82f6cc",
+//     transition: {
+//       duration: 0.3,
+//       ease: "easeOut"
+//     }
+//   }
+// });
 
-const CurrentProjectsPage: React.FC = () => {
+const ProjectsPage: React.FC = () => {
   return (
-    <div className="pt-28 px-4 max-w-6xl mx-auto mb-20">
-      <h1 className="text-4xl font-bold mb-12 text-center text-blue-900 dark:text-white">
-        Current Projects
-      </h1>
+    <div className="pt-16 pb-32 px-4 max-w-6xl mx-auto mb-20">
 
       {projects.map((project, idx) => {
         const direction = idx % 2 === 0 ? 'left' : 'right';
         const delay = idx * 0.2;
 
         return (
-          <motion.section
-            key={project.id}
-            className="mb-20 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8"
-            initial="initial"
-            whileInView="animate"
-            whileHover="hover"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={cardVariants(direction, delay)}
-          >
+        //   <motion.section
+        //     key={project.id}
+        //     className="mb-20 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8"
+        //     initial="initial"
+        //     whileInView="animate"
+        //     whileHover="hover"
+        //     viewport={{ once: true, amount: 0.2 }}
+        //     variants={cardVariants(direction, delay)}
+        //   >
+            <div className="mb-20 bg-gray-light dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8">
+
             <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-1/3 flex items-center justify-center">
                 <Image
@@ -151,21 +167,21 @@ const CurrentProjectsPage: React.FC = () => {
                 />
               </div>
               <div className="md:w-2/3">
-                <h2 className="text-3xl font-bold mb-4 text-blue-700 dark:text-blue-400">
+                <h2 className="text-3xl font-bold mb-4 text-primary">
                   {project.title}
                 </h2>
                 <p className="mb-4 text-lg">{project.description}</p>
                 <div className="mb-6">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+                  <h3 className="text-xl font-semibold mb-2">
                     Problem Statement:
                   </h3>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-6 space-y-2">
                     {project.problemStatement.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
                 </div>
-                {/* Extra details for IRoC-U */}
+                
                 {project.details && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                     {project.details.map((detail, i) => (
@@ -183,12 +199,10 @@ const CurrentProjectsPage: React.FC = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center px-4 py-2 rounded-lg transition
-                        ${i === 0 ? "bg-blue-600 text-white hover:bg-blue-700" : "bg-gray-800 text-white hover:bg-gray-900"}
-                      `}
+                      className="inline-flex items-center px-4 py-2 rounded-lg transition bg-primary text-white"
                     >
                       {link.label}
-                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="white" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                       </svg>
                     </a>
@@ -196,14 +210,13 @@ const CurrentProjectsPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.section>
+
+            {/* </motion.section> */}
+            </div>
         );
       })}
     </div>
   );
 };
 
-export default CurrentProjectsPage;
-
-
-
+export default ProjectsPage;

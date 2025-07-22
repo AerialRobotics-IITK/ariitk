@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Contact from "@/components/Contact";
 
 import { Metadata } from "next";
 
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const ContactPage = () => {
+const RecPage = () => {
   return (
     <>
       <Breadcrumb
@@ -48,4 +47,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default RecPage;

@@ -9,7 +9,7 @@ const Contact = () => {
           Get in touch with us:
         </p>
         <a
-          className="text-3xl hover:text-primary transition-colors duration-200"
+          className="text-4xl hover:text-primary transition-colors duration-200"
           href="mailto:aerial_snt@iitk.ac.in"
           target="_blank"
           rel="noreferrer"
@@ -20,59 +20,54 @@ const Contact = () => {
         </a>
       </div>
       
-      <div className="flex items-center my-4">
+      <div className="flex flex-wrap items-center justify-center mb-24 gap-16 pt-8 text-2xl">
         <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
-        <span className="mx-4 text-2xl font-semibold">Reach out to our heads</span>
-        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
-      </div>
-
-      <div className="flex flex-wrap items-center justify-center mb-24 gap-16 pt-16 text-3xl">
         <div className="text-center">
           Ayush Goyal <br />
-          {/* <a
+          <a
             className="text-xl hover:text-primary transition-colors duration-200"
-            href="mailto:xxxxxx@iitk.ac.in"
+            href="mailto:gayush23@iitk.ac.in"
             target="_blank"
             rel="noreferrer"
           >
-            xxxxxx@iitk.ac.in
-          </a> */}
+            gayush23@iitk.ac.in
+          </a>
         </div>
 
         <div className="text-center">
           Prasun Shrivastav <br />
-          {/* <a
+          <a
             className="text-xl hover:text-primary transition-colors duration-200"
-            href="mailto:xxxxxx@iitk.ac.in"
+            href="mailto:prasuns23@iitk.ac.in"
             target="_blank"
             rel="noreferrer"
           >
-            xxxxxx@iitk.ac.in
-          </a> */}
+            prasuns23@iitk.ac.in
+          </a>
         </div>
 
         <div className="text-center">
           Shivang Sonker <br />
-          {/* <a
+          <a
             className="text-xl hover:text-primary transition-colors duration-200"
-            href="mailto:xxxxxx@iitk.ac.in"
+            href="mailto:shivangso23@iitk.ac.in"
             target="_blank"
             rel="noreferrer"
           >
-            xxxxxx@iitk.ac.in
-          </a> */}
+            shivangso23@iitk.ac.in
+          </a>
         </div>
 
         <div className="text-center">
           Somya Garg <br />
-          {/* <a
+          <a
             className="text-xl hover:text-primary transition-colors duration-200"
-            href="mailto:xxxxxx@iitk.ac.in"
+            href="mailto:somyagarg23@iitk.ac.in"
             target="_blank"
             rel="noreferrer"
           >
-            xxxxxx@iitk.ac.in
-          </a> */}
+            somyagarg23@iitk.ac.in
+          </a>
         </div>
 
         <div className="text-center">
@@ -86,6 +81,7 @@ const Contact = () => {
             sunrajp23@iitk.ac.in
           </a>
         </div>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
       </div>
     </div>
 
