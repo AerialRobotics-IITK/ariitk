@@ -15,16 +15,16 @@ const Gallery = () => {
     { src: "/images/gallery/10.jpg", index: 10 },
     { src: "/images/gallery/11.jpg", index: 11 },
     { src: "/images/gallery/12.jpg", index: 12 },
-    // { src: "/images/gallery/13.jpg", index: 13 },
+    { src: "/images/gallery/13.jpg", index: 13 },
     { src: "/images/gallery/14.jpg", index: 14 },
     { src: "/images/gallery/15.jpg", index: 15 },
     { src: "/images/gallery/16.jpg", index: 16 },
   ];
 
   return (
-    <div className="masonry" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', justifyContent: 'center', alignItems: 'center', padding: '10px' }}>
+    <div className="masonry" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', justifyContent: 'center', alignItems: 'center', padding: '100px' }}>
       {photos.map((photo, index) => (
-        <div key={index} className="relative" style={{ width: '100%', height: '480px' }}>
+        <div key={index} className="relative" style={{ width: '100%', height: '250px' }}>
           <Image
             src={photo.src}
             alt={`Photo ${index + 1}`}

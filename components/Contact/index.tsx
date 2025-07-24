@@ -1,72 +1,87 @@
 import NewsLatterBox from "./NewsLatterBox";
+import { FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <div>
-      <div className="mb-10 ml-20 mt-10 text-2xl">
-        Email:
+      <div className="flex items-center justify-center gap-1 pt-5 pb-16">
+        <p className="text-2xl px-5">
+          Get in touch with us:
+        </p>
         <a
-          className=""
+          className="text-4xl hover:text-primary transition-colors duration-200"
           href="mailto:aerial_snt@iitk.ac.in"
           target="_blank"
           rel="noreferrer"
         >
-          {" "}
-          aerial_snt@iitk.ac.in
+          <div className="flex items-center justify-center gap-2">
+            <FaEnvelope/> aerial_snt@iitk.ac.in
+          </div>
         </a>
       </div>
-      <div className="mb-10 ml-20 mt-10 text-2xl">
-        Reach out to our heads:
-        <br />
-        <a
-          className=""
-          href="mailto:sanskary22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {" "}
-          Sanskar Yaduka
-        </a>
-        <br />
-        <a
-          // className="underline"
-          href="mailto:dhillon22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {" "}
-          Anmoldeep Singh Dhillon
-        </a>
-        <br />
-        <a
-          // className="underline"
-          href="mailto:amansg22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {" "}
-          Aman Singh Gill
-        </a>
-        <br />
-        <a
-          // className="underline"
-          href="mailto:shrutird22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {" "}
-          Shruti Ramchandra Dalvi
-        </a>
-        <br />
-        <a
-          // className="underline"
-          href="mailto:adityant22@iitk.ac.in"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {" "}
-          Aditya Nalin Thakur
-        </a>
+      
+      <div className="flex flex-wrap items-center justify-center mb-24 gap-16 pt-8 text-2xl">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+        <div className="text-center">
+          Ayush Goyal <br />
+          <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:gayush23@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            gayush23@iitk.ac.in
+          </a>
+        </div>
+
+        <div className="text-center">
+          Prasun Shrivastav <br />
+          <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:prasuns23@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            prasuns23@iitk.ac.in
+          </a>
+        </div>
+
+        <div className="text-center">
+          Shivang Sonker <br />
+          <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:shivangso23@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            shivangso23@iitk.ac.in
+          </a>
+        </div>
+
+        <div className="text-center">
+          Somya Garg <br />
+          <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:somyagarg23@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            somyagarg23@iitk.ac.in
+          </a>
+        </div>
+
+        <div className="text-center">
+          Sunraj Patel <br />
+          <a
+            className="text-xl hover:text-primary transition-colors duration-200"
+            href="mailto:sunrajp23@iitk.ac.in"
+            target="_blank"
+            rel="noreferrer"
+          >
+            sunrajp23@iitk.ac.in
+          </a>
+        </div>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
       </div>
     </div>
 

@@ -3,6 +3,12 @@ import Gallery from "@/components/Gallery";
 import Loader from "@/components/Loader";
 import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Gallery | ARIITK",
+  description: "Media gallery for team ARIITK",
+  // other metadata
+};
+
 const GalleryPage = () => {
   return (
     <>
