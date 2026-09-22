@@ -39,8 +39,13 @@ const teamMembersY23=[
   },
   {
     name: "Akshyat Bansal",
-    role: "Senior Team Member",
+    role: "Team Head",
     image: "/images/team/y23/akshyat.jpg",
+  },
+  {
+    name: "Rishabh Chandrakar",
+    role: "Team Head",
+    image: "/images/team/y23/rishabh.jpg",
   },
   {
     name: "Meher Narula",
@@ -48,11 +53,6 @@ const teamMembersY23=[
     instagram: "https://www.instagram.com/brewsters_angle/",
     linkedin: "https://www.linkedin.com/in/meher-narula-26b07b298/",
     image: "/images/team/y23/meher.jpg",
-  },
-  {
-    name: "Rishabh Chandrakar",
-    role: "Senior Team Member",
-    image: "/images/team/y23/rishabh.jpg",
   },
   {
     name: "Ronit Kumar",
