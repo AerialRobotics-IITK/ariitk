@@ -5,6 +5,11 @@ import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const teamMembersY23=[
   {
+    name: "Akshyat Bansal",
+    role: "Team Head",
+    image: "/images/team/y23/akshyat.jpg",
+  },
+  {
     name: "Ayush Goyal",
     role: "Team Head",
     instagram: "https://www.instagram.com/a_yu_sh_g/",
@@ -17,6 +22,11 @@ const teamMembersY23=[
     instagram: "https://www.instagram.com/prasunshrivastav_/",
     linkedin: "https://www.linkedin.com/in/prasun-shrivastav-0674b528b/",
     image: "/images/team/y23/prasun.jpg",
+  },
+  {
+    name: "Rishabh Chandrakar",
+    role: "Team Head",
+    image: "/images/team/y23/rishabh.jpg",
   },
   {
     name: "Shivang Sonker",
@@ -36,16 +46,6 @@ const teamMembersY23=[
     instagram: "https://instagram.com/sunraj_pat/",
     linkedin: "https://www.linkedin.com/in/sunraj-patel-b55a80196/",
     image: "/images/team/y23/sunraj.jpg",
-  },
-  {
-    name: "Akshyat Bansal",
-    role: "Team Head",
-    image: "/images/team/y23/akshyat.jpg",
-  },
-  {
-    name: "Rishabh Chandrakar",
-    role: "Team Head",
-    image: "/images/team/y23/rishabh.jpg",
   },
   {
     name: "Meher Narula",
