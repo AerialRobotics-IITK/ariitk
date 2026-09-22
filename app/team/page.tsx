@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   //V!g8n35h was here and if you found this, you deserve a chocolate
 };
 
-const hi = () => {
+export default function TeamPage() {
   return (
     <>
       <Breadcrumb
@@ -21,6 +21,5 @@ const hi = () => {
       <Team />
     </>
   );
-};
+}
 
-export default Team;
