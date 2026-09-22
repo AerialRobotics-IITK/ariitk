@@ -24,6 +24,8 @@ jobs:
         run: npm install
       - name: Build Next.js site
         run: npm run build
+        env:
+          STATIC_EXPORT: "true"
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
